@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{META_TITLE}</title>
+<meta name="description" content="{META_TITLE}">
+<meta name="keywords" content="{META_KEYWORDS}">
+
+<link href="http://www.fetchprices.com/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link media="all" type="text/css" href="{THEME}result_style.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{THEME}style.css" />
+<script src="{THEME}DD_roundies_0.0.2a-min.js" type="text/javascript"></script>
+<script src="{THEME}jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{THEME}popup.js"></script>  
+
+<script>
+var start=0;
+var amount=6;
+var keyword="{KEYWORDS}";
+var qas;
+var expertQ;
+var expertQA;
+
+$(function(){
+    $('#more_input, .articles').hide();  
+
+    var id= getUrlVars()["question_id"];
+    var aid= getUrlVars()["article_id"];
+    if(id){
+         $('#q_'+id).hide();
+    }
+    else if(aid){
+       $('.contents').hide(); $('.articles').show();
+       hideAllTabs();  $('#guidesTab').addClass("selected"); $('#guides').show();
+    }
+    
+    $('.expert_post-content-detail table tr:even').css("background-color", "#f0f0f0");
+    $('.expert_post-content-detail table tr:even').css("background-color", "#DAE8E6");
+    $('.expert_post-content-detail table tr:nth-child(1)').css("background-color", "#29679a");
+
+    $('#main_question_content').truncate( {  
+      length: 120,  
+      minTrail: 10,  
+      moreText: '[expand]',  
+      lessText: '[close]'
+    }); 
+ 
+    $('#main_question_subject').truncate( {  
+      length: 120,  
+      minTrail: 10,  
+      moreText: '[expand]',  
+      lessText: '[close]'
+    }); 
+
+    $('#reviewsTab').click(function(){hideAllTabs();  $(this).addClass("selected"); $('#reviews').show(); return false;});
+	$('#guidesTab').click(function(){hideAllTabs();  $(this).addClass("selected"); $('#guides').show(); return false;});
+	$('#manualsTab').click(function(){hideAllTabs();  $(this).addClass("selected"); $('#manuals').show(); return false;});
+
+
+});
+
+function hideAllTabs(){$('#reviews, #guides, #manuals').hide();  $('#reviewsTab,#guidesTab,#manualsTab').removeClass('selected');}
+
+
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	        vars[key] = value;
+	});
+	return vars;
+}
+
+function showInputs(){
+    $('.ask_question_small_container').css('height','377px');
+    $('#more_input').show(200); 
+    return false;
+}
+
+function testConfirm(){
+    $('#reminder').html('');
+    var n = $('#ask_name').val();
+    var m = $('#ask_email').val();
+    if(n==''){
+        $('#reminder').html('Please fill your name in form.');
+	return false;
+    }
+    else if(m==''){
+        $('#reminder').html('Please fill email in form.');
+	return false;
+    }
+    else if(!echeck(m)){
+         $('#reminder').html('Please fill a valid email.');
+         return false;
+    }
+    else{
+	document.submitQuestion.submit();
+        return true;
+    }
+}
+
+function echeck(str) {
+	var at="@"
+	var dot="."
+	var lat=str.indexOf(at)
+	var lstr=str.length
+	var ldot=str.indexOf(dot)
+	if (str.indexOf(at)==-1){
+		return false
+	}
+	if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		return false;
+	}
+	if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		return false;
+	}
+	if (str.indexOf(at,(lat+1))!=-1){
+		return false;
+	}
+	if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		return false;
+	}
+	if (str.indexOf(dot,(lat+2))==-1){
+		return false;
+	}
+	if (str.indexOf(" ")!=-1){
+		return false;
+	}
+	return true;
+} 
+
+ 
+
+
+{WIDGET_MODULE}
+</script>
+<style>
+.expert_post-content-detail table{clear:left;}
+.expert_post-content-detail table td{border:1px solid #fff;}
+#question_buttons_lp_page img{cursor:pointer;}
+.expert_post-content-detail table tr td span strong{background-color:none!important;}
+.expert_post-content-detail span{color:fff!important;}
+.expert_post-content-detail ul{margin-left:20px}
+a.URLtext, a.URLbottom{padding-left:5px}
+.avatar2 {margin: 5px 0 0 15px!important;}
+a.purple{color:#9FCB4F}
+li{text-transform:capitalize;}
+</style>
+		
+</head>
+<body class="index_index">
+
+
+
+
+
+    <div id="header">
+    	<div id="logo">
+        	<h1><a class="logo_img" title="fetchprices.com" href="http://www.fetchprices.com/">fetchprices.com</a></h1>
+        </div>
+        
+    </div>
+    
+    
+    <div id="mainNav">
+    	    		<a class="g_a" href="http://www.fetchprices.com/category/1/Appliances"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Appliances</span> 
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/8/Automotive"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Automotive</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/22/Babies-Kids"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Babies & Kids</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/89/Cameras"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Cameras</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/108/Clothing"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Clothing</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/138/Computers"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Computers</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+			<a class="g_a" href="http://www.fetchprices.com/category/155/Electronics"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Electronics</span> 
+
+					</span> 
+				</span> 
+			</a>
+			
+<a class="g_a" href="http://www.fetchprices.com/category/168/Flowers-Gifts"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Flowers & Gifts</span> 
+
+					</span> 
+				</span> 
+			</a>
+			
+<a class="g_a" href="http://www.fetchprices.com/category/174/Furniture"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Furniture</span> 
+
+					</span> 
+				</span> 
+			</a>
+
+		<a class="g_a" href="http://www.fetchprices.com/category/181/Grocery-Gourmet"> 
+				<span class="g_b">
+					<span class="g_c"> 
+						<span class="g_d"> </span> 
+
+						<span class="g_e">Grocery & Gourmet</span> 
+
+					</span> 
+				</span> 
+			</a>
+			        
+		<a class="g_a" href="http://www.fetchprices.com/category/sitemap"> 
+        	<span class="g_b">
+            	<span class="g_c"> 
+            		<span class="g_d"> </span> 
+            		<span class="g_e">all</span> 
+            	</span> 
+            </span> 
+        </a>
+    </div>
+    
+    
+    <div class="mt22" id="searchOther">
+	<form method="post" action="result.php">
+		<div class="searchOther_box">
+                        <input type='text' name="keyword" value ='Start your search here' id="keyword"  class="searchOther_text" />
+			<input type="submit" value="" class="search_button">
+		</div>
+	</form>
+    </div>
+
+
+
+
+
+
+    <div class="bp2" id="page">
+
+
+
+        <div id="wrapper">
+
+		<div id="outer1">
+			<div id="outer2">
+				<div id="outer3">
+					<div id="middle">
+														
+						<div class="columns">
+							<div class="left">	
+								
+<div class="module cms_article article_results">
+
+<div class="frame">
+
+	 {PAGE_CONTENT}
+         {PAGE_REPLACE_BEGIN}
+    <div class="hgroup">
+	<h2>{SEARCH_TERM} <span>guides</span></h2>
+    </div> 
+
+
+    <div class="contents">
+             {QUESTION_BYID_MODULE}			
+    </div>
+   
+    
+    <div class="contents">
+             {QUESTION_MODULE}			
+    </div>
+
+     <div class="articles">
+        <a href="#" class="title">{ARTICLE_TITLE}</a>
+
+         <div id="results" style="padding-bottom:5px;">
+               <div style="text-align:right;font-size: 10pt;color:#ccc;padding-top:2px;text-align:right;">Sponsored Results for {SEARCH_TERM}</div>
+                {SPONSOR_LISTINGS}
+            </div>
+	<p>{ARTICLE_CONTENT}</p>	
+    </div>
+    {PAGE_REPLACE_END}
+   
+
+
+</div>
+
+</div>
+</div>
+						
+
+
+
+
+
+
+
+
+
+<div class="right">
+
+
+
+
+
+
+    <div style="clear:both" class="sidebarTabs">
+            	<div class="hd">
+                    <ul class="siderbar_tab selected">
+                        <li class="tab_first selected" id="reviewsTab"><a mod="reviews" class="reviews tab_name" href="#reviews">Hottest Questions</a></li>
+                        <li class="" id="guidesTab"><a mod="guides" class="guides tab_name" href="#guides" >Top Articles</a></li>
+                        <li class="tab_last" id="manualsTab"><a mod="manuals" class="manuals tab_name" href="#manuals" >Top Categories</a></li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    
+                    <div id="reviews" class="tab_con">
+                        <ul class="reviewsList">
+                            <li><a href="result.php?Keywords={QUESTION_KEYWORD_1}&question_id={QUESTION_ID_1}" style="heght:30px; overflow:hidden;">{QUESTION_SUBJECT_1}</a></li>                                
+                  <li><a href="result.php?Keywords={QUESTION_KEYWORD_2}&question_id={QUESTION_ID_2}" style="heght:30px; overflow:hidden;">{QUESTION_SUBJECT_2}</a></li>          
+                  <li><a href="result.php?Keywords={QUESTION_KEYWORD_3}&question_id={QUESTION_ID_3}" style="heght:30px; overflow:hidden;">{QUESTION_SUBJECT_3}</a></li>          
+                  <li><a href="result.php?Keywords={QUESTION_KEYWORD_4}&question_id={QUESTION_ID_4}" style="heght:30px; overflow:hidden;">{QUESTION_SUBJECT_4}</a></li>          
+                  <li><a href="result.php?Keywords={QUESTION_KEYWORD_5}&question_id={QUESTION_ID_5}" style="heght:30px; overflow:hidden;">{QUESTION_SUBJECT_5}</a></li>       
+                         </ul>
+                    </div>
+                    
+                    <div id="guides" class="tab_con hidden">
+                    	<ul class="reviewsList">
+                            <li><a class="os" href="/result.php?Keywords={ARTICLE_KEYWORD}&article_id={ARTICLE_ID}">{ARTICLE_TITLE}</a><p>{ARTICLE_SUMMARY} ... <a href="/result.php?Keywords={ARTICLE_KEYWORD}&article_id={ARTICLE_ID}">[more]</a></p></li>
+                            <li><a class="os" href="/result.php?Keywords={M_ARTICLE_KEYWORD_1}&article_id={ARTICLE_ID1}">{M_ARTICLE_TITLE_1}</a><p>{M_ARTICLE_SUMMARY_1} ... <a href="/result.php?Keywords={M_ARTICLE_KEYWORD_1}&article_id={ARTICLE_ID1}">[more]</a></p></li>
+                            <li><a class="os" href="/result.php?Keywords={M_ARTICLE_KEYWORD_2}&article_id={ARTICLE_ID2}">{M_ARTICLE_TITLE_2}</a><p>{M_ARTICLE_SUMMARY_2} ... <a href="/result.php?Keywords={M_ARTICLE_KEYWORD_2}&article_id={ARTICLE_ID2}">[more]</a></p></li> </ul>
+                    </div>
+
+          <div id="manuals" class="tab_con hidden">
+             <ul class="reviewsList">
+	         <li><a href="result.php?Keywords={RELATED1}">{RELATED1}</a></li>
+	         <li><a href="result.php?Keywords={RELATED2}">{RELATED2}</a></li>
+                 <li><a href="result.php?Keywords={RELATED3}">{RELATED3}</a></li>
+                 <li><a href="result.php?Keywords={RELATED4}">{RELATED4}</a></li>
+                 <li><a href="result.php?Keywords={RELATED5}">{RELATED5}</a></li>
+                 <li><a href="result.php?Keywords={RELATED6}">{RELATED6}</a></li>
+	     </ul>
+           </div>
+                    
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+   <!--div class="module banner mon_ban_a">
+      <div class="frame" style="">			
+                       <a href="#" rel="" target="_self"  onclick="show_advice_expert(); return false;">
+		<div class="hgroup">
+		<h2>Become an expert</h2>
+	</div>	
+	<div class="contents"></div>
+	</a>
+       </div>
+    </div>
+
+    <div class="module banner mon_ban_b">
+        <div class="frame" style="">
+			<a href="#" rel="" target="_self"  onclick="show_advice(); return false;">
+		<div class="hgroup">
+		<h2>Hire an expert</h2>
+	        </div>	
+	<div class="contents"></div>
+	</a>
+        </div>
+    </div-->
+
+
+   <form name="submitQuestion" action="comment.php" method="post" onsubmit="return true">
+    <div class="ask_question_small_container"> <div class="ask_question_title">Write your question in detail</div>
+       <div id="question_area">
+            <textarea cols="76" rows="3" class="textbox" id="test3" name="comment" onfocus="showInputs();if(this.value=='Ask a question here.') this.value='';" onkeypress="limitText(this,2500);">Ask a question here</textarea>            
+                        <input type="hidden" name="action" value="question_answer" />
+			<input type="hidden" name="domain_id" value="{DOMAIN_ID}" />
+			<input type="hidden" name="referer" value="{REFERER_PAGE}" />  
+       </div>
+
+
+       <div style="clear: left; padding: 5px; display: block;" id="more_input">
+<span style="color: rgb(248, 25, 2); float: left; width:10px">* </span><div style="width:60px; float:left; color: #FFFFFF;">Name</div><input type="text" id="ask_name" name="author" value="" size="22"><br>        
+<span style="color: rgb(248, 25, 2); float: left; width:10px">* </span><div style="width:60px; float:left; color: #FFFFFF;">Email  </div><input type="text" name="email" id="ask_email" value="" size="22">
+         <br><p id="reminder"></p>
+     </div>
+
+       <div id="question_buttons_lp_page">
+          <img height="30" width="145" alt="" src="{THEME_IMAGE}ask_question.jpg" onclick="testConfirm();" >
+          <img height="30" width="144" alt="" src="{THEME_IMAGE}reset_question.jpg" onclick="$('#test3').val('')">
+        </div>
+
+     </div>
+  </form>
+
+
+
+								
+
+
+
+
+     <div style="width:250px; height:20px; clear:both"></div>
+
+
+							</div>
+						
+							<div class="clear"></div>
+						</div>
+					
+					</div> <!-- middle -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="wfooter">
+
+		<div id="footer">
+			<div class="bin">
+				
+
+   <div class="cl" id="copy_right">
+        Copyright © 2013 by <b class="fb">fetchprices.com.</b> - All rights reserved.<br>
+		<span class="fb">Price Comparison and Product Manuals!</span><br>
+		
+		<a href="http://www.fetchprices.com/welcome/Term_conditions">Term & conditions</a> | 
+		<a href="http://www.fetchprices.com/welcome/privacy_policy">Privacy Policy</a> | 
+		<a href="http://www.fetchprices.com/welcome/contact">Contact Us</a>
+    </div>
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+   <div id="popupContact">  
+        <a id="popupContactClose">x</a>  
+           <h1 id="adviceTitle"></h1>  
+                <a name='qform'></a>	
+	     <div id="main-recent">              
+					
+                  <div class="entry page" id="question_form">
+			<div class="entry-top"> 
+				<div class="entry-content">
+					<div class="title">  
+						<h3 id="adviceSubTitle">Give your words here:</h3>
+					</div><br />
+
+					<div class="clear"></div>
+					<div class="page-separator"></div>
+					<div class="post-content">
+				<div id="register-form">  
+																	<form method="post" action="/comment.php" id="loginform" name="loginform">
+			
+			<p class="login-username">
+				<label for="user_login">Your Name</label>
+				<input type="text" tabindex="10" size="20" value="" class="input" id="user_login" name="author">
+			</p><br />
+			<p class="login-password">
+				<label for="user_pass">Your Email</label>
+				<input type="text" tabindex="20" size="20" value="" class="input" id="user_pass" name="title">
+			</p><br />
+			
+			<p >
+                        <textarea name="comment" id="advice_comment" cols="70%" rows="20" tabindex="4"></textarea>
+                        <input type="hidden" name="action" value="question_answer" />
+			<input type="hidden" name="domain_id" value="{DOMAIN_ID}" />
+			<input type="hidden" name="referer" value="{REFERER_PAGE}" />  
+
+                        </p><br />
+
+			<p class="login-submit">
+				<input type="submit" tabindex="100" value="Submit" class="button-primary" id="wp-submit" name="wp-submit">				
+			</p>		 </form>																	
+			</div>
+														
+			<div class="clear"></div>
+					</div>
+				</div> <!-- end .entry-content -->
+			</div> 
+		  </div><!-- end .question_form -->
+			
+	    </div> <!-- end #main-recent -->
+    </div>  
+    <div id="backgroundPopup"></div>  
+
+
+
+   </body></html>

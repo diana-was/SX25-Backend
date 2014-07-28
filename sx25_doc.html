@@ -1,0 +1,2330 @@
+<div id="wrapper">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <tbody><tr>
+	        <td><img src="/images/logo.jpg" height="58" width="255"></td>
+	      <td class="hdrtitle" align="right" valign="bottom">SX25 Layout Documentation</td>
+	    </tr>
+	    <tr>
+	      <td colspan="2" bgcolor="#d1dec2"><img src="/images/s.gif" height="1" width="1"></td>
+
+	    </tr>
+	    <tr>
+	      <td colspan="2" align="right">Version 1.0</td>
+	    </tr>
+	</tbody></table>
+	<br><br>
+	<h1 align="left">Overview</h1>
+	<p align="left">The SX25 Custom Layout feature enables the creation of multiple themes that can be associated with multiple domains allowing them to display  their content.</p>
+	<p align="left">Through the use of variables SX25 allows access to dynamic content for each domain which can be used in the layout designs according to your own needs.</p>
+	<p align="left">To use CSS and JavaScript files in the layout include the links to the files in the header as a normal html using the {THEME} variable as the url e.g.</p> 
+	<div id="source">
+	<pre>&lt;link href="{THEME}em_v1_03.css" rel="stylesheet" type="text/css"&gt; 
+&lt;script src="{THEME}jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+	</div>
+	<p align="left">Then upload the files in the “Theme Files” tab. </p>
+
+	<p align="left">For images files used in the theme use {THEME_IMAGE} variable in the url and upload the files in the "Theme Files" tab.</p>
+	<p align="left">Here are a few more things to keep in mind:</p>
+	<ul>
+	  <li>A Landing page and Results page is required</li>
+	  <li>Required variables must be present, but optional variables may be used at your discretion</li>
+	  <li>Keyword usage should not exceed 60 for optimimum performance</li>
+	</ul>
+	
+	
+	<br class="clear:both;" />
+	<div class="line"></div>
+	<h1 align="left">General Variables</h1>
+	<p align="left">The guidelines below are used to construct the general sections of the landing page and results page. The majority of these variables can be modified from within domain editor.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{COPYRIGHT}</td>
+	<td>Displays copyright information for current domain in the format: ©yyyy domain All rights reserved. </td>
+	<td>No </td>
+
+	<td>Both</td>
+	<td><span> &lt;div id="copyright"&gt;<strong>{COPYRIGHT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DOMAIN}</td>
+
+	<td>Displays the current domain name.</td>
+	<td>No </td>
+	<td>Both</td>
+	<td><span> &lt;div id="hdr"&gt;<strong>{DOMAIN}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{META_KEYWORDS}</td>
+	<td>Meta element used to identify keywords of the document to improve the quality of search results. Displays the Meta Tags Keywords text as defined on the Domain Details page.</td>
+
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;meta name="keywords" content="<strong>{META_KEYWORDS}</strong>"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+
+	<td>{META_TAG}</td>
+	<td>Meta element used to add additional properties of the document by specifying additional meta elements. Complete meta tags should be used. Not accessible from Domain Details page.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;meta name="author" content="John Doe"&gt;<br>
+	  &lt;meta name="date" content="2008-01-01T08:49:37+00:00"&gt;</span> </td>
+
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{META_TITLE}</td>
+	<td>Meta element used to identify description properties of the document.  Displays the Meta Tags Description text as defined on the Domain Detail page.</td>
+	<td>No</td>
+	<td>Both</td>
+
+	<td><span>&lt;meta name="description" content="<strong>{META_TITLE}</strong>"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PAGETITLE}</td>
+	<td>TITLE element used to identify the contents of the document. Displays the Title Tag text as defined on the Domain Detail page.</td>
+
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;title&gt;<strong>{PAGETITLE}</strong>&lt;/title&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+
+	<td>{RESULTS_IMG}</td>
+	<td>Displays the image on the results page as defined on the Domain Detail page based on the keyword or custom content.</td>
+	<td>No</td>
+	<td>Results Page</td>
+	<td><span> &lt;img src="<strong>{RESULTS_IMG}</strong>"&gt;</span></td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{LANDING_IMG}</td>
+	<td>Displays the image on the landing page as defined on the Domain Detail page based on the keyword or custom content.</td>
+	<td>No</td>
+	<td>Landing Page</td>
+
+	<td><span> &lt;img src="<strong>{LANDING_IMG}</strong>"&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{TITLE}</td>
+	<td>Title used in header of template. Displays the Domain Title text as defined on the Domain Detail page.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="/"&gt;<strong>{TITLE}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{TITLE_LINK}</td>
+	<td>Link used for title or logo in header of template. If specified, the link of the domain will be automatically added.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="<strong>{TITLE_LINK}</strong>"&gt;&lt;img src="logo.gif"/&gt;&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DOMAIN_ID}</td>
+	<td>The id of the domain in the domain table.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="display.php?id=<strong>{DOMAIN_ID}</strong>"&gt;&lt;img src="logo.gif"/&gt;&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{REFERER_PAGE}</td>
+	<td>The referer site.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;span &gt;<strong>{REFERER_PAGE}</strong>&lt;/span&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{HOME}</td>
+	<td>The complete url to the root directory.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="<strong>{HOME}</strong>"&gt;&lt;img src="<strong>{HOME}</strong>index.php"/&gt;&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{THEME}</td>
+	<td>The complete url to the theme directory.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;script src="<strong>{THEME}</strong>jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{THEME_IMAGE}</td>
+	<td>The complete url image directory inside the theme directory.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;img src="<strong>{THEME_IMAGE}</strong>logo.gif"/&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{IMAGE_LIBRARY}</td>
+	<td>The complete url to image library.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="example.php"&gt;&lt;img src="<strong>{IMAGE_LIBRARY}</strong>logo.gif"/&gt;&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{CSS_LIBRARY}</td>
+	<td>The complete url to css library for generation Z layouts.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;link rel="stylesheet" type="text/css" href="<strong>{CSS_LIBRARY}</strong>{DOMAIN}.css"/&gt</span></td>
+	</tr>
+	</tbody>
+	</table>
+
+	<div class="line"></div>
+
+
+	<h1 align="left">Keyword Variables</h1>
+	<p align="left">The guidelines below are used to configure the keywords that appear on  the landing page and results page. 
+	There are two types of keywords that can be utilized in constructing your pages.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+	
+	<tr class="altrow1" valign="top">
+	<td>{KEYWORDS}</td>
+	<td>Displays the keyword that was used for current search sended in request as "k=". Used to populate text input field after a search.</td>
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span>&lt;input type="text" name="Keywords" value="<strong>{KEYWORDS}</strong>" style="width: 200px;"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{MAPPING_KEYWORD}</td>
+	<td>Displays the keyword that was used for current search sended in request as "keyword=" or "keywords=". Used to populate text input field after a search.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;input type="text" name="Keywords" value="<strong>{MAPPING_KEYWORD}</strong>" style="width: 200px;"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DOMAIN_KEYWORD}</td>
+	<td>Displays the keyword of the domain.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;input type="text" name="Keywords" value="<strong>{DOMAIN_KEYWORD}</strong>" style="width: 200px;"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{SEARCH_TERM}</td>
+	<td>Displays the keyword that was used for current search sended in request as "k=". Used to populate text input field after a search.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;input type="text" name="Keywords" value="<strong>{SEARCH_TERM}</strong>" style="width: 200px;"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{KEYWORD_URL}</td>
+	<td>Displays the keyword that was used for current search sended in request as "k=" URL encoded.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="display.php?keyword=<strong>{KEYWORD_URL}</strong>"&gt;&lt;img src="logo.gif"/&gt;&lt;/a&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<h2 align="left">Related Keyword Variables</h2>
+	<p align="left">The variables below are used to construct Related keywords, which are located on the landing page and results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{RELATED1}<br>.<br>.<br>.<br>{RELATED13}</td>
+	<td>Related keywords get from the feed for the domain keyword set for the domain. Mainly used creating menues.</td>
+
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span>&lt;a href="result.php?Keywords={RELATED1}"&gt;<strong>{RELATED1}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+
+	<p align="left">Related Searches can be displayed as an unordered list creating a menu, sample structure is shown below:</p>
+
+
+	<div id="source"><pre>
+&lt;ul&gt;<br>&lt;li&gt;<br> 	&lt;a href="result.php?Keywords={RELATED1}"&gt;{RELATED1}&lt;/a&gt;<br>
+&lt;/li&gt;<br>&lt;li&gt;<br>	&lt;a href="result.php?Keywords={RELATED2}"&gt;{RELATED2}&lt;/a&gt;<br>	
+&lt;/li&gt;<br>&lt;li&gt;<br>	&lt;a href="result.php?Keywords={RELATED3}"&gt;{RELATED3}&lt;/a&gt;<br>	
+&lt;/li&gt;<br>&lt;li&gt;<br>	&lt;a href="result.php?Keywords={RELATED4}"&gt;{RELATED4}&lt;/a&gt;<br>	
+&lt;/li&gt;<br>&lt;/ul&gt;
+	</pre></div>
+
+	<p align="left">Style sheets can be used to adjust the appearance of the list to suit your needs. </p>
+
+
+	<div class="line"></div>
+
+
+	<h1 align="left">Sponsor Listings Variables</h1>
+	<p align="left">Guidelines below are used to construct the Sponsor Listings section, which is located on the results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+
+	</tr>
+	<tr class="altrow1" valign="top">
+	<td>{CLICK_LINK}</td>
+	<td>Advertiser URL. Used as href attribute in conjunction with {TITLE}, {DESCRIPTION} and {SITEHOST} variables to form seperate &lt;a&gt; tags for sponsored results. Variables are used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLtop" href="<strong>{CLICK_LINK}</strong>" target='_blank'&gt;{TITLE}&lt;/a&gt;</span></td>
+	</tr>
+	<tr class="altrow2" valign="top">
+	<td>{DESCRIPTION}</td>
+	<td>Advertisement description. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;<strong>{DESCRIPTION}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{SEARCH_TERM}</td>
+
+	<td>Displays the keyword that was used for current search. Used to display the sponsored listing heading as follows: "Sponsored Results for {SEARCH_TERM}"</td>
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;div class="sponsoredresults"&gt;Sponsored Results for <strong>{SEARCH_TERM}</strong>&lt;/div&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{SITEHOST}</td>
+	<td>Advertiser website address. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;<strong>{SITEHOST}</strong>&lt;/a&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{SPONSOR_LISTINGS}<br><br><b>or</b><br><br>{SPONSOR_LISTINGS_0}<br>.<br>.<br>.<br>{SPONSOR_LISTINGS_10}</td>
+
+	<td>Sponsored Results that are provided based on keyword click or search. Used with Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code in order to display properly. Either {SPONSOR_LISTINGS} or the individually numbered {SPONSOR_LISTINGS_x} may be used.</td>
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;div id="results"&gt;<strong>{SPONSOR_LISTINGS}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{TITLE}</td>
+	<td>Advertisement title. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;<strong>{TITLE}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+	<p align="left">The Sponsor Listings section actually consist of two parts, the {SPONSOR_LISTINGS} or {SPONSOR_LISTINGS_x} variables and the Sponsored Listings Source Code. Both components are necessary to ensure that Sponsor Listings are displayed properly. The {SPONSOR_LISTINGS} variable in the layout source code will be replaced by the Sponsored Listings Source Code. Using the source code allows more flexibility in customizing the Sponsor Listings to suit your needs. A sample Sponsored  Listings Source Code structure  is shown below:</p>
+
+
+	<div id="source">
+	  <pre>&lt;p&gt;<br>   &lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>   &lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>   &lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>&lt;/p&gt;</pre>
+
+	</div>
+	<p align="left">Also, the Sponsor Listings notice ("Sponsored Results for ") which  includes the keyword that produced the results must be displayed above the Sponsor Listing results. A complete sample structure is shown below:</p>
+	<div id="source">
+	  <pre>&lt;div class="sponsoredresults"&gt;Sponsored Results for {SEARCH_TERM}&lt;/div&gt;<br>&lt;div id="results"&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>&lt;/div&gt;</pre>
+
+	</div>
+		<p align="left">If using individual Sponsor Listings, a minimum of <strong>five</strong> must be included in order to be considered valid.</p>
+
+
+
+
+	<div class="line"></div>
+
+
+	<h1 align="left">Content Modules</h1>
+	<p align="left">The variables below are used to display content in the domains</p>
+
+	<br>
+	<h2 align="left">Module Variables</h2>
+	<p align="left">The variables below are used to add images, menues ,articles, q&a, events and other content. The Variables can appear on the landing page or results page.</p>
+	
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Module</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Variable</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>ARTICLE<br></td>
+	<td>Displays a number of articles from the articles assign to the domain according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{ARTICLE_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>VIDEO<br></td>
+	<td>Search videos from diferent sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{VIDEO_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>DISPLAY VIDEO<br></td>
+	<td>Displays a video player with the selected video</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{DISPLAY_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>POLL<br></td>
+	<td>Display the selected Poll and Votes results for the domain</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{POLL_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>ARTICLE FEED<br></td>
+	<td>Search articles from diferent sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{ARTICLEFEED_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>NEWS<br></td>
+	<td>Search news from diferent sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{NEWS_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>FORUM<br></td>
+	<td>Search forums from diferent sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{FORUM_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>RSS<br></td>
+	<td>Search news from diferent RSS sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{RSS_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>TOPIC<br></td>
+	<td>Search related topic using the FEED with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{TOPIC_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>WIDGET<br></td>
+	<td>Includes the selected widget code. Default widget displays a form for visitors to subscribe. In {WIDGET#N_MODULE} N is the Modulelayout ID of the widgeet to include</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{WIDGET_MODULE}</strong><br> or <br><strong>{WIDGET#60_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>DIRECTORY<br></td>
+	<td>Search listings from the directories table with the "Search Keyword" and displays them according to the selected ModuleLayout. Listings with directory_flag = 1 (Princenton Websites) are shown first </td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{DIRECTORY_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>EVENT<br></td>
+	<td>Search events from the events table with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{EVENT_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>SHOPPING<br></td>
+	<td>Search products from diferent sources with the "Search Keyword" and displays them according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{SHOPPING_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>SHOPPING BY ID<br></td>
+	<td>Search for a single products "ID" and displays it according to the selected ModuleLayout</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{SHOPPING_BYID_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>QUESTION ANSWER<br></td>
+	<td>Search question from the question_answer table with the "Search Keyword" and displays them according to the selected ModuleLayout. If no QA is found use the "related keyword" and "Domain Keyword" as alternatives.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{QUESTION_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>QUESTION BY ID<br></td>
+	<td>Search for the answers in the question_answer and Answers tables for the given "ID" and displays it according to the selected ModuleLayout. If not ID is provided shows the answers of the first question for the "Search Keyword"</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{QUESTION_BYID_MODULE}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>EXPERT QUESTION BY ID<br></td>
+	<td>Search for the answers in the Answers table ONLY for the given "ID" and displays it according to the selected ModuleLayout. If not ID is provided shows the answers of the first question for the "Search Keyword"</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span><strong>{QAEXPERT_BYID_MODULE}</strong></span></td>
+	</tr>
+
+	</tbody>
+	</table>
+
+	
+	<div class="line"></div>
+
+
+	<h1 align="left">Modules Layouts & Modules Variables</h1>
+	<h2 align="left">Modules Layouts</h2>
+	<p align="left">The Modules Layouts are a block of HTML,JavaScript and CSS that a especific module use to display their data. 
+	The Module Layout use the variables available for the module as shown below to display content in the domains. 
+	Also their settings include the number of listings to display and the sources included.</p>
+
+	<br>
+	<h2 align="left">Modules Variables</h2>
+	<p align="left">The variables below are used to add content specific from a module. The Variables can appear on the Module Layout, landing page or results page.</p>
+	
+	<h3 align="left">Article Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the article module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ARTICLE_TITLE}<br></td>
+	<td>Title of the main article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;h2&gt;<strong>{ARTICLE_TITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ARTICLE_SUMMARY}<br></td>
+	<td>The summary of the main article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{ARTICLE_SUMMARY}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ARTICLE_CONTENT}</td>
+	<td>The content of the main article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{ARTICLE_CONTENT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ARTICLE_ID}</td>
+	<td>The id of the article in the article table.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;a href="article.php?id=<strong>{ARTICLE_ID}</strong>"&gt;read more&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{M_ARTICLE_TITLE_1}<br>.<br>.<br>.<br>{M_ARTICLE_TITLE_10}</td>
+	<td>Title of the menu article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;h2&gt;<strong>{M_ARTICLE_TITLE_1}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{M_ARTICLE_SUMMARY_1}<br>.<br>.<br>.<br>{M_ARTICLE_SUMMARY_10}</td>
+	<td>The summary of the menu article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{M_ARTICLE_SUMMARY_1}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{M_ARTICLE_KEYWORD_1}<br>.<br>.<br>.<br>{M_ARTICLE_KEYWORD_10}</td>
+	<td>The keyword of the menu article.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;a href="result.php?keywords=<strong>{M_ARTICLE_KEYWORD_1}</strong>"&gt;read more&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ARTICLE_ID1}<br>.<br>.<br>.<br>{ARTICLE_ID_10}</td>
+	<td>The id of the menu article in the article table.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;a href="article.php?id=<strong>{ARTICLE_ID1}</strong>"&gt;read more&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{IMG_1}<br>.<br>.<br>.<br>{IMG_3}</td>
+	<td>Displays the images on the page as defined on the Domain Detail.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{IMG_1}</strong>"&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{M_IMG_1}<br>.<br>.<br>.<br>{M_IMG_3}</td>
+	<td>Displays the menu images on the page as defined on the Domain Detail.</td>
+	<td>No</td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{M_IMG_1}</strong>"&gt;</span></td>
+	</tr>
+	</tbody></table>
+<BR><br>
+
+
+	<h3 align="left">Video Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the video module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{VIDEO_SOURCES_TITLES}<br></td>
+	<td>List and link of all video sources.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{ARTICLE_TITLE}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{VIDEO_LIST}<br></td>
+	<td>List of found videos.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{VIDEO_LIST}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Poll Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the poll module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{POLL_TITLE}<br></td>
+	<td>Title of the poll.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{POLL_TITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{POLL_SUMMARY}<br></td>
+	<td>Summary data.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{POLL_SUMMARY}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{POLL_CONTENT}<br></td>
+	<td>Total scores in the poll.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{POLL_CONTENT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Article Feed Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the article feed module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ARTICLE_SOURCETITLE}<br></td>
+	<td>Title of the source.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{ARTICLE_SOURCETITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ARTICLE_LIST}<br></td>
+	<td>List of articles summaries.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;ul&gt;<strong>{ARTICLE_LIST}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ARTICLE_SOURCELINK}<br></td>
+	<td>Link to the article feed source.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{ARTICLE_SOURCELINK}</strong>"&gt;The source&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ARTICLE_SOURCE}<br></td>
+	<td>The source of the articles.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{ARTICLE_SOURCE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">News Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the news module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{NEWS_SOURCETITLE}<br></td>
+	<td>Title of the news.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gModule Layoutstrong>{NEWS_SOURCETITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{NEWS_LIST}<br></td>
+	<td>List of news summaries.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;ul&gt;<strong>{NEWS_LIST}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{NEWS_SOURCELINK}<br></td>
+	<td>Link to the news feed source.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{NEWS_SOURCELINK}</strong>"&gt;The source&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{NEWS_SOURCE}<br></td>
+	<td>The source of the news.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{NEWS_SOURCE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Forum Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the forum module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{FORUM_SOURCETITLE}<br></td>
+	<td>Title of the forum.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{FORUM_SOURCETITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{FORUM_LIST}<br></td>
+	<td>List of forum summaries.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;ul&gt;<strong>{FORUM_LIST}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{FORUM_SOURCELINK}<br></td>
+	<td>Link to the forum feed source.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{FORUM_SOURCELINK}</strong>"&gt;The source&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{FORUM_SOURCE}<br></td>
+	<td>The source of the forum.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{FORUM_SOURCE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">RSS Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the RSS news module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{RSS_SOURCETITLE}<br></td>
+	<td>Title of the RSS.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{RSS_SOURCETITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{RSS_LIST}<br></td>
+	<td>List of RSS summaries.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;ul&gt;<strong>{RSS_LIST}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{RSS_SOURCELINK}<br></td>
+	<td>Link to the RSS feed source.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{RSS_SOURCELINK}</strong>"&gt;The source&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{RSS_SOURCE}<br></td>
+	<td>The source of the RSS.</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{RSS_SOURCE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Topic Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the topic module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{RELATED1}<br>.<br>.<br>.<br>{RELATED16}<br></td>
+	<td>Related topic</td>
+	<td>16</td>
+	<td>All</td>
+	<td><span> &lt;li&gt;<strong>{RELATED16}</strong>&lt;/li&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{MODULES}<br></td>
+	<td>List of modules.</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;ul&gt;<strong>{MODULES}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+
+<BR><br>
+
+	<h3 align="left">Widget Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the widget module. The Variables can appear on the Module Layout as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{SUBSCRIBE_DOMAIN}</td>
+	<td>Domain</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h2&gt;<strong>{SUBSCRIBE_DOMAIN}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Directoty Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the directory module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_ID}</td>
+	<td>The ID in the directory table</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{DIRECTORY_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_ID_n}<br></td>
+	<td>The ID in the directory table</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;div&gt;<strong>{DIRECTORY_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_TITLE}</td>
+	<td>The title</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{DIRECTORY_TITLE}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_TITLE_n}<br></td>
+	<td>The title</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{DIRECTORY_TITLE_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_DESCRIPTION}</td>
+	<td>The description</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{DIRECTORY_DESCRIPTION}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_DESCRIPTION_n}<br></td>
+	<td>The description</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{DIRECTORY_DESCRIPTION_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_URL}</td>
+	<td>The url link</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{DIRECTORY_URL}</strong>"&gt;The directory entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_URL_n}<br></td>
+	<td>The url link</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;a href="<strong>{DIRECTORY_URL_n}</strong>"&gt;The directory entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_IMG}</td>
+	<td>The image source url</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{DIRECTORY_IMG}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_IMG_n}<br></td>
+	<td>The image source url</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="<strong>{DIRECTORY_IMG_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{DIRECTORY_FLAG}</td>
+	<td>1 Princeton domain 0 external domain</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;script&gt;var i=<strong>{DIRECTORY_FLAG}</strong>&lt;/script&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DIRECTORY_FLAG_n}<br></td>
+	<td>1 Princeton domain 0 external domain</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;script&gt;var i=<strong>{DIRECTORY_FLAG_n}</strong>&lt;/script&gt;</span></td>
+	</tr>
+
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Event Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the event module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_ID}</td>
+	<td>The ID in the event table</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{EVENT_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_ID_n}<br></td>
+	<td>The ID in the event table</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;div&gt;<strong>{EVENT_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_EVENTFUL_ID}</td>
+	<td>The ID in the eventfull website</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{EVENT_EVENTFUL_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_EVENTFUL_ID_n}<br></td>
+	<td>The ID in the eventfull website</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;div&gt;<strong>{EVENT_EVENTFUL_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_TITLE}</td>
+	<td>The title</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_TITLE}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_TITLE_n}<br></td>
+	<td>The title</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_TITLE_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_KEYWORD}</td>
+	<td>The keyword</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_KEYWORD}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_KEYWORD_n}<br></td>
+	<td>The keyword</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_KEYWORD_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_DESCRIPTION}</td>
+	<td>The description</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_DESCRIPTION}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_DESCRIPTION_n}<br></td>
+	<td>The description</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{EVENT_DESCRIPTION_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_URL}</td>
+	<td>The url link</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{EVENT_URL}</strong>"&gt;The event entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_URL_n}<br></td>
+	<td>The url link</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;a href="<strong>{EVENT_URL_n}</strong>"&gt;The event entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_IMG}</td>
+	<td>The image source url</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{EVENT_IMG}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_IMG_n}<br></td>
+	<td>The image source url</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="<strong>{EVENT_IMG_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_IMG_WIDTH}</td>
+	<td>The image width</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="{EVENT_IMG}" style="widht:<strong>{EVENT_IMG_WIDTH}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_IMG_WIDTH_n}<br></td>
+	<td>The image width</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="{EVENT_IMG_n}" style="width:<strong>{EVENT_IMG_WIDTH_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_IMG_HEIGHT}</td>
+	<td>The image height</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="{EVENT_IMG}" style="height:<strong>{EVENT_IMG_HEIGHT}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_IMG_HEIGHT_n}<br></td>
+	<td>The image height</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="{EVENT_IMG_n}" style="height:<strong>{EVENT_IMG_HEIGHT_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_START_TIME}</td>
+	<td>The date and time the event starts</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{EVENT_START_TIME}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_START_TIME_n}<br></td>
+	<td>The date and time the event starts</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;b&gt;<strong>{{EVENT_START_TIME_n}}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_STOP_TIME}</td>
+	<td>The date and time the event ends</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{EVENT_STOP_TIME}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_STOP_TIME_n}<br></td>
+	<td>The date and time the event ends</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;b&gt;<strong>{{EVENT_STOP_TIME_n}}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_VENUE_NAME}</td>
+	<td>The name of the venue</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h3&gt;<strong>{EVENT_VENUE_NAME}</strong>&lt;/h3&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_VENUE_NAME_n}<br></td>
+	<td>The name of the venue</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;h3&gt;<strong>{EVENT_VENUE_NAME_n}</strong>&lt;/h3&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_VENUE_URL}</td>
+	<td>The url of the venue website</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{EVENT_VENUE_URL}</strong>"&gt;see event venue&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_VENUE_URL_n}<br></td>
+	<td>The url of the venue website</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;a href="<strong>{EVENT_VENUE_URL_n}</strong>"&gt;see event venue&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_VENUE_ADDRESS}</td>
+	<td>The venue address</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{EVENT_VENUE_ADDRESS}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>The venue address</td>
+	<td>The name of the venue</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;b&gt;<strong>{EVENT_VENUE_ADDRESS_n}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{EVENT_CITY_NAME}</td>
+	<td>The city of the venue</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h3&gt;<strong>{EVENT_CITY_NAME}</strong>&lt;/h3&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{EVENT_CITY_NAME_n}<br></td>
+	<td>The city of the venue</td>
+	<td>13</td>
+	<td>landing and results</td>
+	<td><span> &lt;h3&gt;<strong>{{EVENT_CITY_NAME_n}}</strong>&lt;/h3&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Shopping Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the shopping module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_ID}</td>
+	<td>The ID in the amazon website</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{PRODUCT_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_ID_n}<br></td>
+	<td>The ID in the amazon website</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;div&gt;<strong>{PRODUCT_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_TITLE}</td>
+	<td>The item title</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{PRODUCT_TITLE}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_TITLE_n}<br></td>
+	<td>The item title</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{PRODUCT_TITLE_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_ITEMS}</td>
+	<td>The product num of items</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_ITEMS}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_ITEMS_n}<br></td>
+	<td>The product num of items</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_ITEMS_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_LINK}</td>
+	<td>The url link to the product in amazon website</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;a href="<strong>{PRODUCT_LINK}</strong>"&gt;The directory entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_LINK_n}<br></td>
+	<td>The url link to the product in amazon website</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;a href="<strong>{PRODUCT_LINK_n}</strong>"&gt;The directory entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_IMAGE}</td>
+	<td>The item image url</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{PRODUCT_IMAGE}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_IMAGE_n}<br></td>
+	<td>The item image url</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="<strong>{PRODUCT_IMAGE_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_CATEGORY}</td>
+	<td>The product category</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_CATEGORY}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_CATEGORY_n}<br></td>
+	<td>The product category</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_PRODUCT_CATEGORY_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_PRICE}</td>
+	<td>The product regular price</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_PRICE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_PRICE_n}<br></td>
+	<td>The product regular price</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_PRICE_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_SOURCE}</td>
+	<td>The product seller source amazon or shopzilla</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_SOURCE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_SOURCE_n}<br></td>
+	<td>The product seller source amazon or shopzilla</td>
+	<td>20</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_SOURCE_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Shopping Detail (BY ID) Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the shopping module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_ID}</td>
+	<td>The ID in the amazon website</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{PRODUCT_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_TITLE}</td>
+	<td>The item title</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;h1&gt;<strong>{PRODUCT_TITLE}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_LINK}</td>
+	<td>The url link to the product in amazon website</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;a href="<strong>{PRODUCT_LINK}</strong>"&gt;The directory entry&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_ITEMS}</td>
+	<td>The product num of items</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_ITEMS}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_CATEGORY}</td>
+	<td>The product category</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_CATEGORY}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_PRICE}</td>
+	<td>The product regular price</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_PRICE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_IMAGE}</td>
+	<td>The item image url</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{PRODUCT_IMAGE}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_SOURCE}</td>
+	<td>The product seller source amazon or shopzilla</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_SOURCE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_MANUFACTURER}</td>
+	<td>The product manufacturer</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_MANUFACTURER}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_DESCRIPTION}</td>
+	<td>The product description</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_DESCRIPTION}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_DETAILS}</td>
+	<td>The product details</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_DETAILS}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_FEATURES}</td>
+	<td>The product features</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_FEATURES}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_LOWEST_PRICE}</td>
+	<td>The product lower price</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_LOWEST_PRICE}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_DIMENSION}</td>
+	<td>The product dimension</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_DIMENSION}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_WEIGHT}</td>
+	<td>The product weight</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_WEIGHT}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_LOWEST_USED_PRICE}</td>
+	<td>The product lowest price for used item</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_LOWEST_USED_PRICE}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_LOWEST_REFURBISHED_PRICE}</td>
+	<td>The product lowest price for refurbished item</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_LOWEST_REFURBISHED_PRICE}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_DISCLAIMER}</td>
+	<td>The product disclamer</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{PRODUCT_DISCLAIMER}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PRODUCT_REVIEWSOURCE__n}<br></td>
+	<td>The who made the product revision</td>
+	<td>5</td>
+	<td>ALL</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_REVIEWSOURCE__n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PRODUCT_REVIEWCONTENT_n}<br></td>
+	<td>The product revision</td>
+	<td>5</td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{PRODUCT_REVIEWCONTENT_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+<BR><br>
+
+	<h3 align="left">Question Answer Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the question answer module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ID}</td>
+	<td>The ID in the question_answer table</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{QUESTION_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ID_n}<br></td>
+	<td>The ID in the question_answer table</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;div&gt;<strong>{QUESTION_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_KEYWORD}</td>
+	<td>The question keyword</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_KEYWORD}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_KEYWORD_n}<br></td>
+	<td>The question keyword</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_KEYWORD_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_SUBJECT}</td>
+	<td>The question title</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_SUBJECT}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_SUBJECT_n}<br></td>
+	<td>The question title</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_SUBJECT_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_CONTENT}</td>
+	<td>The questions</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_CONTENT}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_CONTENT_n}<br></td>
+	<td>The question</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_CONTENT_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_DATE}</td>
+	<td>The date the question was created</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_DATE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_DATE_n}<br></td>
+	<td>The date the question was created</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_DATE_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_USERNAME}</td>
+	<td>The username of the user that created the question</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_USERNAME}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_USERNAME_n}<br></td>
+	<td>The username of the user that created the question</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_USERNAME_n}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_USER_PHOTO}</td>
+	<td>The user image url</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{QUESTION_USER_PHOTO}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_USER_PHOTO_n}<br></td>
+	<td>The user image url</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;img src="<strong>{QUESTION_USER_PHOTO_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ANSWERER}</td>
+	<td>The username of the user that answered the question</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_ANSWERER}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ANSWERER_n}<br></td>
+	<td>The username of the user that answered the question</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_ANSWERER_n}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ANSWER}</td>
+	<td>The answer</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ANSWER_n}<br></td>
+	<td>The answer</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ANSWER_SUMMARY}</td>
+	<td>The answer summary (16 words)</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER_SUMMARY}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ANSWER_SUMMARY_n}<br></td>
+	<td>The answer summary (16 words)</td>
+	<td>10</td>
+	<td>landing and results</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER_SUMMARY_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{CSS_CLASS}</td>
+	<td>This is replace by "fist odd" for the first question and then for "odd" or "even" accordingly</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;li class="<strong>{CSS_CLASS}</strong>"&gt; Some line &lt;/li&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+	<h3 align="left">Question Answer & Expert answer (BY ID) Module Variables</h3>
+	<p align="left">The variables below are used to add content specific from the question answer module. The Variables can appear on the Module Layout, landing page or results page as explain.</p>
+
+	<h4 align="left">QuestionByID vs QAExpertByID</h4>
+	<p align="left">The differnce between this to tags is that QAExpertByID will only show questions with answers in the answer table unless an ID is provided</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ID}</td>
+	<td>The ID in the question_answer table</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{QUESTION_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_KEYWORD}</td>
+	<td>The question keyword</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_KEYWORD}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_SUBJECT}</td>
+	<td>The question title</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;h1&gt;<strong>{QUESTION_SUBJECT}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_CONTENT}</td>
+	<td>The questions</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_CONTENT}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_DATE}</td>
+	<td>The date the question was created</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_DATE}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_USERNAME}</td>
+	<td>The username of the user that created the question</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_USERNAME}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_USER_PHOTO}</td>
+	<td>The user image url</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{QUESTION_USER_PHOTO}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ANSWERER}</td>
+	<td>The username of the user that answered the question</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{QUESTION_ANSWERER}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{QUESTION_ANSWER}</td>
+	<td>The answer</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{QUESTION_ANSWER_SUMMARY}</td>
+	<td>The answer summary (16 words)</td>
+	<td></td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{QUESTION_ANSWER_SUMMARY}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{CSS_CLASS}</td>
+	<td>This is replace by "fist odd" for the first question and then for "odd" or "even" accordingly</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;li class="<strong>{CSS_CLASS}</strong>"&gt; Some line &lt;/li&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+	
+	<h4 align="left">The Expert Answer Variables</h4>
+	<p align="left">The variables below are used to add content specific from the answer table. The Variables can appear on the Module Layout, landing page or results page.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_BLOCK_BEGIN}</td>
+	<td>Marks the begining of the block where the Answer variables without sequence ( _n ) are used</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_BLOCK_BEGIN} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_BLOCK_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_BLOCK_END}<br></td>
+	<td>Marks the end of the block where the Answer variables without sequence ( _n ) are used</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_BLOCK_BEGIN} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_BLOCK_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_ID}</td>
+	<td>The ID in the answer table</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;div&gt;<strong>{ANSWER_ID}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_ID_n}<br></td>
+	<td>The ID in the answer table</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;div&gt;<strong>{ANSWER_ID_n}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_KEYWORD}</td>
+	<td>The answer keyword</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{ANSWER_KEYWORD}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_KEYWORD_n}<br></td>
+	<td>The answer keyword</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;h1&gt;<strong>{ANSWER_KEYWORD_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_SUBJECT}</td>
+	<td>The answer title</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;h1&gt;<strong>{ANSWER_SUBJECT}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_SUBJECT_n}<br></td>
+	<td>The answer title</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;h1&gt;<strong>{ANSWER_SUBJECT_n}</strong>&lt;/h1&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_CONTENT}</td>
+	<td>The answer</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{ANSWER_CONTENT}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_CONTENT_n}<br></td>
+	<td>The answer</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{ANSWER_CONTENT_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_SHORT_ANSWER}</td>
+	<td>The answer summary</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;p&gt;<strong>{ANSWER_SHORT_ANSWER}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_SHORT_ANSWER_n}<br></td>
+	<td>The answer summary</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;p&gt;<strong>{ANSWER_SHORT_ANSWER_n}</strong>&lt;/p&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_USER_NAME}</td>
+	<td>The username of the user that created the answer</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{ANSWER_USER_NAME}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_USER_NAME_n}<br></td>
+	<td>The username of the user that created the answer</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{ANSWER_USER_NAME_n}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_USER_PHOTO}</td>
+	<td>The user image url</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{ANSWER_USER_PHOTO}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_USER_PHOTO_n}<br></td>
+	<td>The user image url</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{ANSWER_USER_PHOTO_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE}</td>
+	<td>The type of the answer book,blog,article,school,other </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;b&gt;<strong>{ANSWER_TYPE}</strong>&lt;bp&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_n}<br></td>
+	<td>The type of the answer book,blog,article,school,other </td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;b&gt;<strong>{ANSWER_TYPE_n}</strong>&lt;/b&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_LINK}</td>
+	<td>A url to a website</td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span> &lt;img src="<strong>{ANSWER_LINK}</strong>" /&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_LINK_n}<br></td>
+	<td>A url to a website</td>
+	<td>15</td>
+	<td>All</td>
+	<td><span> &lt;img src="<strong>{ANSWER_LINK_n}</strong>" /&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+	
+	<h4 align="left">Display Expert Answers by Block TYPE Variables</h4>
+	<p align="left">The variables below are used in the module layout to display an expert answer for an especific TYPE. The Variables can appear on the Module Layout only</p>
+	<p align="left">These variables should be between the block markers {ANSWER_BLOCK_BEGIN} ..... {ANSWER_BLOCK_END}</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>N</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE_BLOG}</td>
+	<td>Marks the begining of the block of html to use for answers type BLOG </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_BLOG} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_BLOG_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_BLOG_END}<br></td>
+	<td>Marks the end of the block of html to use for answers type BLOG </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_BLOG} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_BLOG_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE_OTHER}</td>
+	<td>Marks the begining of the block of html to use for answers type OTHER </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_OTHER} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_OTHER_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_OTHER_END}<br></td>
+	<td>Marks the end of the block of html to use for answers type OTHER </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_OTHER} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_OTHER_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE_ARTICLE}</td>
+	<td>Marks the begining of the block of html to use for answers type ARTICLE </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_ARTICLE} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_ARTICLE_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_ARTICLE_END}<br></td>
+	<td>Marks the end of the block of html to use for answers type ARTICLE </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_ARTICLE} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_ARTICLE_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE_SCHOOL}</td>
+	<td>Marks the begining of the block of html to use for answers type SCHOOL </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_SCHOOL} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_SCHOOL_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_SCHOOL_END}<br></td>
+	<td>Marks the end of the block of html to use for answers type SCHOOL </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_SCHOOL} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_SCHOOL_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{ANSWER_TYPE_BOOK}</td>
+	<td>Marks the begining of the block of html to use for answers type BOOK </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_BOOK} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_BOOK_END}</strong></span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{ANSWER_TYPE_BOOK_END}<br></td>
+	<td>Marks the end of the block of html to use for answers type BOOK </td>
+	<td></td>
+	<td>Module Layout</td>
+	<td><span><strong>{ANSWER_TYPE_BOOK} &lt;div&gt;{ANSWER_CONTENT}&lt;/div&gt; {ANSWER_TYPE_BOOK_END}</strong></span></td>
+	</tr>
+
+	</tbody></table>
+<BR><br>
+
+
+
+<div class="line"></div>
+	<h1 align="left">Menu Variables</h1>
+	<p align="left">The variables below are used to show the menu in the website.These Variables can appear on the landing page or results page.</p>
+
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{MENU1}<br>.<br>.<br>.<br>{MENU16}</td>
+	<td>Displays the menu name as defined on the Domain Detail.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;li&gt; &lt;a href="{MENU_LINK1}result.php?Keywords={MENU_KEYWORD1}"&gt;<strong>{MENU1}</strong>&lt;/a&gt; &lt;/li&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{MENU_LINK1}<br>.<br>.<br>.<br>{MENU_LINK16}</td>
+	<td>Link used for the menu as defined on the Domain Detail.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;li&gt; &lt;a href="<strong>{MENU_LINK1}</strong>result.php?Keywords={MENU_KEYWORD1}"&gt;{MENU1}&lt;/a&gt; &lt;/li&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{MENU_KEYWORD1}<br>.<br>.<br>.<br>{MENU_KEYWORD16}</td>
+	<td>Displays the keyword for the menu as defined on the Domain Detail.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;li&gt; &lt;a href="{MENU_LINK1}result.php?Keywords=<strong>{MENU_KEYWORD1}</strong>"&gt;{MENU1}&lt;/a&gt; &lt;/li&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+		
+	<div class="line"></div>
+
+
+	<h1 align="left">Static Pages</h1>
+	<p align="left">The guidelines below are used to enable the site to call static pages like Privacy and Concat Us. The available pages are in the "Page" menu in SX25 top menu.</p>
+
+	<br>
+	<h2 align="left">Static Page Variable</h2>
+	<p align="left">The variables below are use to display the page content and delete the part of the layout not for showing in the Page. The Static Page Variables can appear only in the results page.</p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PAGE_TITLE}<br></td>
+	<td>Displays the ""Display name"" of the page.</td>
+	<td>No</td>
+	<td>Results Page</td>
+	<td><span>&lt;h2&gt;<strong>{PAGE_TITLE}</strong>&lt;/h2&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PAGE_CONTENT}<br></td>
+	<td>Displays the page content.</td>
+	<td>No</td>
+	<td>Results Page</td>
+	<td><span>&lt;div&gt;<strong>{PAGE_CONTENT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{PAGE_REPLACE_BEGIN} {PAGE_REPLACE_END}<br></td>
+	<td>Mars the part of code to NO show when the page displays.</td>
+	<td>No</td>
+	<td>Results Page</td>
+	<td><span><strong>{PAGE_REPLACE_BEGIN}</strong>&lt;div&gt;Some Content&lt;/div&gt;<strong>{PAGE_REPLACE_END}</strong></span></td>
+	</tr>
+	</tbody></table>
+	<h3 align="left">Additional Info</h3>
+	<p align="left">The static pages in the site are linked as domainName.com/pageName.php  e.g: webinfo.net/contact_us.php. This pages will be resolve by the application searching in the database 
+	for a page with name "contac_us" and replace the {PAGE_TITLE} and {PAGE_CONTENT} with the page information.<br> 
+	The code  between {PAGE_REPLACE_BEGIN} and {PAGE_REPLACE_END} will be deleted form the displayed page.</p>
+
+
+	<br><br><br>
+
+	<div class="ftr">
+	</div>
+</div>

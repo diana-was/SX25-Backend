@@ -1,0 +1,73 @@
+var outlookbar=new outlook();
+var t;
+t=outlookbar.addtitle('Listing Domains','Domains',1)
+outlookbar.additem('by Profile',t,'/domain/list_sort/profile')
+outlookbar.additem('by Lot',t,'/domain/list_sort/lot')
+outlookbar.additem('by Category',t,'/domain/list_sort/category')
+outlookbar.additem('by Template',t,'/domain/list_sort/theme')
+outlookbar.additem('by Campaign Style',t,'/domain/list_sort/campaign_style')
+outlookbar.additem('Search Domain',t,'/domain/search')
+
+t=outlookbar.addtitle('Add Domains','Domains',1)
+outlookbar.additem('Building Wizard',t,'/wizard')
+
+t=outlookbar.addtitle('Bulk Tools','Domains',1)
+outlookbar.additem('Create Websites in Bulk',t,'/domain/bulk_domains')
+outlookbar.additem('Install Plugins in Bulk',t,'/domain/bulk_plugins')
+outlookbar.additem('Populate Articles in Bulk',t,'/domain/bulk_articles')
+outlookbar.additem('Review/Publish in Bulk',t,'/domain/bulk_check')
+outlookbar.additem('Export Posts Info',t,'/domain/bulk_csv_download')
+outlookbar.additem('Update Trackings in Bulk',t,'/domain/bulk_tracks')
+outlookbar.additem('Duplicate Articles in Bulk',t,'/domain/bulk_move')
+outlookbar.additem('Add/Edit Categories in Bulk',t,'/domain/bulk_categories')
+outlookbar.additem('Dynamic Mapping in Bulk',t,'/domain/bulk_mapping')
+outlookbar.additem('Setting Campaign Style',t,'/domain/campaign_style')
+
+t=outlookbar.addtitle('Users','System',1)
+outlookbar.additem('Manage Users',t,'/accounts')
+outlookbar.additem('Add User',t,'/accounts/add')
+
+t=outlookbar.addtitle('Wordpress','System',1)
+outlookbar.additem('Manage Themes',t,'/system/theme')
+outlookbar.additem('Add Theme',t,'/system/add_theme')
+outlookbar.additem('Manage Plugins',t,'/system/plugin')
+outlookbar.additem('Add Plugin',t,'/system/add_plugin')
+outlookbar.additem('Update Files',t,'/system/update_files')
+
+t=outlookbar.addtitle('Servers & More','System',1)
+outlookbar.additem('List Servers',t,'/servers')
+outlookbar.additem('Add Server',t,'/servers/add')
+outlookbar.additem('List Profiles',t,'/servers/profile')
+outlookbar.additem('Add Profile',t,'/servers/add_profile')
+outlookbar.additem('List Cateogries',t,'/servers/category')
+outlookbar.additem('Add Category',t,'/servers/add_category')
+
+t=outlookbar.addtitle('Writers','Content',1)
+outlookbar.additem('Uncompleted Tasks',t,'/content')
+outlookbar.additem('Submited Tasks',t,'/content/submited_tasks')
+outlookbar.additem('Approved Tasks',t,'/content/approved_tasks')
+
+t=outlookbar.addtitle('Editors','Content',1)
+outlookbar.additem('Review Articles',t,'/editor')
+
+t=outlookbar.addtitle('Task Manager','Content',1)
+outlookbar.additem('Review Tasks',t,'/task/review')
+outlookbar.additem('Manage Tasks',t,'/task/')
+outlookbar.additem('New Task',t,'/task/add')
+outlookbar.additem('Task Comments',t,'/task/comments')
+
+t=outlookbar.addtitle('Publisher','Content',1)
+outlookbar.additem('Translate Articles',t,'/publish/translator')
+outlookbar.additem('Review Translated',t,'/publish/review')
+outlookbar.additem('Manage Crawler',t,'/publish/crawler')
+outlookbar.additem('Manage Content DB',t,'/publish/search')
+outlookbar.additem('Add Article',t,'/publish/add_article')
+outlookbar.additem('Manage Page Templates',t,'/publish/pages')
+outlookbar.additem('Add Page Template',t,'/publish/add_page')
+
+t=outlookbar.addtitle('Designers','Content',1)
+outlookbar.additem('Raw Images',t,'/images/index')
+
+t=outlookbar.addtitle('Logs','Report',1)
+outlookbar.additem('View Logs',t,'/logs')
+outlookbar.additem('Clear Logs',t,'/logs/clear')

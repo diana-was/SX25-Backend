@@ -1,0 +1,227 @@
+/* basic */
+body{
+    font-family: Verdana,Arial;
+    font-size: 12px;
+    background: url('images/bg.jpg') #484848 repeat-x;
+    text-align:center;
+}
+body,h1,h2,h3,h4,h5,h6,p {
+    padding:0;
+    margin:0;
+}
+.clear{ clear:both; }
+.fl{ float:left; }
+.fr{ float: right; }
+#wrapper{
+    padding: 0;
+    margin: auto;
+    width: 964px;
+    text-align:left;
+}
+
+/* header */
+#header{
+    height: 118px;
+    padding-left: 7px;
+}
+#header h4{
+    color: white;
+    font-weight: normal;
+}
+#logo-wrapper{
+    padding-top: 55px;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* content */
+#content{
+    margin: 0;
+    width: 100%;
+}
+#top{
+    height: 57px;
+    background: url('images/top-bg.png') no-repeat;
+    position: relative;
+}
+#top span{
+    position:absolute;
+    right: 60px;
+    top: 15px;
+}
+#top a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 55px;
+    margin-left: 30px;
+}
+
+#top .searchinput{
+    border:none;
+    background: url('images/search-box-bg.png') no-repeat;
+    width: 219px;
+    height: 33px;
+    color: #686768;
+    font-size: 11px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+#top .searchbutton{
+    background: url('images/search.png') no-repeat;
+    width: 70px;
+    height: 30px;
+    border: none;
+    margin-top: 3px;
+    margin-left: 4px;
+    
+}
+#nav{
+    background: url('images/nav-bg.jpg') repeat-x;
+    width: 950px;
+    margin-left: 8px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 37px;
+}
+#nav ul{
+    margin:0;
+    padding:0;
+    height: 37px;
+}
+#nav li{
+    display: inline;
+    list-style: none;
+    margin: 0 10px;
+    line-height:35px;
+}
+#nav a{
+    color: white;
+    font-weight: bold;
+    text-decoration:none;
+}
+/* main content */
+#page{
+    background-color: #fdfdfd;
+    margin-left: 8px;
+    margin-right: 6px;
+}
+#main-column{
+    margin-top: 20px;
+    margin-left:15px;
+    width: 700px;
+    background-color: #fdfdfd;
+}
+.col-title{
+    width:680px;
+    clear:both;
+    background:url('images/big-title.png') no-repeat;
+    height: 36px;
+    margin: 10px 10px 0 10px;
+}
+.col-title h1{
+    font:bold 16px Verdana;
+    line-height: 35px;
+    margin-left: 10px;
+}
+#left-col,#right-col{
+    width: 46%;
+    margin-right:10px;
+    margin-left: 13px;
+}
+#left-col p,#right-col p{
+    line-height: 20px;
+    font-family: Verdana;
+    font-size: 12px;
+}
+.results{
+    margin: 10px 0;
+}
+.results a{
+    text-decoration: none;
+}
+.results div{
+    margin: 10px 0;
+}
+.results .URLtitle{
+    color: #0997F9;
+    font-size:13px;
+    font-weight: bold;
+}
+.results .URLdesc,.results .URLlink{
+    font-size: 12px;
+    color: #777777;
+    font-weight: bold;
+}
+/* sidebar */
+#sidebar{
+    width: 225px;
+    margin-top: 20px;
+    background-color: #fdfdfd;
+    height: 500px;
+}
+#sidebar .widget{
+    margin: 10px 0;
+    background-color: #fdfdfd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#sidebar .widget h2{
+    background: url('images/small-title.png') no-repeat;
+    height: 31px;
+    font:bold 16px Verdana;
+    line-height: 30px;
+    padding-left: 5px;
+    margin-left: 3px;
+}
+#sidebar .widget ul{
+    margin:10px 25px;
+    margin-top: 10px;
+    margin-bottom:5px;
+    margin-right:0;
+    margin-left:25px;
+    padding:0;
+}
+#sidebar .widget li{
+    list-style-image:url('images/arrow.png');
+    margin: 5px 0;
+}
+#sidebar .widget li a{
+    color: #0997F9;
+    font-size:13px;
+    font-weight: bold;
+    text-decoration:none;
+}
+#sidebar .widget image{
+    width: 200px;
+    border: none;
+}
+/* footer */
+#footer{
+    height: 100px;
+    text-align:center;
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+}
+#footer a{
+    text-decoration:none;
+    color: white;
+}
+#footer a:hover{
+    text-decoration:underline;
+}
+#footer span,#footer p{
+    margin-top: 20px;
+}
+
+#spacer {
+    clear: both;
+    float: left;
+    height: 6em;
+    width: 1px;
+}
+.results{
+float: right;
+}

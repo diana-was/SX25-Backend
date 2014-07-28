@@ -1,0 +1,206 @@
+/* reset CSS */
+root { 
+    display: block;
+}
+body, div, dl, dt, dd, li, pre,
+form, fieldset, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-size: 100%; font-weight: normal; }
+
+address, caption, cite, code, dfn, em, strong, var { font-style: normal; font-weight: normal; }
+
+ol, ul { list-style: none; margin: 0; padding: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th { text-align: left; font-weight: normal; font-style: normal; }
+
+acronym, abbr, fieldset, img { border: 0;}
+
+:focus { outline: 0; }
+/* styles */
+body {
+        color: black;
+        background: white url('images/bg.jpg') repeat-x;
+        font-family: Verdana, Arial;
+        font-size: 12px;
+    }
+.cl{ clear:both; }
+.fl{ float:left; }
+.clear { clear: both !important; height: 0; line-height: 0; font-size: 0; text-indent: -4000px; }
+
+#page{
+    width: 925px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#header{
+    clear: both;
+    height: 145px;
+    width: 100%;
+}
+.hoz-menu li{
+    float: left;
+    margin-right: 15px;
+}
+.hoz-menu li a{
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+#logo-area h1{
+    line-height: 95px;
+}
+#logo-area h1 a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+#search #s{
+    border: 1px solid #CCCCCC;
+    height: 25px;
+    margin-left: 30px;
+    text-align: right;
+    width: 195px;
+}
+#search button{
+    background-color: #CCCCCC;
+    border: medium none;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    vertical-align: top;
+    width: 50px;
+}
+
+#wrapper{
+    clear: both;
+    padding-top: 20px;
+}
+
+#content{
+    float: left;
+    width: 640px;
+}
+#sponsored{
+    margin: 40px 0;
+}
+#sponsored p{
+    line-height: 20px;
+    margin: 20px 0;
+}
+#sponsored .URLtop{
+    color: #3366cc;
+    font-size: 12px;
+    font-weight: bold;
+}
+#sponsored .URLtext{
+    color: #000;
+    text-decoration: none;
+    font-size: 11px;
+}
+.article{
+    clear: both;
+    border-bottom: 1px solid #EEEEEE;
+    margin: 0px 20px 20px 0px;
+}
+.article h1, .article h2{
+    clear: both;
+    margin: 10px 0;
+}
+.article h1 a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+.article h1.blue a{
+     color:#3366cc;
+}
+.article h2{
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+}
+.article img{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 214px;
+}
+.article p{
+    line-height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+#sidebar{
+    float: left;
+    width: 285px;
+}
+#sidebar img{
+    clear: both;
+    margin: 15px 0;
+    width: 285px;
+}
+#sidebar #twitter{
+     border: 1px solid #ccc;
+     padding: 10px;
+}
+#sidebar #twitter h1{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+}
+#sidebar #twitter h2{
+    color: #3d5caf;
+    font-weight: bold;
+    line-height: 40px;
+}
+#sidebar #twitter img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 3px;
+}
+#sidebar #twitter p{
+    font-size: 11px;
+}
+#sidebar #twitter div{
+    margin: 5px 0;
+}
+#sidebar #related{
+    background-color: #eff5ff;
+}
+#sidebar #related h1{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 10px;
+    clear: both;
+}
+#sidebar #related h1,#sidebar #related a{
+    font-weight: bold;
+}
+#sidebar #related a{
+    text-decoration:none;
+    color: #000;
+}
+#sidebar div#related ul{
+    width: 50%;
+    float: left !important;
+}
+#sidebar div#related li{
+    font-size: 12px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+#footer{
+    display: none;
+    clear: both;
+}

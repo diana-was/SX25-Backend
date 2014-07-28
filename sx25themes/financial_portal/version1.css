@@ -1,0 +1,1087 @@
+﻿/*  
+Theme Name: PRiNZ BranfordMagazine 2.6
+Theme URI: http://www.der-prinz.com/2008/01/20/wordpress-magazine-style-theme-branfordmagazine/
+
+/******************************************
+*   HTML Elements                         
+******************************************/
+
+* {
+	margin:0;
+	padding:0;
+	}
+
+body,html { min-height:101%; }
+	
+body {
+	background: #E0E0E0;
+	color: #333;
+	padding: 13px 0 25px 0;
+	}
+
+body, select, input, textarea {
+	font: 12px Verdana, Geneva, sans-serif;
+	line-height:1.5em;
+	}
+	
+p {	margin: 15px 0;	}
+
+
+hr {
+	display: block;
+	height:1px;
+	background:#333;
+	border:0;
+	}
+
+small {
+	font-size: 0.9em;
+	padding:3px 6px;
+	}
+
+
+/******* Hyperlinks ********************/
+
+/* standard link behaviour */
+a:link, a:active, a:visited { 
+	color:#005C99;
+	text-decoration: underline; 
+	} 
+a:hover	{ 
+	color:#005C99;
+	text-decoration: none; 
+	}
+
+.blogtitle a { text-decoration: none; }
+
+/* Title area links */
+.title:link, .title:active, .title:visited { 
+	color: #2E94C8; 
+	text-decoration: none;
+	} 
+	
+/* HTML headline links */
+h3 a:link, h3 a:active, h3 a:visited  {text-decoration:none;}
+h3 a:hover {text-decoration:underline;}
+
+h4 a:link, h4 a:active, h4 a:visited  {color:#666; text-decoration:none;}
+h4 a:hover {text-decoration:underline;}
+
+
+/* Links in the sidecontainer */
+.subnav li a:link, .subnav li a:visited { /* .subnav is the categories list */
+	background: #fff;
+	display:block;
+	padding:4px 4px 4px 20px;
+	border-bottom: 1px solid #999;
+	}
+		
+.subnav li a:hover, .subnav li a:active {
+	background: #CCC;
+	text-decoration:none!important;
+	}
+
+#sidelist a:link, #sidelist a:active, #sidelist a:visited {text-decoration:none;}
+#sidelist a:hover {text-decoration:underline;}
+#sidelist .children li a, #sidelist .children li a:visited {
+	padding:2px 2px 2px 0px;
+	border:0;
+	background:#F4F4EC;
+	color: #666;
+	}
+#sidelist .children li a:hover, #sidelist .children li a:active	{
+	color:#000;
+	text-decoration:none!important;
+	}
+
+/* Links in unordered lists */
+.bullets li a { text-decoration:none!important;	}
+.bullets li a:hover { text-decoration:underline!important;	}
+
+/* How tags appear */
+.tags a {text-decoration:none;}
+.tags a:hover {text-decoration:underline;}
+
+/* Links within comments metadata (date, Author etc.) */
+.commentmetadata a:link, .commentmetadata a:active, .commentmetadata a:visited  {text-decoration:none;}
+.commentmetadata a:hover {text-decoration:underline;}
+
+/* Links in the footer */
+#footer a {text-decoration: none;} 
+#footer a:hover	{text-decoration: underline;}
+
+
+
+/******************************************
+*   Images                         
+******************************************/
+
+/*** default image behaviour ***/
+img {
+    padding: 10px;
+}
+
+
+/*** WordPress specific image classes ***/
+.aligncenter, div.aligncenter {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.alignleft {
+float: left;
+margin: 4px 15px 5px 0;
+}
+
+.alignright {
+float: right;
+}
+
+.wp-caption {
+   text-align: center;
+   background-color: #fff;
+   margin-top:5px;
+   margin-right: 15px;
+   margin-bottom:0px;
+}
+
+.wp-caption img{
+   padding:2px;
+   border:1px solid #999;
+}
+
+.wp-caption img:hover{
+   border:1px solid #333;
+}
+
+.wp-caption p.wp-caption-text {
+   color:#666;
+   font-size: 10px;
+   line-height: 12px;
+   padding: 7px 4px 2px 5px!important;
+   margin: 0!important;
+}
+
+
+		
+/******************************************
+*   General Structure                         
+******************************************/
+
+#page { /*the main container*/
+	width:980px;
+	margin:0 auto;
+	font-size:1em;
+	background:#FFF;
+	padding: 10px 8px 35px 12px;
+	border:1px solid #999999;
+	}
+
+#branding {/*where the logo sits*/
+	width:625px;
+	padding-bottom:15px;
+	}
+
+.left {
+	float:left;
+	}
+
+.right {
+	float:right;
+	background: url("images/headerSearch.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    bottom: -5px;
+    height: 40px;
+    right: 10px;
+    width: 328px;
+	}
+	
+#searchsubmit {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 29px;
+    overflow: hidden;
+    right: 0;
+    text-transform: capitalize;
+    top: 0;
+    width: 80px;
+}
+
+/*#searchform input {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: 0 0 0 #FFFFFF;
+    display: block;
+}*/
+
+#s {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: 0 0 0 #FFFFFF;
+    display: block;
+    float: left;
+    height: 28px;
+    width: 240px;
+}
+
+input.submit {
+    cursor: pointer;
+}
+
+#sidecontainer {/*you guessed it: itÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´s the sidecontainer container*/
+	width: 310px;
+	float:right;
+	}
+
+#leftcol {/*the left homepage column carrying the "Featured Article" section*/
+	width:318px;
+	border-right:1px solid #b6b6b6;
+	padding-right:10px;
+	}
+
+#leftcol, #rightcol {
+	float:left
+}	
+	
+#rightcol {/*actually the column in the middle of the homepage (if the right column is the sidecontainer)*/
+	width:318px;
+	padding-left:10px;
+	}
+
+.hgroup h2 {
+    color: #0E4C6B;
+    font-family: 'LatoBlack',Arial,Helvetica;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 2px;
+    padding-bottom: 10px;
+	padding-left:8px;
+}
+
+.cms .col-1 {
+    height: 50px;
+    width: 50px;
+}
+
+.cms .col {
+    float: left;
+}
+
+.cms .parents li {
+    background: url("images/dotted-line.gif") no-repeat scroll 0 bottom transparent;
+    overflow: hidden;
+    padding: 0 0 10px;
+}
+
+.cms div.avatar {
+    background: url("images/avatar.jpg") no-repeat scroll 4px 4px transparent;
+    height: 54px;
+    padding: 4px;
+    width: 42px;
+}
+
+a {
+    color: #14A1C4;
+    text-decoration: none;
+}
+
+.cms .col-2 {
+    padding: 0 10px 0 10px;
+    width: 381px;
+}
+
+.cms .title {
+    margin: 0 0 4px;
+}
+
+.cms.home_questions .title a {
+    font-size: 18px;
+}
+
+.cms .title a {
+    font-weight: bold;
+}
+
+.cms .author_name {
+    font-size: 12px;
+    margin: 0 0 4px;
+}
+
+.cms .author_name span {
+    color: #01A0E6;
+}
+
+.cms .col-3 {
+    width: 162px;
+}
+
+.cms .answer_link a {
+    background: url("images/btn-answerQuestion-gray.png") repeat scroll 0 0 transparent;
+    display: block;
+    height: 55px;
+    margin: 0 0 8px;
+    position: relative;
+    text-indent: -999em;
+    width: 162px;
+}
+
+.home_questions {clear:left; text-align: justify;}
+
+a {
+    color: #14A1C4;
+    text-decoration: none;
+}
+		
+/******************************************
+*   Sidebar                         
+******************************************/
+
+.subnav li {/*.subnav is mainly the categories list*/
+	list-style:none;
+	}
+
+#sidelist li {
+	list-style:none;
+	}
+	
+.bullets li {
+	margin:0 0 5px 15px;
+	list-style:square;
+	}
+	
+#sidelist .bullets li {
+	list-style:square;
+	margin-bottom:5px;
+	margin-left:22px;
+	}
+
+#sidelist .children {
+	background:#F4F4EC;
+	}
+
+#sidelist .children li {
+	background: #F4F4EC;
+	list-style: none;
+	margin-left:15px;
+	padding-left:15px;
+	border-bottom:1px solid #fff;
+	}
+
+#sidelist .feed li{
+	margin-bottom:5px;
+	padding-left:20px;
+	background:url(images/rss.gif) no-repeat;
+	}
+
+	
+/******************************************
+*   Headlines                         
+******************************************/
+
+.blogtitle, .blogtitle a {
+	color: #333;
+	font-size: 22px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	padding: 20px 0px 0px 0px;
+	
+	}
+
+h1 {
+	color: #840000;
+	font-size: 1.8em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	margin: 0px 10px 0px 0px;
+	padding: 20px 0px 0px 10px;
+	}
+	
+h2 {
+	color: #660066;
+	font: 1.8em Verdana, Geneva, sans-serif;
+	padding-bottom:8px;
+	margin: 20px 0;
+	}
+
+h3 {
+	font-size: 12px;
+	text-transform:uppercase;
+	letter-spacing: normal;
+	margin-bottom:4px;
+	font-weight:bold;
+	}
+
+h3#respond {
+	font-size:1.1em;
+	border-top:1px solid #666;
+	margin-top:25px;
+	padding-top:20px
+	}
+
+h3#comments {
+	margin-top:32px
+	}
+
+h3 a:link, h3 a:visited {
+	color: #01A0E6;
+	}
+
+h4 {
+	font-size:1.2em;
+	margin-bottom:6px;
+	}
+	
+#leftcol h3, #rightcol h3 {margin-left:16px; color: #01A0E6;}	
+	
+/******************************************
+*   Content                        
+******************************************/
+
+#content {
+	width:670px;
+	float:left
+	}
+	
+.description {
+	font-size: 1.3em;
+	font-weight: bold; 
+	color:#999;
+	}
+
+/* Featured Articles formatting "leftcol" */
+
+.article {
+	padding:10px;
+	font-size: 11px;
+	text-align: justify;
+	}
+
+.article p, #rightcol p { margin:0;	}
+
+#leftcol img, #rightcol img {
+	padding:1px;
+	border:1px solid #999;
+	}
+
+#leftcol .article {	margin-bottom: 15px; }
+
+/* Formating of the Leadstory stuff in the tabbed section */
+			
+#leadpic {
+	float:left;
+	margin: 0 18px 8px 0;
+	}
+
+.title, a.title  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:1.1em;
+	font-weight:bold;
+	color: #01A0E6;
+	letter-spacing:normal;
+	}
+		
+#lead p {
+	margin-bottom:10px;
+	}
+
+.read-on a { /* This can be used to format the "[...]" link in the lead story */
+	color:#01A0E6;!important;
+	text-decoration:none;
+	}
+	
+.read-on a:hover {
+	text-decoration:underline;
+	}
+
+/* Formating of "rightcol" which is the column in the homepage middle ;-) */
+
+#rightcol img {
+	float:left;
+	margin:3px 10px 4px 0;
+	}
+
+#leftcol img {
+	margin-bottom: 4px;
+	display:block
+	}
+	
+#rightcol .clearfloat {
+	border-bottom:1px solid #999;
+	padding:12px 0;
+	}	
+	
+
+
+/* Post Formatting */
+
+.entry {
+	padding-bottom:28px;
+	text-align:justify;
+	}
+
+.post blockquote {
+	color:#666;
+	background:#F4F4EC;
+	padding:6px 14px;
+	margin:18px 35px;
+	border-right:1px solid #DDD;
+	border-bottom:1px solid #DDD;
+	}	
+
+.post ul li {
+	list-style:square;
+	margin-bottom:5px;
+	margin-left:42px;
+	}
+
+.post ol li {
+	margin-bottom:5px;
+	
+	margin-left:48px;
+	}
+	
+#tags {
+	padding:3px;
+	border-bottom:1px solid #DDD;
+	border-top:1px solid #DDD;	
+	}	
+	
+.postmetadata {
+	font-size:0.9em;
+	margin:0 0 10px 0;
+	padding:5px 10px;
+	background:#F4F4EC;
+	border-top:1px solid #E6E3D3;	
+	border-bottom:1px solid #E6E3D3;	
+	}
+				
+
+/* Form Elements */
+
+select {
+	background:#f2f2f2;
+	border:1px solid #9c9c9c;
+	width:100%
+	}
+	
+
+#searchform { 	padding:2px 5px 0 0; 	}
+
+.button {
+	padding: 1px;
+	background:#333;
+	color:#fff;
+	border:none;
+	}
+
+.button:hover {
+	background:#666;
+	color:#FFF;
+	text-decoration:none
+	}
+
+#commentform input {
+	width: 170px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	margin-top:5px;
+	}
+
+
+
+/* Comments*/
+
+.commentlist {
+	padding-left:30px;
+	}
+	
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 8px 15px 10px 15px;
+	background:#F4F4EC;
+	border:1px solid #E6E3D3;
+	}
+
+.commentlist blockquote {
+	color:#666;
+	background:#fff;
+	padding:6px 14px;
+	margin:18px 35px;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	}	
+
+#commentform small {
+	background:#FFF;
+	font-weight:bold;
+	padding:0;
+	}
+	
+.commentmetadata {
+	display: block;
+	}
+
+.commentlist small {
+	background:#fff;
+	border:1px solid #E6E3D3;
+	}
+
+
+
+/* Float Properties*/
+
+.clearfloat:after {
+	display:block;
+	visibility:hidden;
+	clear:both;
+	height:0;
+	content:".";
+	}
+	
+.clearfloat {
+	display:inline-block;
+	}	
+
+.clearfloat {
+	display:block;
+	}
+	
+	
+/******************************************
+*   Footer                        
+******************************************/
+
+#footer {
+	margin: 0 auto;
+	width: 900px;
+	font-size:0.9em;
+	text-align:center;
+	padding-top:15px;
+	color:#01A0E6;
+	}
+
+#footer a {
+	color:#01A0E6;
+	}
+
+.sidecontainer_lynsay {
+	background-image: url(images/gradient.jpg);
+	background-repeat:repeat-x;
+	padding-top: 33px;
+	
+}
+
+.article_divider {
+	width: 222px;
+	height: 5px;
+	background-image:url(images/stroke.gif);
+	background-repeat:repeat-x;
+	margin-left: 15px;
+	
+}
+ 
+.stroke_v {
+	width: 10px;
+	height: 500px;
+	background-image:url(images/stroke_vert.gif);
+	background-repeat: repeat-y;
+	float:left;
+	margin-top: 20px;
+}
+
+.spacer{
+    width:1px; 
+    float:left; 
+    height:7em; 
+    clear:both;
+}
+
+#leftcol .article, #rightcol .article {
+    /* background: url(images/bg_article.jpg) repeat-x scroll 0 0 #00376C; */
+    background-color: #E8EEE7;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+	margin-bottom: 15px;
+	height: 180px;
+    overflow-y: scroll;
+}
+
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none!important;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .ui-tabs-nav {
+        display: none!important;
+    }
+}
+
+/* Skin */
+#container-4 { /* the whole container with all elements of the tabbed section */
+	margin: 10px 0!important;
+	height:233px!important;
+	 background: url("images/have_question.jpg") no-repeat scroll center top transparent;
+}
+
+.ui-tabs-panel { /* the main content-section of the tabbed area NOT the tabs themselfes */
+	width:580px!important;
+    padding: 15px!important;
+	border-top: 1px solid #ccc!important;
+	border-left: 1px solid #ccc!important;
+	border-right: 2px solid #999!important;
+	border-bottom: 2px solid #999!important;
+	background: url(images/bg_leadarticle.jpg) repeat-x #EBEBEB!important; /* declare background color for container to avoid distorted fonts in IE while fading */
+}
+
+/* the "fragments" which are the single tab areas. each tab is defined by a fragment. 
+you can add as many as you want following the scheme "#fragment-x" */
+#fragment-1, #fragment-2, #fragment-3, #fragment-4, #fragment-5, #fragment-6, #fragment-7, #fragment-8, #fragment-9 {
+	height:300px!important; /* defines a static height to the tabed section and avoids "jumping" - part 2 of 2 */
+}
+
+.ui-tabs-panel .title { /* for the headlines in the tabbed section */
+	font:1.8em Verdana, Geneva, sans-serif; font-weight:bold;!important;
+	line-height:100%!important;
+	display:block!important;
+	padding-bottom:7px!important;
+	color: #660066!important;
+	text-transform:none!important;
+	letter-spacing:normal!important;
+
+}
+
+.ui-tabs-nav { /* the whole area of the tabs navigation above the tabbed-content */
+    list-style:none!important;
+    margin:0px!important;
+    padding:0px!important;
+}
+
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block!important;
+    clear: both!important;
+    content: " "!important;
+}
+.ui-tabs-nav li {
+    float: left!important;
+    margin:0 1px 0 0!important;
+    min-width: 85px!important; /* be nice to Opera */
+}
+.ui-tabs-nav .ui-tabs {
+    display:block!important;
+    padding:5px!important;
+    background:#E6E3D3!important;
+	margin:1px 0 0 0!important; /* position: relative makes opacity fail for disabled tab in IE */
+	position: relative!important;
+    top:1px!important;
+    z-index:2!important;
+    color: #333!important;
+    font-weight:bold!important;
+    line-height:1.2!important;
+    text-align:center!important;
+    text-decoration:none!important;
+	border:1px solid #ccc!important;
+    white-space:nowrap!important; /* required in IE 6 */    
+    outline:0!important; /* prevent dotted border in Firefox */
+}
+
+
+.ui-tabs-nav .ui-tabs:hover { /* hereÃ‚Â´s to define the hover effect of the tabs */
+    background:#333!important;
+	color:#fff!important;
+}
+
+
+.ui-tabs-selected .ui-tabs { /* the effects of the currently selected tab */
+	background-color:#fff!important;
+    color:#333!important;
+	border-bottom:1px solid #fff!important;
+}
+
+.ui-tabs-nav .ui-tabs-selected .ui-tabs, 
+.ui-tabs-nav .ui-tabs a:hover, 
+.ui-tabs-nav .ui-tabs a:active {
+    background-position: 100% -150px!important;
+}
+
+.ui-tabs-nav .ui-tabs, 
+.ui-tabs-nav .ui-tabs-disabled .ui-tabs a:hover, 
+.ui-tabs-nav .ui-tabs-disabled .ui-tabs a:active {
+    background-position: 100% -100px!important;
+}
+
+.ui-tabs-nav .ui-tabs-selected .ui-tabs a:link, 
+.ui-tabs-nav .ui-tabs-selected .ui-tabs a:visited, 
+.ui-tabs-nav .ui-tabs-disabled .ui-tabs a:link, 
+.ui-tabs-nav .ui-tabs-disabled .ui-tabs a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text!important;
+}
+
+.ui-tabs-nav .ui-tabs a:hover, 
+.ui-tabs-nav .ui-tabs a:active,
+.ui-tabs-nav .ui-tabs-unselect .ui-tabs a:hover, 
+.ui-tabs-nav .ui-tabs-unselect .ui-tabs a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer!important; 
+	background-color:#333!important;
+	color:#fff!important;
+}
+
+.ui-tabs-disabled {
+    opacity: .4!important;
+    filter: alpha(opacity=40)!important;
+}
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block!important;
+}
+*:first-child+html .ui-tabs-nav  { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block!important;
+}
+
+/******************************************
+*   Main or page navigation styles                       
+******************************************/
+
+
+/*Main Navbar */
+
+#nav {
+	background:#666;
+	font-size:1em;
+	}
+	
+#nav, #nav ul {
+	 background: url("images/menuBack.png") repeat-x scroll 0 0 transparent;
+    height: 25px;
+    left: 0;
+    line-height: 23px;
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 3px 8px;
+    width: 625px;
+	}
+
+#nav a, #nav a:hover {
+	display: block;
+	text-decoration: none;
+	border:none;
+	}
+
+#nav li {
+	float: left;
+	list-style:none;
+	border-right:1px dotted #fff;
+	padding: 3px;
+	}
+
+#nav a, #nav a:visited {
+	display:block;
+	font-weight:bold;
+	color: #eee;
+	padding:0px 12px;
+	}
+
+#nav a:hover, #nav a:active {
+	background:#019AE6;
+	text-decoration:none;
+	}	
+
+.current_page_item	a, #home .on  {color: #333333 !important;}
+	
+	
+	
+/* Dropdown Menus for child pages */		
+
+#nav li ul {/*first level dropdown*/
+	position: absolute;
+	z-index: 10;
+	left: -999em;
+	height: auto;
+	width: 174px;
+	border-bottom: 1px solid #666;
+	}
+	
+#nav li ul ul {/*second level dropdown*/
+	margin: -2em 0 0 172px;
+	}
+
+#nav li:hover ul ul, #nav li.sfhover ul ul {
+	left: -999em;
+	}
+
+#nav li li {
+	width: 172px;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	background:#999;
+	}
+
+#nav li li a, #nav li li a:visited {
+	font-weight:normal;
+	font-size:0.9em;
+	color:#FFF;
+	}
+
+#nav li li a:hover, #nav li li a:active {background:#840000;}	
+	
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul {left: auto;}
+
+
+.article h1, .article h2, .article h3, .article h4, .article h5{
+    color: #14A1C4;
+}
+
+
+a.main:hover {background:none;}
+
+
+a.main:hover {background:none;}
+
+.URLtop>img{display:none}
+.etf {
+    color: #333333;
+    display: block;
+    clear: left;
+}
+.etf > span {
+    float: left;
+    padding-left: 15px;
+    width: 90px;
+}
+
+/* Categories */
+.category {
+	background:none repeat scroll 0 0 #FFFFFF;
+	border-top:1px dashed #ccc;
+	float:left;
+	margin:0;
+	padding:5px 10px 10px;
+	width:212px;
+}
+
+#cat-1, #cat-3, #cat-5 {
+	border-top:1px dashed #ccc;
+}
+#middle {
+	background:none repeat scroll 0 0 #FFFFFF;
+	float:right;
+	margin:10px 0;
+	padding:10px;
+	width:960px;
+}
+
+.clearfloat {
+	display:block;
+}
+.cat_title2 {
+	font-size:1.2em;
+	letter-spacing:-0.05em;
+	margin:0;
+	text-transform:lowercase;
+}
+
+#cat-2, #cat-4 {
+	border-top:1px dashed #ccc;
+}
+#leftcol {
+	border-right:0 solid #B6B6B6!important;
+}
+
+.bottom_title{
+    color: #2E94C8!important;
+    text-decoration: none!important;
+    font-family: Verdana,Geneva,sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.blogtitle, #popular_topic, #featured_article, #recent_question, #related_topics {height:45px;}
+
+.blogtitle a{
+	font-family: 'YukarimobileRegular'; 
+	padding: 20px 18px 0; 
+	font-size: 36px; 
+	text-transform:capitalize;
+}
+
+/* Ads */
+#results {margin-left:35px}
+
+.ads{
+    width: 600px!important; 
+    float: left;
+    padding:5px 5px; 
+    clear: both;
+}
+a.URLtop {
+    color: #00356B;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration:none !important;
+}
+a.URLtext {
+    color:#000000;
+    text-decoration:none!important;
+}
+a.URLbottom {
+    color:#167C3A !important; 
+    text-decoration:underline!important;
+}
+
+		
+/* Index php */
+#popular_topic{background:url('images/popular_topics.png') no-repeat;}
+#featured_article{background:url('images/featured_articles.png') no-repeat; margin-bottom: 8px;}
+#recent_question{background:url('images/recent_question.png') no-repeat;}
+#related_topics {background:url('images/related_topics.png') no-repeat;}
+.blogtitle{
+	background:url('images/logo2a.png') no-repeat;
+}
+
+.cms .parents li {
+    padding: 20px 0 30px!important;
+}
+
+#c4_left {width:430px; height:240px; float:left;}
+#c4_right {width:230px; height:240px; cursor:pointer; float:left;}
+.rul{line-height: 25px; padding-left: 18px;}
+
+
+/* result */
+#comment{width:620px; height: 250px;}
+#featured{cursor:pointer;}
+
+.category a {
+    background:none repeat scroll 0 0 transparent;
+    color:#333333;
+    display:block;
+}
+
+#full_article { 
+    padding: 3px 8px;
+    text-align: justify; 
+    display:none;
+}
+#article_summary{ 
+    background: url('images/totd.png') no-repeat scroll 4px 3px transparent;  
+    padding: 0 8px 3px 80px;
+    text-align: justify;   
+}
+
+.cms.home_questions .title a {
+    font-size: 14px!important;
+    color: #14A1C4!important;
+    text-decoration: none;
+}
+

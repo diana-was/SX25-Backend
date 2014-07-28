@@ -1,0 +1,39 @@
+.p1, .p2, .p3, .p4, .p5{float:left; width:160px;}
+.page{clear:both; padding:10px; margin-left:20px}
+.save_page_button{margin-right:15px;}
+.spacer{height:20px; width: 90%; margin:10px; border-bottom:1px dashed #333; clear: both;}
+.fs{margin-left:45px}
+.opacity{
+	opacity: .5;
+	filter: alpha(opacity=50); 	
+}
+.button{margin:0 10px;}
+
+.msg{color:red; padding:15px;}
+
+#preview_button, #undo_button{float:right; margin-right:20px;}
+
+.etf {
+    color: #333333;
+    display: block;
+	width:430px;
+}
+
+.etf > span {
+    float: left;
+    padding-left: 15px;
+    width: 190px;
+}
+#background_list ul{
+	display:block; 
+	clear: left;
+    margin-left: 180px;
+}
+#background_list ul li{	padding-top: 15px;}
+#remove_background{margin-left:15px}
+#header_height{width:40px}
+#tc_button, #tc_button1, #tc_button2, #css_button{margin:auto 15px auto 46px; width:25px}
+
+#combination, #css_content{ height:120px; background:#fff; padding-top:20px}
+#theme{ height:330px; background:#fff; padding-top:20px}
+#edit_template{height:1360px; background:#fff; padding-top:20px}

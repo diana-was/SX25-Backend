@@ -1,0 +1,329 @@
+/* HTML Tag Styles */
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background:#D6D9E1;
+	margin:0px auto;
+	padding:0px;
+}
+thead {
+	width:100%;
+	text-align:center;
+}
+/* Header Styles */
+#summary {
+	text-align:right;
+	padding:0px 10px 0px 0px;
+	color:#FFF;
+}
+#summary a:link {
+	color:#FFF;
+}
+#summary a:visited {
+	color:#FFF;
+}
+#summary a:hover {
+	color:#DDD;
+}
+
+#navInt, #navTr {
+	text-align:center;
+	background:#000;
+	height:24px;
+	color:#FFF;
+	font-weight:bold;
+	padding:2px auto 1px auto;
+}
+#navTr .explain {
+	font-weight:normal;
+	font-size: 6px;
+	opacity: 0.5;
+}
+#navInt a{
+	color:#FFF;
+	text-decoration:none;
+	padding:4px 30px;
+}
+#navInt a:hover{
+	background:url(../images/nav_bg_roll.jpg) repeat-y;
+	background-position:center;
+	text-decoration:none;
+}
+#navInt .on{
+	background:url(../images/nav_bg_on.jpg) repeat-y;
+	background-position:center;
+	text-decoration:none;
+}
+#navInt #onState{
+	color:#227EBF;
+}
+#navInt #onState a{
+	color:#227EBF;
+	background:url(../images/nav_bg_on.jpg) repeat-y;
+	background-position:center;
+	text-decoration:none;
+}
+#navInt #onState a:hover{
+	color:#227EBF;
+	background:url(../images/nav_bg_on.jpg) repeat-y;
+	background-position:center;
+	text-decoration:none;
+}
+#subnav {
+	background:url(../images/bg_subnav.jpg) repeat-x;
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	height:18px;
+	text-align:center;
+	font-weight:bold;
+	color:#2780C2;
+}
+#subnav a{
+	color:#ACF8F1;
+	text-decoration:none;
+	padding:2px 20px 2px 20px;
+}
+#subnav a:hover{
+	text-decoration:underline;
+}
+#subnav .menu{
+	color:#035ab0;
+	text-decoration:none;
+	text-align:center;
+}
+/* Options styles */
+.systemMessage
+{
+	font-style: italic;
+}
+.systemMessage b, strong
+{
+	font-style: normal;
+	font-weight: 900;
+	font-size: .9em;
+}
+/* MAIN BODY STYLES */
+#main {
+	padding:5px 10px 5px 10px;
+}
+/* ajax specific */
+.relDiv
+{
+	width: 300px;
+	min-height:50px;
+	margin-bottom:15px;
+		
+}
+.remDiv
+{
+	min-height:50px;
+	width: 300px;
+	clear: both;
+	margin-bottom:15px;
+	font-size: 12px;
+	padding: 1px;
+}
+div.clear
+{
+	clear:both;
+	height;6px;
+}
+.hClass
+{
+	background-color:#dfe9bc;
+}
+.listitem
+{
+	display: block;
+	padding-left: 4px;
+	padding-right: 1px;
+	float: left;
+	width: 145px;
+	cursor: move;
+}
+.listitem:hover
+{
+	color: #86B100;
+}
+.tablePop input.textInput
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #227EBF;
+	background-color: #e9f5b8;
+	font-size:.95em;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.tablePop .infoText
+{
+	font-size:.85em;
+	font-style: italic;
+}
+.tablePop .infoTextErr
+{
+	color: #ff0000;
+	font-size:.85em;
+	font-style: italic;
+}
+.tablePop input.btn
+{
+	color:#050;
+	font-family:'trebuchet ms',helvetica,sans-serif;
+	font-size:.85em;
+	font-weight:900;
+	background-color:#e9f5b8;
+	border:1px solid;
+	border-top-color:#227EBF;
+	border-left-color:#227EBF;
+	border-right-color:#363333;
+	border-bottom-color:#363333;
+}
+/* working and waiting control the lightbox style page layover */
+.workingEl
+{
+	float: left; 
+	clear: both;
+	width:100%; 
+	height:101%; 
+	background-color:#000000; 
+	z-index:10000 !important; 
+	top:0; left:0; 
+	position: absolute; 
+	filter: alpha(opacity=45);
+	-moz-opacity: .45;
+	opacity: .45;
+}
+.waiting
+{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 1.3em;
+	display: block;
+	background-color: #EEEEEE;
+	position: absolute;
+	z-index:10001 !important; 
+	padding-left:25px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom:5px;
+	margin-left: 40%;
+	margin-top: 20%;
+	height: 20px;
+	width: 150px;
+	border:1px solid;
+	border-top-color:#227EBF;
+	border-left-color:#227EBF;
+	border-right-color:#363333;
+	border-bottom-color:#363333;	
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+}
+#domainSwitch
+{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 1.1em;
+	display: block;
+	vertical-align: middle;
+	overflow: visible;
+}
+.selectors {
+	font-family:'trebuchet ms',helvetica,sans-serif;
+	background-color: #92ba0a ;
+	border-color: #000000 ;
+	border-style: solid;
+	border-width: 1px;
+	margin-right: 4px;
+	letter-spacing: .03em;
+}
+.domBtn {
+	color:#050;
+	font-family:'trebuchet ms',helvetica,sans-serif;
+	font-size:.85em;
+	font-weight:900;
+	background-color:#e9f5b8;
+	border:1px solid;
+	border-top-color:#227EBF;
+	border-left-color:#227EBF;
+	border-right-color:#363333;
+	border-bottom-color:#363333;
+}
+.button {
+	-moz-box-shadow:inset -4px 0px -1px -5px #dcecfb;
+	-webkit-box-shadow:inset -4px 0px -1px -5px #dcecfb;
+	box-shadow:inset -4px 0px -1px -5px #dcecfb;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea) );
+	background:-moz-linear-gradient( center top, #bddbfa 5%, #80b5ea 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea');
+	background-color:#bddbfa;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#000000;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 20px;
+	margin-top: 10px;
+	text-decoration:none;
+	text-shadow:1px -1px 0px #cccccc;
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa) );
+	background:-moz-linear-gradient( center top, #80b5ea 5%, #bddbfa 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa');
+	background-color:#80b5ea;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+.customLabel{ 
+	color: #000000; 
+	/*background-color: #d0df95;*/
+	background-color: #E9F5B8;
+}
+.customOpt{ 
+	color: #000000; 
+	background-color: #E9F5B8;
+}
+
+
+table.whiteBlue {
+	border-width: 1px;
+	border-spacing: 1px;
+	border-style: outset;
+	border-color: white;
+	border-collapse: separate;
+	background-color: white;
+}
+table.whiteBlue th {
+	color: white;
+	border-width: thin;
+	padding: 5px;
+	border-style: outset;
+	border-color: gray;
+	background-color: #227EBF;
+	-moz-border-radius: ;
+}
+table.whiteBlue td {
+	border-width: thin;
+	padding: 5px;
+	border-style: outset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius: ;
+}
+
+td.col1 {
+	color: white;
+	background-color: #227EBF !important;
+	font-weight:bold;
+}
+
+#missList{list-style: none outside none;}
+#missList li{color:red; float:left; clear:both}

@@ -1,0 +1,609 @@
+/*
+Theme Name: Stunning Silence
+Theme URI: http://brandonwang.org/wp/stsi/
+Description: Clean theme that emits an air of stunning silence. Simple colors, elegant designs, and visual flourishes come together with multiple color schemes, a lengthy options page, Twitter integration in the header, customizable link colors, navigation background editing, custom footer text... all without updating a single line of code. Designed by Brandon Wang.
+Author: Brandon Wang
+Author URI: http://brandonwang.org/
+version: 1.2.4
+Tags: white, blue, pink, green, light, two-columns, fixed-width, theme-options, custom-colors
+*/
+
+/* ----- BASICS */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	/* 1 em = 10px, 1.2 em = 12px, so on */
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 850px;
+	margin: 0 auto;
+}
+
+#content {
+	float: left;
+	width: 600px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sidebar {
+	float: right;
+	width: 200px;
+	text-align:left;
+}
+
+/* ----- NAVIGATION */
+
+#nav {
+	width: 100%;
+	height: 22px;
+	font-size: 1.4em;
+	background-color: #DDD;
+	position: fixed;
+	top: 0px;
+	padding-top: 5px;
+	text-transform: lowercase;
+	color: #AAA;
+	border-top: 10px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	z-index: 99;
+}
+
+#nav ul {
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+#nav ul li {
+	display: inline;
+	margin-right: 10px;
+}
+
+#nav ul li a {
+	color: #555;
+	text-decoration: none;
+}
+
+#nav ul li a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+/* ----- HEADER */
+
+#header {
+	width: 100%;
+	height: 90px;
+	margin-top: 30px;
+	padding-top: 20px;
+}
+
+
+#header h1 {
+	padding: 0;
+	margin: 0;
+	text-tranform: lowercase;
+	font-weight: 100;
+	font-size: 3em;
+	display: inline;
+	padding-left: 30px;
+}
+	
+#header h1 a {
+	text-decoration: none;
+	color: inherit;
+	padding: 3px;
+}
+
+#header h1 a:hover {
+	background: #EEE;
+	padding: 2px;
+	border: 1px solid #FFF;
+}
+
+#header h2 {
+	color: #999;
+	margin-left: 20px;
+	font-size: 1.6em;
+	font-weight: 100;
+	display: inline;
+	text-transform: lowercase;
+	display: block;
+}
+
+#header #blogtitle {
+	width: 525px;
+	float: left;
+	display: block;
+}
+
+#header #twitter {
+	width: 250px;
+	float: right;
+	display: block;
+	margin-top: 0px;
+	padding-right: 22px;
+	background: url(images/twitter.png) no-repeat top right;
+	text-align: right;
+}
+
+#header #twitter #twitter_update_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+#header #twitter a {
+	text-decoration: none;
+	color: #666;
+}
+
+#header #twitter a:hover {
+	text-decoration: underline;
+}
+
+#rss {
+	background: url(images/rss.png) no-repeat;
+	height: 31px;
+	width: 40px;
+	position: absolute;
+	margin-top: 69px;
+}
+
+#rss a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#rss:hover {
+	width: 112px;
+}
+
+/* ----- CONTENT */
+
+.pagetitle {
+	font-weight: 100;
+	font-size: 2em;
+	text-transform: lowercase;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 30px;
+}
+
+.post {
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.post:last-child {
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+
+.post h2 {
+	font-size: 1em;
+	font-weight: 100;
+	color: #000;
+	padding: 0;
+}
+
+.post h2 a {
+	color: #666;
+	text-decoration: none;
+	border-bottom: 1px dashed #DDD;
+	padding: 3px;
+}
+
+.post h2 a:hover {
+	color: #444;
+	border-bottom: 1px solid #DDD;
+	background: #EEE;
+}
+
+.post h1 {
+	font-size: 2.5em;
+	color: #666;
+	border-bottom: 1px dashed #DDD;
+	text-transform:capitalize;
+}
+
+.post h3 {
+	font-size: 1.5em;
+}
+
+.post h4 {
+	font-size: 1.6em;
+}
+
+.post h5 {
+	font-size: 1.3em;
+}
+
+.post h6 {
+	font-size: 1em;
+}
+
+.post p, .post ul, .post ol {
+	font-size: 1.1em;
+	line-height: 1.8em;
+	color: #333;
+}
+
+.post a {
+	color: #39F;
+}
+
+.post a:hover {
+	text-decoration: none;
+}
+
+.post .beforemeta, .post .aftermeta {
+	font-size: 1.2em;
+	color: #AAA;
+	padding: 0;
+	margin: 0;
+}
+
+.post .aftermeta {
+	text-transform: lowercase;
+}
+
+.post .aftermeta a {
+	color: #888;
+	text-decoration: none;
+}
+
+.post .aftermeta a:hover {
+	text-decoration: underline;
+	color: #555;
+}
+
+/* ----- COMMENTS */
+
+#commentform {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	}
+	
+#commentform p {
+	color: #333;
+	}
+	
+#commentform a {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px dotted #465D71;
+	line-height: 1.4em;
+}
+	
+#commentform h3{
+	margin:0;
+	padding:0;
+	}
+	
+#comment {
+	width: 80%;
+	font-size: 1.3em;
+	line-height: 1.8em;
+}
+
+#author, #email, #url, #comment, #submit{
+	background: #fff;
+	font-size: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 5px 5px 0 0;
+	padding: 5px;
+	border: 1px solid #C9D1D4;
+	}
+
+#comment {
+	width: 590px;
+}
+	
+#submit {
+	margin:5px 5px 0 0;
+	float: right;
+}
+
+#comments{margin:0; padding:0}
+	
+ol.commentlist {list-style-type: none; margin:0; padding:0;}
+
+.avatar{float:left; margin:0 12px 0 0;}
+
+ol.commentlist li {
+	background: #fff;
+	margin:10px 0;
+	padding:5px 0 5px 10px;
+	list-style-type:none;
+	}
+
+ol.commentlist li.alt {background: #eee;}
+ol.commentlist li p {
+	margin: 6px 0 6px 0;
+	padding: 0 12px 0 0;
+	font-size: 1.3em;
+	line-height: 1.8em;
+}
+
+ol.commentlist a {color:#000;}
+
+cite {
+	font-family: arial, verdana, tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: normal;
+	}
+	
+cite a{color: #000; text-decoration: none; border-bottom: 1px dotted #465D71;}
+
+/* ----- SIDEBAR */
+
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#sidebar p {
+	line-height: 1.8em;
+	font-size: 1.2em;
+}
+
+#sidebar ul li {
+	padding: 0;
+	margin: 0 0 30px 0;
+}
+
+#sidebar ul ul li {
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 1.8em;
+	margin: 0;
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #EEE;
+}
+
+#sidebar ul ul ul li {
+	padding: 0;
+	margin: 0 0 0 10px;
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #EEE;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+#sidebar h2 {
+	font-weight: 100;
+	font-size: 1.8em;
+	color: #555;
+	text-transform: lowercase;
+	border-bottom: 1px solid #DDD;
+}
+
+#sidebar a {
+	color: #555;
+}
+
+#sidebar a:hover {
+	text-decoration: none;
+}
+
+/* ----- MISC */
+
+.navigation {
+	color: #888;
+	font-size: 1.1em;
+	text-transform: lowercase;
+	padding: 5px 7px;
+	background: #DDD;
+	clear: both;
+	height: 17px;
+	margin: 5px 0;
+}
+
+.navigation a {
+	color: #888;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	text-decoration: underline;
+}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+.boldlink {
+	font-weight: bold;
+	color: #888;
+}
+/* ----- COLOR SCHEMES */
+
+/* first of all */
+#sidebar .blurb {width: 190px;padding: 0 5px 5px 5px;}
+#searchform input {width: 180px;padding:4px;}
+
+/* header */
+.bg_blue {background: #bfcfd7  repeat-x bottom;}
+.bg_green {background: #cbe0b4 url(images/headergradgreen.jpg) repeat-x bottom;}
+.bg_minim {background: #dfdfdf url(images/headergradgray.jpg) repeat-x bottom;}
+.bg_light {background: #ffffff url(images/headergradlight.jpg) repeat-x bottom;}
+.bg_pink {background: #ffebf8 url(images/headergradpink.jpg) repeat-x bottom;}
+
+/* search form background */
+#sidebar #blurb_bg_blue {background: #9fb3bc;}
+#sidebar #blurb_bg_green {background: #9abf88;}
+#sidebar #blurb_bg_minim {background: #b3b3b3;}
+#sidebar #blurb_bg_light {background: #dfdfdf;}
+#sidebar #blurb_bg_pink {background: #ffdbf7;}
+
+/* search form actual */
+#searchform #s_bg_blue {border: 1px solid #FFF;background: #C9D1D4;}
+#searchform #s_bg_green {border: 1px solid #FFF;background: #cbe0b4;}
+#searchform #s_bg_minim {border: 1px solid #FFF;background: #dfdfdf;}
+#searchform #s_bg_light {border: 1px solid #AAA;background: #FFFFFF;}
+#searchform #s_bg_pink {border: 1px solid #FFF;background: #ffebf8;}
+
+/* ----- FOOTER */
+
+#footer {
+	background: #999;
+	clear: both;
+	width: 100%;
+	color: #FFF;
+	padding: 0;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+#footer a {
+	color: #FFF;
+}
+
+#footer .container {
+	height: 50px;
+	background-color:#999999;
+}
+
+#footer .container #left {
+	margin-top: 15px;
+	float: left;
+}
+
+#footer .container #right {
+	float: right;
+	margin-right: 100px;
+	margin-top: 15px;
+}
+
+a.URLtop {
+        color:#00E !important;
+        text-decoration:underline !important;
+		background: none !important;
+		font-weight:bold !important;
+}
+
+a.URLbottom { 
+        color:#008000 !important;
+        text-decoration:none !important;
+		background: none !important;
+		font-weight:bold !important;
+		font-size:90% !important;
+}
+
+a.URLtext { 
+        text-decoration:none !important;
+        color:#000 !important;
+		background: none !important;
+		font-weight:bold !important;
+		font-size:90% !important;
+}
+
+.sponsoredresults {
+        background-repeat: no-repeat !important;
+        padding:4px 0px 0px 15px !important;
+        font-size:10px !important; 
+        color:#999 !important; 
+}
+
+#results {
+        margin:0 !important; 
+        background-color:#FFFFFF !important; 
+}
+
+#results p { 
+        margin:5px 0px 10px 0px !important; 
+        width:360px !important; 
+}
+
+.URLtop {
+        font-weight: normal !important;
+        font-size: 12pt !important;
+        text-decoration:underline !important;
+}
+
+.URLbottom { 
+        color:#008000 !important; 
+        text-decoration:none !important; 
+}
+
+.URLtext { 
+        text-decoration:none !important;
+        color:#000 !important;
+}
+
+.entry {
+position:static;
+text-align:justify
+}
+#spacer {
+float:left;
+height:9em;
+width:1px;
+}

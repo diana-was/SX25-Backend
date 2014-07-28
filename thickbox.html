@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>SX2 - NEW</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="/interior.css" rel="stylesheet" type="text/css">
+<link href="/parked.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="thickbox/thickbox.css" type="text/css" media="screen" />
+
+</head>
+<body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script> 
+<script>
+
+function go_back(){
+	$('#edit_landing_page, #edit_result_page, #arrow_bar').hide();
+	$('#main_content').show(500);
+}
+
+function pView(page) {
+	$('#arrow_bar').show(500);
+	if(page=='landing_page'){
+		$('#main_content, #edit_result_page').hide();
+		$('#edit_landing_page').show(500);
+		sth = 0;
+	}
+	if(page=='result_page'){
+		$('#main_content, #edit_landing_page').hide();
+		$('#edit_result_page').show(500);
+		sth = 1;
+	}
+}
+
+function switch_edit(){
+	$('#arrow_bar').show(500);
+	if(sth==1){
+		$('#main_content, #edit_result_page').hide();
+		$('#edit_landing_page').show(500);
+		sth = 0;
+	}
+	else if(sth==0){
+		$('#main_content, #edit_landing_page').hide();
+		$('#edit_result_page').show(300);
+		sth = 1;
+	}
+}
+</script>
+
+
+
+<script language="javascript">
+var start = 1;
+var domain_id = '3447';
+var kws = {land:'Tiles', result:'Tiles',page1:'Tiles',page2:'Tiles',page3:'Tiles',menu1:'Tiles',menu2:'Tiles',menu3:'Tiles'};
+
+$(".pic").click(			  
+  
+  function(){
+	var found = $(this).find("span:last");
+	if (found.length == 0) {
+		var loc = $(this).find('img').attr('id');
+		var name = $(this).find('img').attr('src');
+		name = encodeURIComponent(name.substring(13));
+		var kw = getKeyword(kws, loc);
+		$(this).append('<span class="ui-state-default ui-corner-all" id="EWconsole-blockoptions" ><br /><ul><li style="color:#033e78;"><a class="thickbox" href="edit_image.php?keepThis=true&image_name='+name+'&TB_iframe=true&height=500&width=700" >Edit</a></li><li onclick="from_bing(\''+loc+'\',\'1\')" ><a href="#">More From Bing</a></li> <li onclick="from_google(\''+loc+'\',\'1\')" ><a href="#">More From Google</a></li> <li onclick="upload(\''+loc+'\',\''+kw+'\'); return false;"><a href="#">Upload Image</a></li></ul><div id="'+loc+'_upload_area" style="color:red"></div></span>'); 
+		tb_init('a.thickbox'); //it is in thickbox.js
+	}
+  }
+);
+
+function from_bing(loc, s){
+	if(s=='+')
+		start+=10;
+	else if(s=='-' && start>10){
+		start-=10;
+	}else if(s=='-' && start<10){
+		$("#image_gallery").html('<span style="font-size:12px;">No more images. Please look forward.</span>');
+		return false;
+	}else{
+		start=1;	
+	}
+	var kw = getKeyword(kws, loc);
+	$("#image_gallery").html('<img src="images/loading.gif" style="border:0px;" />');
+	
+	$.getJSON("editImage.php", {action:'loadBingPics', keyword: kw, start:start, location:loc},function(data){
+		  if(null==data || data==''){
+				$("#image_gallery").html('<span style="font-size:12px;">No more images. Please look backward.</span>');
+				return false;  
+		  }
+		  $("#image_gallery").html('');
+		  $("#bwd").html('<img onclick="from_bing(\''+loc+'\',\'-\')" style="background:url(images/ar6.gif); cursor:pointer; border:0px; padding:6px 12px;" />');
+		  $("#fwd").html('<img onclick="from_bing(\''+loc+'\',\'+\')" style="background:url(images/ar5.gif); cursor:pointer; border:0px; padding:6px 12px;" />');
+		  $.each(data, function(key, value) { 					
+  				$("#image_gallery").append("<img src='"+value+"' style='width:120px; height:160px; cursor:pointer;background:#CBE3F5; margin-left:3px; padding:5px;' onclick='set_image(this.src, \""+loc+"\", \""+kw+"\")' />");
+			});		 
+     });
+}
+
+function from_google(loc, s){
+	if(s=='+')
+		start+=10;
+	else if(s=='-' && start>10){
+		start-=10;
+	}else if(s=='-' && start<10){
+		$("#image_gallery").html('<span style="font-size:12px;">No more images. Please look forward.</span>');
+		return false;
+	}else{
+		start=1;	
+	}
+	var kw = getKeyword(kws, loc);
+	$("#image_gallery").html('<img src="images/loading.gif" style="border:0px;" />');
+	
+	$.getJSON("editImage.php", {action:'loadGooglePics', keyword: kw, start:start, location:loc},function(data){
+		  if(null==data || data==''){
+				$("#image_gallery").html('<span style="font-size:12px;">No more images. Please look backward.</span>');
+				return false;  
+		  }
+		  $("#image_gallery").html('');
+		  $("#bwd").html('<img onclick="from_google(\''+loc+'\',\'-\')" style="background:url(images/ar6.gif); cursor:pointer; border:0px; padding:6px 12px;" />');
+		  $("#fwd").html('<img onclick="from_google(\''+loc+'\',\'+\')" style="background:url(images/ar5.gif); cursor:pointer; border:0px; padding:6px 12px;" />');
+		  $.each(data, function(key, value) { 					
+  				$("#image_gallery").append("<img src='"+value+"' style='width:120px; height:160px; cursor:pointer;background:#CBE3F5; margin-left:3px; padding:5px;' onclick='set_image(this.src, \""+loc+"\", \""+kw+"\")' />");
+			});		 
+     });
+}
+
+function set_image(path,loc,kw){
+	var si = confirm('Do you want to set this image as '+loc+'?');
+	if(si){
+		$.get("editImage.php", {action:'setImage', path:path, domain_id:domain_id, keyword: kw, location:loc},function(data){
+          		$("#"+loc).attr('src',path);
+				$("#image_gallery").html('');		  		 
+     		});
+	}
+	return false;
+}
+
+function upload(loc,kw){
+	var addStr = '<form id="upload_image" name="upload_image" action="editImage.php" enctype="multipart/form-data" method="POST" style="color:red;"><input type="file" size="1" name="upimage" /><input type="hidden" name="image_location" value="'+loc+'" /><input type="hidden" name="kw" value="'+kw+'" ><input type="hidden" name="domain_id" value="'+domain_id+'" ><input type="hidden" name="action" value="upload_image" ><button >Go</button></form><br />* Only accept jpg/png/gif.<br /><br />';
+	var addStr2 = "<SCRIPT>$(function(){ var options = {target:'#"+loc+"_upload_area', success:showResponse};  $('#upload_image').submit(function(){$(this).ajaxSubmit(options);return false; }); }); <"+"/"+"SCRIPT>";
+	//beforeSubmit:showRequest,
+	$('#'+loc+'_upload_area').append(addStr+addStr2);
+	return false;
+}
+function after_upload(data){
+	alert(data);	
+}
+function getKeyword(kws, loc){
+	if(loc=='landing_pic'){
+		return kws.land;	
+	}else if(loc=='result_pic'){
+		return kws.result;	
+	}else if(loc=='page_pic_1'){ return kws.page1;	
+	}else if(loc=='page_pic_2'){ return kws.page2;	
+	}else if(loc=='page_pic_3'){ return kws.page3;	
+	}else if(loc=='page_pic_4'){ return kws.page4;	
+	}else if(loc=='page_pic_5'){ return kws.page5;	
+	}else if(loc=='page_pic_6'){ return kws.page6;	
+	}else if(loc=='page_pic_7'){ return kws.page7;	
+	}else if(loc=='page_pic_8'){ return kws.page8;	
+	}else if(loc=='page_pic_9'){ return kws.page9;	
+	}else if(loc=='page_pic_10'){ return kws.page10;	
+	}else if(loc=='menu_pic_1'){ return kws.menu1;	
+	}else if(loc=='menu_pic_2'){ return kws.menu2;	
+	}else if(loc=='menu_pic_3'){ return kws.menu3;	
+	}else if(loc=='menu_pic_4'){ return kws.menu4;	
+	}else if(loc=='menu_pic_5'){ return kws.menu5;	
+	}else if(loc=='menu_pic_6'){ return kws.menu6;	
+	}else if(loc=='menu_pic_7'){ return kws.menu7;	
+	}else if(loc=='menu_pic_8'){ return kws.menu8;	
+	}else if(loc=='menu_pic_9'){ return kws.menu9;	
+	}else if(loc=='menu_pic_10'){ return kws.menu10;	
+	}	
+}
+</script>
+<script type="text/javascript" src="thickbox/thickbox.js"></script>
+<a href="#TB_inline?height=155&width=300&inlineId=hiddenModalContent&modal=true" class="thickbox">Show hidden modal content.</a>
+<div id="hiddenModalContent"><p>we are the world</p><p style="text-align:center"><input type="submit" id="Login" value="&nbsp;&nbsp;Ok&nbsp;&nbsp;" onclick="tb_remove()" /></p>
+</div>
+<div id="ftr">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+
+			<td rowspan="3" class="brdrL">&nbsp;</td>
+			<td><img src="/images/s.gif" width="700" height="4" alt=""></td>
+			<td rowspan="3" class="brdrR">&nbsp;</td>
+		</tr>
+		<tr>
+			<td id="ftrNav"></td>
+
+		</tr>
+		<tr>
+
+			<td class="copy"></td>
+		</tr>
+		<tr>
+			<td><img src="/images/brdr_l_corner.jpg" width="12" height="7" alt=""></td>
+			<td class="brdrBtm"><img src="/images/s.gif" width="700" height="7" alt=""></td>
+			<td><img src="/images/brdr_r_corner.jpg" width="12" height="7" alt=""></td>
+
+		</tr>
+	</table>
+
+</div><br>
+&nbsp;
+</body>
+
+</html>

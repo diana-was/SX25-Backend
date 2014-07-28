@@ -1,0 +1,171 @@
+.custLabel {
+	float: left;
+	height: 25px;
+	margin: 0px;
+	padding: 5px 5px 5px 5px;
+	text-align: left;
+	width: 90%;
+}
+
+.dynamic-tab-pane-control.tab-pane {
+	position:	relative;
+	width:		100%;		/* width needed weird IE bug */
+	margin-right:	-2px;	/* to make room for the shadow */
+}
+
+.dynamic-tab-pane-control .tab-row .tab {
+
+	width:				70px;
+	height:				16px;
+	background-image:	url( "/images/tab.png" );
+	
+	position:		relative;
+	top:			0;
+	display:		inline;
+	float:			left;
+	overflow:		hidden;
+	
+	cursor:			Default;
+
+	margin:			1px -1px 1px 2px;
+	padding:		2px 0px 0px 0px;
+	border:			0;
+
+	z-index:		1;
+	font:			10px Tahoma;
+	white-space:	nowrap;
+	text-align:		center;
+}
+
+.dynamic-tab-pane-control .tab-row .tab.selected {
+	width:				74px !important;
+	height:				18px !important;
+	background-image:	url( "/images/tab.active.jpg" ) !important;
+	background-repeat:	no-repeat;
+
+	border-bottom-width:	0;
+	z-index:		3;
+	padding:		2px 0 0px 0;
+	margin:			1px -3px -3px 0px;
+	top:			-2px;
+	font:				10px Tahoma;
+}
+
+.dynamic-tab-pane-control .tab-row .tab a {
+	font:				10px Tahoma;
+	color:				Black;
+	text-decoration:	none;
+	cursor:				default;
+}
+
+.dynamic-tab-pane-control .tab-row .tab.hover {
+	font:				10px Tahoma;
+	width:				70px;
+	height:				16px;
+	background-image:	url( "/images/tab.hover.jpg" );
+	background-repeat:	no-repeat;
+}
+
+
+.dynamic-tab-pane-control .tab-page {
+	clear:			both;
+	border:			1px solid rgb( 145, 155, 156 );
+	background:		rgb( 252, 252, 254 );
+	z-index:		2;
+	position:		relative;
+	top:			-2px;
+
+	font:				10px Tahoma;
+	color:				Black;
+
+	/*filter:			progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fffcfcfe, EndColorStr=#fff4f3ee, GradientType=0)
+					progid:DXImageTransform.Microsoft.Shadow(Color=#ff919899, Strength=2, Direction=135);*/
+	
+	/*244, 243, 238*/
+	/* 145, 155, 156*/
+	padding:		10px;
+	/*tab content height*/
+	height:		500px;
+	/*tab content width*/
+	width:		933px;
+	overflow:	auto;
+}
+
+.dynamic-tab-pane-control .tab-row {
+	z-index:		1;
+	white-space:	nowrap;
+}
+
+#wrapper {
+	background:#ffffff;
+	font-family: 'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
+	font-size:12px;
+	margin:0px auto;
+	text-align:left;
+	width:855px;
+}
+
+.hdrtitle {
+	font-size: 28px;
+}
+
+.tb {
+	border-collapse: collapse;
+	padding:0px 10px 0px 10px;
+	margin: 10px;
+}
+
+.tb span {
+	color: #666666;
+	font-size: 10px;
+}
+
+.tb td{
+	border-bottom: 1px solid #c0e232;
+}
+
+
+.tbhdr {
+	background-color: #ABBF60; 
+	font-size:14px;
+}
+
+.altrow1 {
+	background-color: #FAFFE6; 
+	border-bottom: 1px solid #c0e232;
+}
+
+.altrow2 {
+	background-color: #F2FFBF; 
+	border-bottom: 1px solid #c0e232;
+}
+
+.line {
+	border-bottom: 1px solid #d1dec2;
+	margin:50px auto;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	width: 95%;
+}
+
+#source {
+	background-color: #E0EFF9;
+	border: 1px solid #c1d7e5;
+	color: #666666;
+	font-size: 12px;
+	margin: 10px 10px 10px 10px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	text-align:left;
+	width: 800px;
+}
+
+.ftr {
+	border-bottom: 1px solid #d1dec2;
+	font-size:14px;
+	padding:60px 0px 0px 0px;
+}

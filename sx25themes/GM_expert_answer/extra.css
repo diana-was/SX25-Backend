@@ -1,0 +1,30 @@
+.editorial_container {width: 720px;}
+.post_userinfo {
+    float: right;
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-top: 3px;
+    width: 75px;
+}
+.expert_title_detail{color:#08347E!important;}
+a.purple{color:#666;}
+
+div.expert_postbit_header {
+    margin: 10px 3px 0 8px!important;
+    padding: 5px 3px 0px 0!important;
+    width: 585px; text-align:justify;
+}
+
+div.expert_post-content-detail {
+    margin: 0 10px 10px 0!important;
+}
+
+.author{font-size:11px; font-weight: bold;}
+
+div.expert_post-content-detail {border-style: none!important; padding: 0px 15px 25px 10px!important;}
+
+.expert_subtitle {color: #08347E !important;}
+.expert_postbit_header a{text-decoration:none;}
+
+.expert_postbit_header h4{width:480px}
+

@@ -1,0 +1,81 @@
+
+#jMenu {
+	display:table;
+	margin:0;
+	padding:0
+}
+
+/********************/
+/** premier niveau **/
+/********************/
+#jMenu li {
+	display:table-cell;
+	background-color:#000000;
+	margin:0;
+	//float:left;
+}
+	#jMenu a {
+		color:#FFFFFF;
+		text-decoration:none;
+		opacity: 100;
+	}
+	
+	#jMenu a:hover {
+		background:url(nav_bg_roll.jpg) repeat-y;
+		background-position:center;
+	}
+	
+	#jMenu li a {
+		color:#FFFFFF;
+		display:block;
+		background-color: transparent;
+		text-transform:uppercase;
+		cursor:pointer;
+		font-size:12px;
+		padding:10px;
+	}
+
+/*******************/
+/** second niveau **/
+/*******************/
+#jMenu li ul {
+	display:none;
+	position:absolute;
+	padding:0;
+	margin:0
+}
+	#jMenu li ul li {
+		background-color:#000000;
+		display:block;
+		border-bottom:2px solid #484548;
+		padding:0;
+	}
+	#jMenu li ul li.arrow {
+		background:#000000 url('arrow_down.png') no-repeat center center;
+		height:6px;
+		padding:0;
+		border-bottom:none;
+		padding-bottom:10px
+	}
+		#jMenu li ul li a {
+			font-size:11px;
+			text-transform:none;
+			display:block;
+			border-top:2px solid transparent;
+			border-bottom:2px solid transparent;
+			padding:7px;
+		}
+		#jMenu li ul li a.isParent {
+			background:#000000 url('arrow_right.png') no-repeat right center;
+		}
+			#jMenu li ul li a:hover {
+				background-color:#000000;
+				/* border-top:0px solid #322f32;
+				border-bottom:0px solid #322f32; */
+			}
+				#jMenu li ul li ul li {
+					text-align:left;
+				}
+				#jMenu li ul li ul li a:hover {
+					background:url(nav_bg_sub.jpg) repeat-y;
+				}

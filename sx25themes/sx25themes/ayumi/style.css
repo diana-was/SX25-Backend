@@ -1,0 +1,715 @@
+/*  
+Theme Name: Ayumi
+Theme URI: http://www.jauhari.net/themes/ayumi
+Description: Ayumi Theme is clean layout that build with 3 Columns Layout. And this Theme I dedicated to Ayumi Hamasaki. Visit <a href="http://www.jauhari.net/themes/ayumi">Theme page</a> for more info The CSS, XHTML and design is released under a GPL:http://www.opensource.org/licenses/gpl-license.php
+Version: 2.0
+Author: Nurudin Jauhari
+Author URI: http://www.jauhari.net/
+Tags: three-columns,fixed-width, green,custom-header
+
+	This theme was designed and built by Nurudin Jauhari,
+	whose blog you will find at http://www.jauhari.net/themes/ayumi
+	Crafted on 19 July 2007
+	Last Edit: 16 December 2008 12.00  +7 GMT
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* Social Style 
+********************* */
+
+html
+{
+	height: 100%;
+	margin-bottom: 0.1em;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+img
+{
+	border: 0;
+}
+p
+{
+	line-height: 1.6em;
+	margin: 0.7em 0;
+}
+dl
+{
+	margin: 1em 0;
+}
+dt
+{
+	font-weight: bold;
+}
+dd
+{
+	margin: 0.5em;
+	padding: 0;
+}
+img.alignright, img.right
+{
+	float: right;
+	margin: 10px 0 0 10px;
+}
+img.alignleft, img.left
+{
+	float: left;
+	margin: 0 10px 0 0;
+}
+hr
+{
+	display: none;
+}
+body
+{
+	background: #fff;
+	color: #333;
+	font: 74%/1.6em "Lucida Sans Unicode", "Lucida Grande", LucidaGrande, "Lucida Sans", Geneva,  verdana, tahoma, arial, sans-serif; 
+/*	font: 72%/1.6em verdana, tahoma, arial, sans-serif; */
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+a
+{
+	text-decoration: none;
+}
+a:link, a:visited
+{
+	color: #666;
+}
+a:hover, a:active
+{
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Arial, Verdana, Serif;
+}
+
+/* Etc
+******************** */
+br.clear {
+	clear: both;
+}
+
+/* Design 
+******************** */
+#top {
+	background:#2E9B22 url(images/bg/bg-g-top.gif) 0 100% repeat-x;
+	margin-bottom: 20px;
+}
+#page {
+	text-align: left;
+	width: 950px;
+	border-top: none;
+	margin: 0 auto;
+	background: url(images/bg-gradient.gif) 0 bottom repeat-x; 
+}
+#headr {
+	width: 950px;
+	margin: 0 auto 5px;
+	color: #C3EAFB;
+	position: relative;
+	text-align: left;
+	height: 50px;
+	padding-top: 10px;
+}
+#logo h1 {
+	margin: 5px 0 0;
+	font-size: 2.5em;
+	font-family: Arial, Geneva, Helvetica, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#logo h1 a {
+	color: #fff;
+	}
+#logo h1 a:hover {
+	color: #D7F7D4;
+	}
+#logo .description {
+	color: #E9FFFF;
+	font-size: 1.3em;
+	margin-top: 5px;
+	display: none;
+}
+
+#logo {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}#top-rss {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#top-img {
+	width: 930px;
+	margin: 20px auto;
+	background: #F7FFFF;
+	height: 90px;
+	border: 10px solid #BBC5C6;
+	display: none;
+}
+#headr #top-menu {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+/* Menu */
+ul#menuv {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, verdana, tahoma, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+ul#menuv li {
+	float: left;
+	margin-right: 4px;
+}
+ul#menuv li a {
+	padding: 3px 10px;
+	display: block;
+	color: #2E9B22;
+	background: #D7F7D4 url(images/bg/bg-g-menu.gif) 0 0 repeat-x;
+}
+ul#menuv li a:hover {
+	background: #C20F0F;
+	color: #fff;
+}
+ul#menuv li.current_page_item a {
+	background: #fff;
+	color: #2E9B22;
+	font-weight: bold;
+}
+
+#content-wrap {
+	float: left;
+	width: 100%;
+}
+
+#content {
+	margin: 0 440px 0 0;
+}
+.post {
+	margin-bottom: 25px;
+}
+.post2 {
+}
+
+.side {
+	width: 440px;
+	margin-left: -440px;
+	float: left;
+}
+.side1 {
+	width: 220px;
+	float: left;
+	color: #333;
+	margin-left: -0px;
+	color: #498EB8;
+}
+.side2 {
+	color: #498EB8;
+	width: 220px;
+	float: left;
+	color: #333;
+}
+#content .gap {
+	margin: 0 20px 0 0; 
+}
+.side1 .gap {
+}
+.side2 .gap  {
+	margin: 0 0 0 10px; 
+}
+#out-foot {
+	width: 100%;
+	float: left;
+}
+
+#footer {
+	margin: 0 auto 0;
+	width: 950px;
+	color: #666;
+	font-size: 1em;
+	text-align: left;
+	position: relative;
+}
+#footer a {
+	color: #666;
+	text-decoration: underline
+}
+#footer a:hover {
+	color: #333;
+	text-decoration: none;
+}
+	#footer {
+		padding-top: 5px;
+	}
+	#footer p.right {
+		position: absolute;
+		right: 0;
+		text-align: right;
+		top: 0;
+	}
+
+/* Starting Sidebar
+******************** */
+.side1  ul, .side2  ul, .side ul{
+	list-style: none;
+}
+.about a:link, .about a:visited {
+	background: #D7F7D4;
+	color: #34B027;
+	padding: 0 2px;
+}
+.about a:hover {
+	background: #34B027;
+	color: #D7F7D4;
+	padding: 0 2px;
+}
+.linkcat, .widget, .boxy, .side .categories, .widget-sortable {
+	padding: 10px;
+	border: 1px solid #3AC52C;
+	background: url(images/bg-gradient.gif) 0 bottom repeat-x;
+}
+.side1  ul li ul li, .side2  ul li ul li {
+	padding: 2px 0;
+	margin-left: 15px;
+	list-style: square;
+	color: #C20F0F;
+}
+.side1  ul li ul li ul li{
+	border: none;
+}
+.side1  ul.children, .side2  ul.children{
+	margin-left: 0;
+}
+.boxy, .side1 .categories, .side2 .categories, .widget, .side1 .linkcat, .side2 .linkcat, .about, .widget-sortable  {
+	margin-bottom: 20px;
+}
+.side2 .boxy, .side2 .linkcat {
+}
+.side1 h2, .side2 h2{
+	font: bold 1.4em "Trebuchet MS", Trebuchet, Verdana, Arial, sans-serif;
+	color: #C20F0F;
+	margin-bottom: 5px;
+	background: #F7D4D4 url(images/bg/bg-g-h2.gif) 0 0 repeat-x;
+	padding: 3px 5px;
+}
+.side1 ul li ul li a:link, .side1 ul li ul li a:visited,.side2 ul li ul li a:link, .side2 ul li ul li a:visited{
+	color: #2E9B22;
+}
+
+.side1 ul li ul li  a:hover,.side2 ul li ul li  a:hover{
+	color: #000;
+}
+.side1 ul li ul li.current_page_item a,.side1 ul li ul li.current-cat a, .side2 ul li ul li.current-cat a  {
+	color: #FFC757;
+	font-weight: bold;
+}
+
+/* --Calendar-- */
+#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+
+
+/* Starting Search
+************************ */
+input#s {
+	width: 408px;
+	padding: 10px 5px 10px 25px;
+	margin: 0 0 10px;
+	background: #fff url(images/ico/zoom1.png) 5px 10px no-repeat;
+	border: 1px solid #3AC52C;
+	color: #2E9B22;
+	font-size: 1.3em;
+}
+	
+
+input#s:hover {
+	border: 1px solid #F78787;
+
+}
+input#s:focus {
+	background: #fff url(images/ico/zoom.png) 5px 10px no-repeat;
+	color: #C20F0F;
+	border: 1px solid #F7D4D4;
+}
+
+input#searchsubmit
+{
+	margin: 0;
+}
+
+/*Starting  Typography
+********************* */
+
+h2.pagetitle {
+	text-align: left;
+	font: 1.5em Arial, verdana;
+	border-bottom: 1px solid #ccc;
+}
+
+.post h2 {
+	font: bold 1.7em Arial, "Trebuchet MS", Verdana, sans-serif;	
+	color: #C20F0F;
+}
+.post h2 a:link, .post h2 a:visited {
+	color: #2E9B22;
+	padding: 0 5px;
+	background: #D7F7D4;
+}
+.post h2 a:hover {	
+	color: #fff;
+	background: #498EB8;
+}
+.post a:hover {
+}
+
+.date {
+	color: #498EB8;
+}
+p.meta {
+	font-size: 100%;
+	color: #4D7E8F;
+}	
+p.meta2 {
+	text-align: right;
+	font-size: 100%;
+	color: #498EB8;
+	border-top: 2px solid #D4EAF7;
+	padding: 5px 0 0 0;
+}
+p.meta2:hover {
+	border-top: 2px solid #D7F7D4;
+}
+p.meta a:link, p.meta a:visited, p.meta2 a:link, p.meta2 a:visited {
+	color: #498EB8;
+	padding: 2px 4px;
+	background: #D4EAF7;
+}
+p.meta a:hover,p.meta2 a:hover {
+	color: #2E9B22;
+	background: #DAF7D4;
+}
+.post ul.postspermonth{
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+/*
+.entry p a:link, .entry p a:visited {
+	border-bottom: 1px solid #4D71A5;
+	color: #4D71A5;
+} */
+	.entry a:link, .entry a:visited {
+		background: #D7F7D4;
+		color: #34B027;
+		padding: 0 2px;
+	}
+	.entry a:hover {
+		background: #34B027;
+		color: #D7F7D4;
+		padding: 0 2px;
+	}	
+
+.post ul {
+	margin-left: 35px;
+}
+.post ol {
+	margin-left: 40px;
+}
+.post p a:hover {
+	border: none;
+}
+.categr, .monthr {
+	margin-bottom: 20px;
+}
+.categr h2, .monthr h2{
+	border-bottom: 1px solid #ccc;
+}
+
+.rss {
+	background: url(images/feed-icon-10x10.png) left center no-repeat;
+	padding-left: 12px;
+}
+.tags {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+	.tags a {
+		font-weight: normal;
+	}
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End captions */
+
+
+
+/* Comment Etc
+********************* */
+.navigation 
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+	width: 100%;
+}
+
+.navigation a
+{
+	color: #666;
+}
+.navigation .alignleft
+{
+	float: left;
+	width: 50%;
+}
+.navigation .alignright
+{
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+
+.ileft {
+	float: left;
+	margin-right: 5px;
+}
+#avatr {
+	border: 1px solid #3AC52C; 
+}
+p.stats {
+	color: #999;
+	font-size: .8em;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-right: none;
+}
+blockquote
+{
+	background: url(images/blockquote.gif) no-repeat left top;
+	color: #666;
+	margin: 1em;
+	padding: 0 0 10px 50px;
+}
+#content .commentsfeedr
+{
+	background: url(images/ico/feed.png) no-repeat left center;
+	padding: 2px 2px 2px 20px;
+}
+#content .trackbackr
+{
+	background: url(images/ico/arrow_refresh.png) no-repeat left center;
+	padding: 2px 2px 2px 20px;
+}
+input.textbox, textarea, textarea, input#url, input#email, input#author
+{
+	background: #fff url(images/shadow_top.gif) repeat-x top;
+	border: #ccc 1px solid;
+	font: 1em Verdana, Arial, Serif;
+	padding: 2px;
+}
+input.textbox:focus, textarea:focus
+{
+	background: #fff url(images/shadow_top.gif) repeat-x top;
+	border: #999 1px solid;
+}
+#submit {
+	background: #2E9B22;
+	color: #fff;
+	padding: 3px 5px;
+	border: #227118 solid 2px;
+	border-top: 2px solid #34B027;
+	border-left: 2px solid #34B027;
+}
+#submit:focus, #submit:hover {
+	background: #227118;
+	color: #fff;
+	border: #000 solid 2px;
+	border-top: 2px solid #2E9B22;
+	border-left: 2px solid #2E9B22;
+}
+
+.trackbacklist {
+	margin-left: 20px;
+}
+.commentlist .children {
+	margin-left: 30px;
+}
+
+
+.comment
+{
+	background: #fff url(images/shadow_top.gif) repeat-x top;
+	border-bottom: #ddd 1px solid;
+	list-style: none;
+	margin: 0;
+	padding: 1em 0.5em;
+}
+.alt
+{
+	background: #f9f9f9;
+}
+.MyAvatars
+{
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	float: right;
+	margin-left: 5px;
+	margin-right: 10px;
+	padding: 3px;
+}
+
+h3#respond, h3#comments {
+	font: bold 1.3em "Trebuchet MS", Verdana, Arial, sans-serif;
+	color: #2E9B22;
+	text-transform: uppercase;
+}
+
+#comment {
+	width: 98%;
+}
+
+fieldset {
+	border: none;
+}
+textarea#cp_message {
+	width: 100%;
+}
+
+
+pre {
+	width: 95%;
+	overflow:auto;
+	font: 13px 'Courier New', Courier, Verdana, Arial, sans-serif;
+	color: #921A14;
+	max-height: 350px;
+	line-height: 18px;
+	margin: 10px 0;
+	border: 1px solid #921A14;
+	padding: 5px;
+	background: #F7D5D4;
+}
+
+code {
+font: 13px 'Courier New', Courier, Verdana, Arial, sans-serif;
+color: #921A14;
+padding: 2px;
+}
+
+.avatar {
+	float: right;
+	margin-left: 10px;
+}
+
+
+/* Change Log *** 
+1.0	: Public Releaed
+1.1	: Fixed Sidebar and Footer Issue
+1.2	: Fix Comments and Background Overlap
+1.3	: Fix Categories archives, margin post and Support for WordPress 2.3
+1.5	: Fix Problem Page and Better Effect and WordPress 2.5 Compatible and add Favicon
+1.6 : Custom Header
+1.7 : Gravatar and Caption Support
+1.8 : Fix 404 Error Page
+2.0 : WordPress 2.7 Threaded Comment Support, Switch License to GPL Licence
+*** */

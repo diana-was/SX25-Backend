@@ -1,0 +1,1148 @@
+/******************************************
+*   Main or page navigation styles                       
+******************************************/
+
+/*Main Navbar page navigation */
+
+#header_menu_1 {
+    background: none repeat scroll 0 0 #444444;
+	font-size: 15px;
+	height: 30px;
+	}
+	
+#header_menu_1, #header_menu_1 ul {
+	list-style: none;
+	line-height: 1;
+	}
+
+#header_menu_1 a, #header_menu_1 a:hover {
+	display: block;
+	text-decoration: none;
+	border:none;
+}
+
+
+#header_menu_1 li {
+	float: left;
+	list-style:none;
+	}
+
+#header_menu_1 a, #header_menu_1 a:visited {
+	display:block;
+	font-weight:bold;
+	color: #fff;
+	padding:6px 12px;
+	}
+
+#header_menu_1 a:hover {
+	color:#39A3F9;
+	text-decoration:none;
+	}	
+
+#header_menu_1 a:active {
+	color:#C29704;
+	text-decoration:none;
+	}	
+
+.current_page_item	a, #home .on  { 
+	/*background-color:#333;*/
+	color: #FFF;!important;
+	text-decoration:none;
+	}
+	
+	
+	
+/* Dropdown Menus for child pages */		
+
+#header_menu_1 li ul {/*first level dropdown*/
+	position: absolute;
+	z-index: 10;
+	left: -999em;
+	height: auto;
+	width: 174px;
+	border-bottom:1px solid #ccc;
+	}
+	
+#header_menu_1 li ul ul {/*second level dropdown*/
+	margin: -2em 0 0 172px;
+	}
+
+#header_menu_1 li:hover ul ul, #header_menu_1 li.sfhover ul ul {
+	left: -999em;
+	}
+
+#header_menu_1 li li {
+	width: 172px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background:#444;
+	}
+
+#header_menu_1 li li a, #header_menu_1 li li a:visited {
+	font-weight:normal;
+	font-size:0.9em;
+	color:#fff;
+	}
+
+#header_menu_1 li li a:hover, #header_menu_1 li li a:active {
+	background:#333;
+	color:#a37f04;
+	}
+	
+#header_menu_1 li:hover ul, #header_menu_1 li li:hover ul, #header_menu_1 li li li:hover ul, #header_menu_1 li.sfhover ul, #header_menu_1 li li.sfhover ul, #header_menu_1 li li li.sfhover ul {left: auto;}
+
+a.main:hover {background:none;}
+
+
+
+/* Category navigation in Navbar */
+
+#header_menu_2 {
+    background: none repeat scroll 0 0 #eeeeee;
+	font-size: 15px;
+	height: 30px;
+	overflow: hidden;
+	}	
+#header_menu_2, #header_menu_2 ul {
+	list-style: none;
+	line-height: 1;
+	}
+
+#header_menu_2 a, #header_menu_2 a:hover {
+	display: block;
+	text-decoration: none;
+	border:none;
+	}
+
+#header_menu_2 li {
+	float: left;
+	list-style:none;
+	}
+
+#header_menu_2 a, #header_menu_2 a:visited {
+	display:block;
+	font-weight:bold;
+	color: #666;
+	padding:6px 12px;
+	}
+
+#header_menu_2 a:hover {
+	color:#39A3F9;
+	text-decoration:none;
+	}	
+
+#header_menu_2 a:active {
+	color:#a37f04;
+	text-decoration:none;
+	}	
+
+
+	
+/* Dropdown Menus for categories  */
+		
+
+#header_menu_2 li ul {/*first level dropdown*/
+	position: absolute;
+	z-index: 10;
+	left: -999em;
+	height: auto;
+	width: 174px;
+	border-bottom:1px solid #fff;
+	}
+	
+#header_menu_2 li ul ul {/*second level dropdown*/
+	margin: -2em 0 0 172px;
+	}
+
+#header_menu_2 li:hover ul ul, #header_menu_2 li.sfhover ul ul {
+	left: -999em;
+	}
+
+#header_menu_2 li li {
+	width: 172px;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	background:#eee;
+	}
+
+#header_menu_2 li li a, #header_menu_2 li li a:visited {
+	font-weight:normal;
+	font-size:0.9em;
+	color:#666;
+	}
+
+#header_menu_2 li li a:hover, #header_menu_2 li li a:active {background:#ddd;}	
+	
+#header_menu_2 li:hover ul, #header_menu_2 li li:hover ul, #header_menu_2 li li li:hover ul, #header_menu_2 li.sfhover ul, #header_menu_2 li li.sfhover ul, #header_menu_2 li li li.sfhover ul {left: auto;}
+
+
+/*  
+Theme Name: PRiNZ WyntonMagazine
+Theme URI: 
+Description: A premium magazine-style layout for Wordpress with multiple functionalities and additional page templates. "Brother" of my BranfordMagazine theme.
+Version: 1.1
+Author: Michael Oeser
+Author URI: http://www.der-prinz.com
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+Credits
+=======
+
+My very special thanks go out to all of you out there
+using the theme and sending me tons of emails telling me how great this theme is.
+
+THANK YOU ALL!!!
+
+
+/******************************************
+*   HTML Elements                         
+******************************************/
+
+#art-main
+{
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  cursor:default;
+  
+}
+
+body
+{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+
+#art-page-background-glare-image
+{
+  height: auto;
+  width: 100%;
+  margin-top:10px;
+}
+
+html:first-child body
+{
+  border: 1px solid transparent;/* Opera fix */
+}
+
+
+#art-page-background-gradient
+{
+  background-position: top left;
+}
+
+#wrapper
+{
+  margin: 0 auto;
+  width: 1000px;
+  padding: 10px;
+  background-color:#FFF;
+  border-top: #CCC 0pt solid;
+
+}
+
+#header
+{
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  width: 1000px;
+  overflow: hidden;
+}
+#header {
+    height: 140px;
+}
+
+.art-header-jpeg
+{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 980px;
+  height: 80px;
+}
+
+
+* {
+	margin:0;
+	padding:0;
+	}
+
+body,html {
+	min-height:101%;
+	}
+	
+body {
+
+	color:#333;
+	padding: 13px 0 25px 0;
+	}
+	
+body {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #333333;
+    padding: 13px 0 25px;
+}
+
+body, select, input, textarea {
+	font: 12px Arial, Verdana, Sans-Serif;
+	line-height:1.5em;
+	}
+	
+p {	
+	margin: 15px 0;
+	}
+
+
+hr {
+	display: block;
+	height:4px;
+	background:#ddd;
+	border:0;
+	}
+
+small {
+	font-size: 0.9em;
+	padding:3px 0px;
+	}
+	
+/******* Hyperlinks ********************/
+
+/* standard link behaviour */
+a:link, a:active, a:visited { 
+	color:#333;
+	text-decoration: underline; 
+	} 
+a:hover	{ 
+	color:#333;
+	text-decoration: none; 
+	}
+	
+	
+	/* begin Logo */
+#header_logo
+{
+  color: #000000;
+    font-family: Arial,Helvetica,Sans-Serif;
+    margin: 0 20px;
+    padding: 0;
+    text-decoration: none;
+	font-size: 33px;
+    font-weight: bold;
+ 	padding: 10px 0 0;
+ 	display: block;
+    height: 33px;
+    left: 10px;
+    top: 16px;
+    width: 1000px;
+}
+
+h1.art-logo-name
+{
+  display: block;
+  text-align: left;
+}
+
+h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name a:visited, h1.art-logo-name a:hover
+{
+  font-family:Arial, Helvetica, Sans-Serif;
+  font-size: 43px;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color:#000; !important;
+}
+
+/* end Logo */
+
+/* How the links in the leadstory area on the homepage look like */
+#main_content a {color:#fff;}
+
+/* Title area links */
+.title:link, .title:active, .title:visited { 
+
+	text-decoration: none;
+	} 
+.title:hover { 
+	color: #0778D7; 
+	text-decoration: underline;
+	} 
+	
+/* HTML headline links */
+h3 a:link, h3 a:active, h3 a:visited  {text-decoration:none;}
+h3 a:hover {text-decoration:underline;}
+
+h4 a:link, h4 a:active, h4 a:visited  {color:#666; text-decoration:none;}
+h4 a:hover {text-decoration:underline;}
+
+/* Links in the sidebar */
+#sidelist a:link, #sidelist a:active, #sidelist a:visited {text-decoration:none;}
+#sidelist a:hover {text-decoration:underline;}
+#sidelist .children li a, #sidelist .children li a:visited {
+	padding:2px 2px 2px 0px;
+	border:0;
+	background:#eee;
+	color: #666;
+	}
+#sidelist .children li a:hover, #sidelist .children li a:active	{color:#000;}
+
+/* How tags appear */
+#tags a {text-decoration:none;}
+#tags a:hover {text-decoration:underline;}
+
+/* Links within comments metadata (date, Author etc.) */
+.commentmetadata a:link, .commentmetadata a:active, .commentmetadata a:visited  {text-decoration:none;}
+.commentmetadata a:hover {text-decoration:underline;}
+
+/* Links in the footer */
+#footer a {text-decoration: none;} 
+#footer a:hover	{text-decoration: underline;}
+
+
+/****** Images ****************************/
+
+img, a:link img, a:visited img{border:1px solid #999; padding:1px;}
+img.left,img.center,img.right,img.norm{ margin:5px 12px 5px 0; border:1px solid #999; padding:1px;}
+img.left{ float:left; margin:0 12px 5px 0; }
+img.center{ display:block; margin:0 auto 5px auto; }
+img.right{ float:right; margin:0 0 5px 12px; }
+#leadpic {float:left;margin: 0 20px 10px 0;padding:1px;border:1px solid #999;}
+.home-cat-img {float:left; margin:0 6px 4px 0;}
+
+	
+		
+/******************************************
+*   Main Element Structure                         
+******************************************/
+
+#page { /* main container */
+	width:940px;
+	margin:0 auto;
+	font-size:1em;
+	background:#FFF;
+	padding: 10px 20px 40px 20px;
+	border-top:2px solid #999;
+	border-bottom:2px solid #999;
+	border-left:2px solid #999;
+	border-right:2px solid #999;
+	}
+	
+
+#branding {/* Where the logo is located */
+	width:625px;
+	padding-bottom:15px;
+	}
+
+.left {
+	float:left;
+	}
+
+.right {
+	float:right;
+	}
+
+#sidebar {
+	width: 240px;
+	float:right
+	}
+
+
+/* The 3 columns on the homepage */
+
+#homeleftcol {
+	width:30%;
+	border-right:1px solid #ccc;
+	padding-right:20px;
+	text-align:justify;
+	float:left;
+	}
+	
+#homemidcol {
+	width:30%;
+	padding:0 20px 0 20px;
+	text-align:justify;
+	float:left;
+	}
+	
+#homerightcol {
+	width:30%;
+	border-left:1px solid #ccc;
+	padding-left:20px;
+	text-align:justify;
+	float:right;
+	}
+		
+	
+/******************************************
+*   Sidebar stuff exept hyperlinks                        
+******************************************/
+	
+#sidelist li {list-style:none}
+	
+.bullets li {
+	list-style:none;
+	border-bottom:1px solid #FFF;
+	}
+	
+#sidelist .bullets li {
+	list-style:square;
+	margin-bottom:5px;
+	margin-left:22px;
+	}
+
+#sidelist .children {background:#eee;}
+
+#sidelist .children li {
+	background: #eee;
+	list-style: none;
+	margin-left:15px;
+	padding-left:15px;
+	border-bottom:1px solid #fff;
+	}
+	
+#sidelist .recent li{
+	margin-bottom:5px;
+	padding-left:20px;
+	background:url(/sx25themes/WyntonMagazine_base/images/icon_recent.gif) no-repeat;
+	}
+
+#sidelist .recent-comments li{
+	margin-bottom:5px;
+	padding-left:20px;
+	background:url(/sx25themes/WyntonMagazine_base/images/icon_comments.gif) no-repeat;
+	}
+
+#sidelist .more li{
+	margin-bottom:5px;
+	padding-left:20px;
+	background:url(/sx25themes/WyntonMagazine_base/images/icon_categories.gif) no-repeat;
+	}
+
+
+	
+	
+/******************************************
+*   All Headlines and related stuff                         
+******************************************/
+
+.leadmeta, .leadmeta a {/* ThatÂ´s how the Date and Author appear in the leadarticle section above the Headline */
+	font: 0.9em Arial, Helvetica, sans-serif;
+	margin-top:-4px;
+	color:#ddd;
+	text-decoration:none;
+	}
+	
+.blogtitle, .blogtitle a {/* ThatÂ´s only relevant, if you donÂ´t use an image for your Logo in the header */
+	color: #333;
+	font-size: 45px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: regular;
+	padding: 20px 0px 10px 0px;
+	text-decoration:none;
+	}
+
+.cat-head {/* Background for the category teasers headline on the homepage */
+	margin-bottom:3px;
+	background-color:#ddd;
+	padding:3px 2px 1px 4px;
+	}
+
+h1 {
+	color: #0778D7;
+	font-size: 1.6em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	margin: 0px 10px 0px 0px;
+	padding: 20px 0px 0px 10px;
+	}
+	
+h2 {
+	color: #0778D7;
+	font: 1.6em Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	padding-bottom:8px;
+	border-bottom:2px solid #ddd;
+	margin: 20px 0;
+	}
+
+h3 {
+	font: 13px Arial, Helvetica, sans-serif;
+	margin-bottom:0px;
+	font-weight:normal;
+	color:#000000;
+	}
+
+#sidebar h2, #sidebar h3 a {
+	font: 0.9em Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	margin-bottom:4px;
+	font-weight:bold;
+	color:#a37f04;
+	}
+
+#sidebar h3, #sidebar h2 {
+	font-size:0.9em;
+	border-top:4px solid #ddd;
+	border-bottom:1px solid #ddd;
+	padding:5px 0 5px 2px;
+	margin:20px 0 15px 0;
+	color:#0778D7;
+	}
+
+h3#respond {
+	border-top:4px solid #ddd;
+	margin-top:25px;
+	padding-top:20px
+	}
+
+h3#comments {
+	margin-top:32px
+	}
+
+h4 {
+	color:#444;
+	font-size:1.2em;
+	margin-bottom:6px;
+	}
+	
+	
+/******************************************
+*   Content styles                    
+******************************************/
+
+/* some structural styles for the content area */
+
+#content {/* main content (left of sidebar) */
+	width:640px;
+	float:left
+	}
+
+#pagecontent { /* content area in static pages (without sidebar) */
+	width:820px;
+	float:left;
+	}
+
+#homecontent-top {/* The upper area on the homepage */
+	width:940px;
+	margin-top:25px;
+	}
+	
+#homecontent-bottom {/* The lower area f the homepage */
+	width:900px;
+	margin-top:20px;
+	}
+
+#homecontent-topleft {/* The left side of the upper area (where the leadstory area is located) */
+	width: 500px;
+	}
+
+#right_sidebar {/* The right upper area (where the three feature boxes appear) */
+	width: 300px;
+	}
+	
+
+
+/* The lead story on the honmepage */
+
+#main_content {
+	background:/*url(/sx25themes/WyntonMagazine_base/images/bg_leadcontainer.jpg) repeat-x 0px 0px #252525 */ #444;
+	color:#ddd;
+	border-top:4px solid #ccc;
+	border-bottom:4px solid #ccc;
+	padding:15px;
+	width:592px;
+	min-height:350px;
+	}
+
+#main_content:hover {
+	background:#333;
+	border-top:4px solid #39A3F9;
+	border-bottom:4px solid #39A3F9;
+	}
+
+#main_content .title {
+	font:28px Arial, Helvetica, sans-serif;
+	line-height:100%;
+	display:block;
+	padding-bottom:7px;
+	color: #D8D8D8;
+	}
+
+#leadheader {
+	display:block;
+	}
+
+#leadheader a {color:#ddd;}
+
+#homebottom {/* ThatÂ´s the nice shadow below the main_content */
+	width:625px;
+	height:60px;
+	background:url(/sx25themes/WyntonMagazine_base/images/homebottom.png);
+	}
+	
+
+.read-on a { /* This can be used to format the "continue readng..." link in the lead story */
+	text-decoration:none;
+	}
+	
+.read-on a:hover {color:#C29704!important;}
+
+	
+/* Featured Articles formatting in "hometop-rightcol" */
+
+.feature {
+	background: #eee;
+	padding:10px 10px 10px 20px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	}
+
+.feature:hover {
+	background:#ddd;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	}
+
+/*.feature p { margin:0;	}*/
+
+#hometop-rightcol img {
+	margin-bottom:4px;
+	padding:1px;
+	border:1px solid #999;
+	}
+
+#hometop-rightcol .feature {margin-bottom: 10px;}
+
+#hometop-rightcol.title, #hometop-rightcol a.title  {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:1.4em;
+	color: #a37f04;
+	margin:10px 0 15px 0;
+	}
+
+/**********************************************************/
+	
+.description {
+	font-size: 1.3em;
+	font-weight: bold; 
+	color:#999;
+	}
+		
+.title, a.title  {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:1.4em;
+	color: #0778D7;
+	margin:10px 0 15px 0;
+	}
+		
+#homemidcol .clearfloat, #homeleftcol .clearfloat, #homerightcol .clearfloat {
+	border-bottom:0px solid #ccc;
+	padding:12px 0;
+	}	
+
+/* Pagination formats for the achives (previous and next links) */	
+
+.navigation a {
+	width: 120px;
+	border: 1px dotted #ccc;
+	padding:2px 4px 2px 4px;
+	text-align:center;
+	font-size:0.9em;
+	text-decoration:none;
+	color:#666;
+	}
+
+.navigation a:hover {
+	background-color:#eee;
+	}
+
+.preventries {
+	float:left;
+	}
+
+.nextentries {
+	float:right;
+	}
+	
+
+/*Post Formatting*/
+
+.entry {
+	padding-bottom:28px;
+	text-align:justify;
+	}
+
+.post blockquote {
+	color:#666;
+	padding:6px 14px;
+	margin:18px 35px;
+	border-top:1px solid #DDD;
+	border-bottom:1px solid #DDD;
+	}	
+
+.post ul li {
+	list-style:square;
+	margin-bottom:5px;
+	margin-left:42px;
+	}
+
+.post ol li {
+	margin-bottom:5px;
+	margin-left:48px;
+	}
+	
+#tags {
+	padding:5px;
+	background-color:#eee;
+	border-bottom:1px solid #999;
+	border-top:1px solid #999;	
+	}	
+		
+.postmetadata {margin: 30px 0;}
+	
+
+/* Form Elements */
+
+select {
+	background:#eee;
+	border-top:2px solid #999;
+	border-bottom:2px solid #999;
+	border-left:none;
+	border-right:none;
+	width:100%
+	}
+	
+
+#searchform {padding:5px 1px 1px 10px; display:block; height:30px; margin-left: 540px; }
+#searchform .imageblock {
+	width:90px;
+	height:25px;
+	float:left;
+	padding-right:10px;
+	background:url(/sx25themes/WyntonMagazine_base/images/search.gif) no-repeat;
+}
+.searchbutton {
+	font-weight:bold;
+	height: 20px;
+	padding: 1px;
+	background: #333;
+	color:#fff;
+	border:1px solid #ddd;
+	width:80px;
+	}
+
+.searchbutton:hover {
+	color:#fff;
+	background:#999;
+	border:1px solid #999;
+	text-decoration:none;
+	}
+
+.searchfield {
+	width:300px;
+	padding: 0px0px 1px 15px;
+	
+	color:#666;
+	border:1px solid #ddd;
+	}
+
+.searchfield:hover, .searchfield:focus {
+	
+	border:1px solid #999;
+	text-decoration:none;
+	}
+
+
+.button {
+	font-weight:bold;
+	padding: 1px;
+	background:#fff;
+	color:#666;
+	border-top:2px solid #ddd;
+	border-bottom:2px solid #ddd;
+	border-left:none;
+	border-right:none;
+	}
+
+.button:hover {
+	color:#333;
+	background:#eee;
+	border-top:2px solid #999;
+	border-bottom:2px solid #999;
+	border-left:none;
+	border-right:none;
+	text-decoration:none;
+	}
+
+#commentform input {
+	width: 170px;
+	margin: 5px 5px 1px 0;
+	border-top:2px solid #ddd;
+	border-bottom:2px solid #ddd;
+	border-left:none;
+	border-right:none;
+	}
+
+#commentform textarea {
+	background:#eee;
+	width: 100%;
+	margin-top:5px;
+	border-top:2px solid #ddd;
+	border-bottom:2px solid #ddd;
+	border-left:none;
+	border-right:none;
+	}
+
+#commentform textarea:hover, #commentform textarea:focus {background:#fff;}
+
+
+/* Comments*/
+
+.commentlist {
+	padding-left:30px;
+	}
+	
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 8px 15px 10px 15px;
+	background:#eee;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	}
+
+#commentform small {
+	background:#FFF;
+	font-weight:bold;
+	padding:0;
+	}
+	
+.commentmetadata {
+	display: block;
+	}
+
+.commentlist small {
+	background:#fff;
+	padding:2px 5px 2px 5px;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	}
+
+.commentlist cite { font-weight:bold; }	
+	
+
+/* Float Properties*/
+
+.clear {
+	clear:both;
+	}
+
+.clearfloat:after {
+	display:block;
+	visibility:hidden;
+	clear:both;
+	height:0;
+	content:".";
+	}
+
+.clearfloat {/*never delete this otherwise MSIE will kill the layout */
+	display:inline-block;
+	}	
+
+.clearfloat {/*never delete this otherwise MSIE will kill the layout */
+	display:block;
+	}
+	
+	
+/******************************************
+*   Footer                        
+******************************************/
+
+#footer {
+	margin: 0px auto 0;
+	width: 1004px;
+	font-size:0.9em;
+	text-align:center;
+	padding-top:15px;
+	height:50px;
+	clear: both;
+	border-top: 3px solid #999999;
+	
+	}
+
+.table_style {
+	border-top:1px solid #666;
+	border-bottom:1px solid #666;
+	border-left:1px solid #666;
+	border-right:1px solid #666;	
+}
+
+.spacer{
+width:1px; 
+float:left; 
+height:7em; 
+clear:both;
+}
+
+.ads{
+width: 670px; 
+float: left;
+clear: both;
+margin-bottom:5px;
+}
+
+#right_sidebar ur{
+    list-style: none outside none;
+}
+#right_sidebar li {
+    display: inline;
+    font-weight: normal;
+}
+#right_sidebar li a {
+    border-bottom: 1px solid #DEDEDE;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#content {
+text-align:justify;
+width: 630px!important; 
+}
+a.URLtop {
+color:#0778D7;
+font-size:15px;
+font-weight:bold;
+}
+a.URLbottom {
+color:#000000;
+}
+a.URLtext {
+color:#000000;
+text-decoration:none!important;
+}
+
+
+.etf > span {
+    float: left;
+    padding-left: 15px;
+    width: 90px;
+}
+
+.etf {
+    color: #333333;
+    display: block;
+}
+
+#header_menu{position: absolute; bottom: 0; left: 0; width: 100%;}
+
+#body li{margin-left: 25px;}  #header_menu_1{ background: none repeat scroll 0 0 #11A8DB; }
+
+#header_menu_2{ background: none repeat scroll 0 0 #ACE6F9; }
+
+#header_menu_1 li {background-color: #11A8DB }
+#header_menu_1 li:hover {background-color: #ACE6F9 }
+#header_menu_2 li {background-color: #ACE6F9 }
+#header_menu_2 li:hover {background-color: #11A8DB }
+
+
+#header_menu_1 a, #header_menu_2 a{color:#000055; font-weight: bold !important;}
+ 
+#header_menu_1 a:visited, #header_menu_2 a:visited{color:#000055!important; font-weight: bold !important;}
+
+#header_menu_1 a:hover, #header_menu_2 a:hover{color:#000055!important; font-weight: bold !important;}
+
+#header_logo{color:#156884; font-size:33px;}
+
+body{
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+    color:#0E4253;
+}
+
+a:link{
+    color: #115369;
+}
+
+a:visited{
+    color: #115369;
+}
+
+a:hover{
+    color: #2790A5;
+    text-decoration: none;
+}
+
+.title, .title a, .title a:visited {color:#000055!important;}
+ 
+.title a:hover {color:#2B1324!important;}
+
+#footer a{ color: #0E4253; }
+
+#footer{ 
+        color: #0E4253; 
+	background: #ACD0D8;  
+	height: 50px;
+	padding: 10px 0;
+	text-align: center;
+}  body{ background: url("layout_images/page_dolphin.jpg")  repeat-x #e7f4f5;  background-attachment: fixed;} 
+#art-main { cursor: default; left: 0; position: relative; top: 0; width: 100%; }
+
+  #header {
+    background: url("layout_images/header_dolphin.jpg") #ACD0D8 repeat-x scroll center center;
+} 
+
+#header_bg { background-color: #ACD0D8;}   
+
+  a.URLtop, a.URLtop:visited {
+	text-decoration: underline !important;
+	font-weight: bold !important;
+	color: #156884 !important;
+	font-size: 15px;
+}
+
+a.URLtop:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 15px;
+}
+
+a.URLtext, a.URLtext:visited {
+	text-decoration: none !important;
+	font-weight: normal !important;
+	color: #0E4253 !important;
+	font-size: 12px;
+}
+
+a.URLtext:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #0E4253 !important;
+	font-size: 12px;
+}
+
+a.URLbottom, a.URLbottom:visited {
+	text-decoration: none !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 12px;
+}
+
+a.URLbottom:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 12px;
+}

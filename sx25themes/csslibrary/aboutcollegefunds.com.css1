@@ -1,0 +1,97 @@
+﻿#header_menu{position: absolute; bottom: 0; left: 0; width: 100%;}
+
+#body li{margin-left: 25px;}  body{ background: url("layout_images/red.jpg")  repeat-x #fff;  background-attachment: fixed;} #art-main { cursor: default; left: 0; position: relative; top: 0; width: 
+
+100%; }  
+#header{ background: url("layout_images/header.jpg") repeat-x scroll center center;
+}  #header{ height: 180px;}    #header_menu_1{ background: none repeat scroll 0 0 #11A8DB; }
+
+#header_menu_2{ background: none repeat scroll 0 0 #ACE6F9; }
+
+#header_menu_1 li {background-color: #11A8DB }
+#header_menu_1 li:hover {background-color: #ACE6F9 }
+#header_menu_2 li {background-color: #ACE6F9 }
+#header_menu_2 li:hover {background-color: #11A8DB }
+
+
+#header_menu_1 a, #header_menu_2 a{color:#000055; font-weight: bold !important;}
+ 
+#header_menu_1 a:visited, #header_menu_2 a:visited{color:#000055!important; font-weight: bold !important;}
+
+#header_menu_1 a:hover, #header_menu_2 a:hover{color:#000055!important; font-weight: bold !important;}
+
+#header_logo{color:#156884; font-size:33px;}
+
+body{
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+    color:#0E4253;
+}
+
+a:link{
+    color: #115369;
+}
+
+a:visited{
+    color: #115369;
+}
+
+a:hover{
+    color: #2790A5;
+    text-decoration: none;
+}
+
+.title, .title a, .title a:visited {color:#000055!important;}
+ 
+.title a:hover {color:#2B1324!important;}
+
+#footer a{ color: #0E4253; }
+
+#footer{ 
+        color: #0E4253; 
+	background: #ACD0D8;  
+	height: 50px;
+	padding: 10px 0;
+	text-align: center;
+}  a.URLtop, a.URLtop:visited {
+	text-decoration: underline !important;
+	font-weight: bold !important;
+	color: #156884 !important;
+	font-size: 15px;
+}
+
+a.URLtop:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 15px;
+}
+
+a.URLtext, a.URLtext:visited {
+	text-decoration: none !important;
+	font-weight: normal !important;
+	color: #0E4253 !important;
+	font-size: 12px;
+}
+
+a.URLtext:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #0E4253 !important;
+	font-size: 12px;
+}
+
+a.URLbottom, a.URLbottom:visited {
+	text-decoration: none !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 12px;
+}
+
+a.URLbottom:hover {
+	text-decoration: underline !important;
+	font-weight: normal !important;
+	color: #156884 !important;
+	font-size: 12px;
+}

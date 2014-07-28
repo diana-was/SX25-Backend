@@ -1,0 +1,338 @@
+﻿
+#header .search {
+    background-color: #FCEED2;
+    border-radius: 5px 5px 5px 5px;
+    display: inline;
+    float: left;
+    margin: 10px 30px 0 30px;
+    overflow: hidden;
+    padding: 10px;
+    width: 334px;
+}
+
+#header .search .submit {
+    background: url("images/header-search.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 30px;
+    margin: 0 0 0 7px;
+    text-indent: -9999px;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+input.placeholder {
+    color: #A7AAAB;
+    font-size: 15px;
+    font-weight: bold;
+    float:left;
+     border: 0 none;
+    box-shadow: 0 0 4px #808080;
+    display: block;
+    height: 24px;
+    line-height: 18px;
+    margin: 0;
+    padding: 3px;
+    width: 220px;
+}
+
+.forms_question form a.ask-now {
+    background: url("images/btnShareNow.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 5px 5px 5px 5px;
+    bottom: 14px;
+    box-shadow: 3px 3px 7px #93B5B9;
+    cursor: pointer;
+    height: 56px;
+    position: absolute;
+    right: 23px;
+    text-indent: -9000px;
+    text-transform: uppercase;
+    width: 237px;
+}
+
+.forms_question textarea.placeholder {
+    color: #A7AAAB;
+    font-weight: bold;
+}
+
+.forms_question textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    box-shadow: 0 0 13px #93B5B9;
+    height: 75px;
+    overflow: auto;
+    padding: 14px 13px;
+    position: absolute;
+    resize: none;
+    right: 22px;
+    top: 165px;
+    width: 345px;
+}
+
+fieldset, img {border: 0 none;}
+
+.feature {background:#DEEEF0!important;}
+
+.cat-head {background-color: #0E6063!important;}
+
+h3 {color: #FFFFFF!important;}
+
+.cms_instance_qow_home {
+    background: url("images/qow-bg.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: left;
+    font: 20px/25px Candal,serif;
+    height: 360px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 300px;
+}
+
+.cms_instance_qow_home p:after, .cms_instance_qow_right p:after {content: "”";}
+
+.cms_instance_qow_home p:before, .cms_instance_qow_right p:before {content: "“";}
+
+.cms_instance_qow_home p, .cms_instance_qow_right p {
+    color: #FFFFFF;
+    float: left;
+    font: 20px/25px Arial,serif;
+    margin: 0 0 0 40px;
+    padding: 115px 0 0;
+    width: 215px;
+    text-align:justify;
+    max-height: 180px;
+    overflow:hidden;
+}
+
+.cms_instance_qow_home .detail_link a, .cms_instance_qow_right .detail_link a {
+    background: url("images/btnSeeAnswers.png") no-repeat scroll 0 0 transparent;
+    bottom: 25px;
+    height: 32px;
+    position: absolute;
+    right: 20px;
+    text-indent: -9000px;
+    width: 134px;
+}
+
+a {
+    color: #00A3D6;
+    text-decoration: none;
+}
+
+.cms .parent .body {
+    color: #00A3D6;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 0 3px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 0 3px;
+    overflow: hidden;
+    width: 560px;
+}
+
+#wrapper_inner {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0 auto;
+    width: 975px;
+    text-align:left;
+}
+
+.right .listxml {
+    border: 3px dotted #B3B3B3;
+    color: #00A3D6;
+    padding: 11px 20px;
+}
+.right {
+    float: right;
+    width: 300px;
+}
+.left {
+    float: left;
+    margin-right: 8px;
+    width: 660px;
+}
+.module {
+    margin-bottom: 25px;
+}
+.left .hgroup, .left .no_results_hgroup {
+    background: url("images/categoryHeaderBg.png") no-repeat scroll right bottom #148E96;
+    min-height: 50px;
+}
+
+.left .recent .hgroup h2 {
+    background: url("images/recentQuestionGraphic.png") no-repeat scroll 0 0 transparent;
+}
+
+.left .cms .hgroup h2, .left .no_results_hgroup h2 {
+    color: #FFFFFF;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0;
+    min-height: 50px;
+    padding: 0 0 0 70px;
+}
+.left .module .contents {
+    background: none repeat scroll 0 0 #DEEEF0;
+    color: #575B50;
+    padding: 7px;
+}
+
+.cms li {
+    margin: 0 0 5px;
+    padding: 7px 0 8px;
+}
+ul {
+    list-style: none outside none;
+}
+li {
+    display: list-item;
+}
+.cms ul.parents li.even .parent {
+    background: url("images/stethoscope-small.png") no-repeat scroll 0 0 #FFFFFF;
+}
+
+.cms .parent {
+    min-height: 76px;
+    padding: 0 8px 0 76px;
+    position: relative;
+}
+
+.cms ul.parents li.odd .parent {
+    background: url("images/stethoscope-small.png") no-repeat scroll 0 0 transparent;
+    padding-bottom: 0;
+}
+
+
+.cms .parent .detail_link a {
+    background: url("images/btnAnswer.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 3px 7px #CCCCCC;
+    display: block;
+    height: 36px;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-transform: capitalize;
+    width: 152px;
+}
+
+.cms .parent .detail_link {
+    bottom: 0;
+    position: absolute;
+    right: 12px;
+}
+
+.left .cms .hgroup h2, .left .no_results_hgroup h2 {
+    background: url("images/recentQuestionGraphic.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0;
+    min-height: 50px;
+    padding: 0 0 0 70px;
+}
+
+.right .listxml ul li a {
+    color: #00A3D6;
+    font-size: 18px;
+    margin: 0 0 0 3px;
+}
+
+.right .listxml ul li {
+    font-family: arial,sans-serif;
+    line-height: 30px;
+    margin: 0 0 0 0;
+}
+
+.right .listxml {
+    border: 3px dotted #B3B3B3;
+    color: #00A3D6;
+    padding: 11px 15px;
+}
+
+.right .listxml h2 {
+    background: url("images/featuredTopics.png") no-repeat scroll left center transparent;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    text-indent: -9000px;
+}
+
+.cms_instance_qow_right {
+    background: url("images/QuestionDayRightRailBg.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font: 20px/25px Candal,serif;
+    height: 361px;
+    margin: 0 0 10px;
+    padding: 0;
+    position: relative;
+    width: 300px;
+}
+
+p, dl, multicol {
+    display: block;
+}
+
+.cms_instance_qow_right .detail_link a {
+    bottom: 19px;
+    right: 17px;
+}
+
+.cms_instance_qow_home .detail_link a, .cms_instance_qow_right .detail_link a {
+    background: url("images/btnSeeAnswers.png") no-repeat scroll 0 0 transparent;
+    height: 32px;
+    position: absolute;
+    text-indent: -9000px;
+    width: 134px;
+}
+
+.right .forms_question {
+    background: url("images/AskRightRailBg.png") no-repeat scroll 0 0 transparent;
+    height: 360px;
+    margin: 0 0 10px;
+    padding: 0;
+    position: relative;
+    width: 300px;
+}
+
+.right .forms_question form a.ask-now {
+    background: url("images/btnShareNow.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    bottom: 10px;
+    cursor: pointer;
+    height: 66px;
+    position: absolute;
+    right: 24px;
+    text-indent: -9000px;
+    text-transform: uppercase;
+    width: 248px;
+}
+
+.right .forms_question textarea.placeholder {
+    color: #A7AAAB;
+    font-weight: bold;
+}
+
+.right .forms_question textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    box-shadow: 0 0 13px #93B5B9;
+    height: 70px;
+    left: 15px;
+    overflow: auto;
+    padding: 14px 13px;
+    position: absolute;
+    resize: none;
+    top: 175px;
+    width: 241px;
+}
+

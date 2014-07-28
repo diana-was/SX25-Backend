@@ -1,0 +1,257 @@
+/* basic */
+root { 
+    display: block;
+}
+body{
+    background-color: #333333;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+}
+.cl{
+    clear:both !important;
+}
+/* layout */
+#navi{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+#navi ul{
+    padding: 0;
+    margin:0;
+    line-height: 35px;
+}
+#navi li{
+    display:inline;
+    list-style: none;
+    margin-left: 10px;
+}
+#navi a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#navi a:hover{
+    text-decoration: underline;
+}
+#page{
+    background-color: #333333;
+    padding-top: 30px;
+    text-align: center;
+}
+#wraper{
+    margin: auto;
+    width: 960px;
+    text-align: left;
+}
+#header{
+    width: 950px;
+    height: 160px;
+    background-color: #8c0000;
+}
+#header div{
+    float: left;
+}
+#header div#logo{
+    width: 60%;
+    height: 160px;
+}
+#header div#logo span{
+    line-height:140px;
+    margin-left:20px;
+}
+#header div#logo a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 43px;
+}
+#header div#searchbox{
+    width: 40%;
+    height: 160px;
+    text-align: right;
+}
+#header div#searchbox form div{
+    margin-top: 60px;
+    margin-right: 20px;
+}
+#header div#searchbox form .textfield{
+    text-align: right;
+    color: #333;
+    border: none;
+    height: 23px;
+    width: 250px;
+}
+#header div#searchbox form .button{
+    border: 1px solid #9c9c9c;
+    background-color: #343434;
+    color: #f0f0f0;
+    width: 50px;
+    height: 23px;
+    font-weight: bold;
+}
+#content{
+    width: 950px;
+    /*height: 1400px;*/
+    background-color: #efefef;
+    padding-top: 10px;
+}
+#container{
+    width: 930px;
+    margin: 0 10px;
+}
+#container div{
+    float: left;
+	text-align: justify;
+}
+
+#container div.column{
+    padding: 14px 6px;
+    width: 322px;
+    border-right: 5px solid #efefef;
+    background-color: #ffffff;
+	color: #333333;
+}
+#container div.column h2,#container div.column p{
+    margin:0 5px;
+}
+#container div.column h2{
+    color: #C00000;
+    font-size: 20px;
+}
+#container div.column p{
+    color: #333333;
+    line-height: 20px;
+}
+#results{
+    width: 322px;
+    margin: 5px;
+    background-color:#FFFFFF !important;
+}
+.sponsoredresults {
+        background-repeat: no-repeat !important;
+        padding:4px 0px 0px 15px !important;
+        font-size:10px !important;
+        color:#999 !important;
+}
+#results p {
+        margin:5px 0px 10px 0px !important;
+        /*padding:0px 15px 0px 15px !important;*/
+		padding:0px !important;
+        width:300px !important;
+        font-size: 12pt;
+}
+
+#results a.URLtop {
+        color:#BF0000 !important;
+        text-decoration:none !important;
+		background: none !important;
+		font-weight:bold !important;
+}
+
+#results a.URLbottom {
+        color:#000000 !important;
+        text-decoration:none !important;
+		background: none !important;
+		font-weight:normal !important;
+		font-size:90% !important;
+}
+
+#results a.URLtext {
+        text-decoration:none !important;
+        color:#000 !important;
+		background: none !important;
+		font-weight:normal !important;
+		font-size:90% !important;
+}
+
+div#sidebar{
+    width: 250px;
+    float: right !important;
+}
+div#sidebar .widget{
+    width: 100%;
+    background-color: #ffffff;
+}
+div#sidebar .widget img,div#sidebar .widget p{
+    margin-left: 10px;
+}
+div#sidebar .widget > ul.list-cat{
+    padding-left: 20px;
+}
+div#sidebar .widget > ul.list-cat li{
+    margin-left: 10px;
+}
+div#sidebar .widget ul.list-cat li{
+    list-style-image:url("list_cat.png");
+}
+div#sidebar .widget ul.list-cat li a{
+    color: #383838;
+    font-weight: bold;
+    text-decoration:none;
+    vertical-align: top;
+}
+div#sidebar .widget h2{
+    margin:0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height:30px;
+    background-color:#383838;
+    text-transform:lowercase;
+    padding-left: 18px;
+}
+div#sidebar .widget img{
+    border: 10px solid #949494;
+    width: 210px;
+}
+#sidebar div.widget p {
+        margin:5px 0px 10px 0px !important;
+        padding:0px 15px 0px 15px !important;
+        width:230px !important;
+        font-family: Verdana,Arial;
+        font-size:10pt;
+}
+#sidebar div.widget a.URLtop {
+        color:#333333 !important;
+        text-decoration:none !important;
+		background: none !important;
+		font-weight:bold !important;
+}
+
+#sidebar div.widget a.URLbottom {
+        color:#333333 !important;
+        text-decoration:none !important;
+		background: none !important;
+		font-weight:normal !important;
+		font-size:90% !important;
+}
+
+#sidebar div.widget a.URLtext {
+        text-decoration:none !important;
+        color:#333333 !important;
+		background: none !important;
+		font-weight:normal !important;
+		font-size:90% !important;
+}
+#footer{
+    width: 950px;
+    height: 45px;
+    background-color: #8c0000;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 44px;
+}
+#footer a{color:#fff;}
+#spacer{float:left; height:6em; width:1px; clear:both}
+#result{clear:left;   float: right; }
+.etf > span {
+    float: left;
+    padding-left: 15px;
+    width: 90px;
+}
+.etf {
+    color: #333333;
+    display: block;
+}

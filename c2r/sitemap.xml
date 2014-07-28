@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+									<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+									<!-- generator="sx25-ironhead" -->
+									<!-- generated-on="2012-08-20T17:11:22-07:00" -->
+									<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+									<url>
+										<loc>http://bankaccountdirect.com/index.php</loc>
+										<lastmod>August 20, 2012 17:11 pm</lastmod>
+										<changefreq>weekly</changefreq>
+										<priority>1.0</priority>
+									</url><url>
+										<loc>http://bankaccountdirect.com/ARTICLE/bank+account/result.php</loc>
+										<lastmod>August 20, 2012 17:11 pm</lastmod>
+										<changefreq>weekly</changefreq>
+										<priority>0.5</priority>
+								</url><url>
+										<loc>http://bankaccountdirect.com/ARTICLE/online+banking/result.php</loc>
+										<lastmod>August 20, 2012 17:11 pm</lastmod>
+										<changefreq>weekly</changefreq>
+										<priority>0.5</priority>
+								</url></urlset>

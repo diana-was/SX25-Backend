@@ -1,0 +1,222 @@
+body {
+	background-color: #f2f2f2;
+}
+body, .t-boutique-p-post .paragraph a, .t-boutique-p-footer .footer a, #main ul.gallery-grid li a, #main ul.gallery-list li a, #main ul.news li a h3, .t-boutique-p-contact p.adress, 
+.post article h3, .search h3, .detailsTable ul.specsList li .val, ul.results li a p {
+	color: #000000;
+}
+
+header h1, header form, header a.back, header form input#submit, 
+#addtocart #selectModel, .detailsTable ul.specsList li, .detailsTable ul.specsList li:first-child,
+ul.articlesCart, ul.detailCart, ul.totalCart, footer, .border {
+	border-color: #000000;
+}
+header form input#submit {
+	border-color: #000000 !important;
+}
+.logo{
+	color: #3d3d3d;
+}
+
+.logotype {text-align:center}
+#logotype {
+  text-decoration: none!important;
+  color: #80b63d!important;
+  font: bold 50px 'PT Sans Narrow', sans-serif !important;
+}
+
+#logotype:hover {
+  text-decoration: none!important;
+}
+
+h3, #main ul.news li a time, .post article time, .search .searchNum, .detailsTable ul.specsList li .def {
+	color: #3d3d3d;
+}
+header form, .detailsTable, .search .searchNum, .t-boutique-p-single #addtocart #selectModel, 
+#main.t-boutique-p-ecogallerygrid ul.gallery-grid li, #main.t-boutique-p-blog ul.news li,
+#main.t-boutique-p-ecogallerylist ul.gallery-list li, #main.t-boutique-p-gallerygrid ul.gallery-grid li,
+#main.t-boutique-p-gallerylist ul.gallery-list li, #main.t-boutique-p-search ul.gallery-list li,
+#main.t-boutique-p-search ul.news li, .t-boutique-p-single #addtocart #selectModel,
+#main.t-boutique-p-blogdate ul.news li, .searchInfo, ul.results li {
+	background-color: #ffffff;
+}	
+header a.back, header form input#submit, #main ul.gallery-grid li.more, .t-boutique-p-hsocial, 
+#addtocart #submitCart, #main ul.news li.more, #main ul.gallery-list li.more,
+.t-boutique-p-contact ul.getcontact li a, ul.articlesCart li span.edit, .checkout, nav ul, nav ul li.sub-list a,
+.menu, .t-boutique-p-single .back a, .t-boutique-p-post article .back a, .t-boutique-p-contact .map:before {
+	/*background-color: #000000;*/
+}
+.t-boutique-p-menu ul li a.menu{
+	/*background: url(images/box-heading.gif) repeat-x #C0143C;*/
+}
+.t-boutique-p-menu ul li.menu1 a{
+	background: #B06891;
+}
+.t-boutique-p-menu ul li.menu2 a{
+	background: #F27C1E;
+}
+.t-boutique-p-menu ul li.menu3 a{
+	background: #B07A51;
+}
+.t-boutique-p-menu ul li.menu4 a{
+	background: #83C6B0;
+}
+.t-boutique-p-menu ul li.menu5 a{
+	background: #C34820;
+}
+.t-boutique-p-menu ul li.menu6 a{
+	background: #A8AF3F;
+}
+.t-boutique-p-menu ul li.menu7 a{
+	background: #999999;
+}
+header.t-boutique-p-hsocial{
+	background-color:#F7F7F7;
+}
+#main ul.gallery-grid li a span.price, #main ul.gallery-list li a span.price, 
+.detail .price span, .detail .price span, ul.articlesCart li span.price, .search .searchInfo,
+#main.t-boutique-p-search ul.gallery-list li a span.price {
+	background-color: #3d3d3d;
+}
+#main ul.gallery-grid li.more a, .detail .price span, #main ul.news li.more a p, 
+#main ul.gallery-list li.more a p, nav ul li, nav ul li a, #main ul.date li a time span.m,
+.t-boutique-p-single .back a, .t-boutique-p-post article .back a {
+	color: #f2f2f2;
+}
+.t-boutique-p-hsocial p.text-social{
+	color:#087ACF;
+}
+
+#main ul.date li a time, .searchNum {
+	background-color: #000000;
+}
+#main ul.date li a time span.d, .search .searchFor, #main.t-boutique-p-ecogallerygrid ul.gallery-grid li a span.price {color: #ffffff;}
+#main ul.date li a time span.y {color: #f23f3f;}
+
+.t-boutique-p-single #addtocart #submitCart, .t-boutique-p-contact ul.getcontact li a, 
+#main.t-boutique-p-cart ul.articlesCart li span.price, #main.t-boutique-p-cart .checkout,
+#main.t-boutique-p-ecogallerylist ul.gallery-list li a span.price,
+#main.t-boutique-p-gallerygrid ul.gallery-grid li a span.price,
+#main.t-boutique-p-gallerylist ul.gallery-list li a span.price,
+#main.t-boutique-p-search ul.gallery-list li a span.price, .t-boutique-p-single #addtocart #submitCart,
+#main.t-boutique-p-blogdate ul.date li a time span.d, .searchNum {
+	color: #ffffff;
+}
+
+.t-boutique-p-contact .map img {
+	border-color: #ffffff;
+}
+.search p.no-results span {
+	color: #FF0000;
+}
+nav ul li {
+	border-color: #f2f2f2;
+}
+
+body.home {
+	background-color: #ffffff;
+}
+.logo {text-align : center ;text-transform : none ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 2em ;font-family : ProximaNovaSemibold ;} .title {text-align : left ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 1.5em ;font-family : ProximaNovaSemibold ;} .title2 {text-align : left ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 1.3em ;font-family : ProximaNovaSemibold ;} .title3 {text-align : left ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 0.9em ;font-family : ProximaNovaSemibold ;} .title4 {text-align : center ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 0.9em ;font-family : ProximaNovaSemibold ;} .subtitle {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 1.3em ;font-family : ProximaNovaSemibold ;} .paragraph {text-align : left ;font-weight : normal ;font-style : normal ;text-transform : none ;text-decoration : none ;font-size : 0.8em ;font-family : Arial ;} .paragraph2 {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : none ;text-decoration : none ;font-size : 0.8em ;font-family : Arial ;} .footer {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : none ;font-size : 0.7em ;font-family : arial ;} 
+.menu {text-align : left ;font-weight : bold ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 1em ;font-family : 'PT Sans Narrow', sans-serif  ;} 
+.button {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 1em ;font-family : ProximaNovaSemibold ;} 
+
+.pagetop {font-style:italic !important;}
+
+/************* result.php **************/
+#results {
+width: 100%;
+margin: 0;
+padding: 2px;
+}
+#results ul {
+list-style-type: none;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#results ul li {
+display: block;
+margin: 10px 0px 10px 0;
+background-color: #EEEEEE;
+border: 1px solid #BBB;
+clear: both;
+}
+
+.imgbox {
+min-height: 80px;
+float:left; 
+margin:5px 5px 10px 5px;
+}	
+
+#results ul li img {
+width: 60px; 
+margin:0 auto auto auto;
+}
+
+a.URLtop {
+    font-weight:bold;
+    color: #1961A9;
+    font-size: 16px;
+    text-decoration: underline!important;
+}
+
+a.URLtext{
+    font-size: 12px!important; 
+    line-height:14px!important; 
+    color: #333333 !important; 
+    text-decoration: none !important;
+}
+
+a.URLbottom {
+    font-size: 12px;  
+    color: #679B00;
+    text-decoration: underline!important;
+}
+
+/*customize css*/
+.question{
+	width:100% !important;
+}
+.questionMain{
+	width:100% !important;
+	float:none !important;
+}
+.question h4{
+	margin: 0 !important;
+	padding: 0 10px 10px 0 !important;
+	text-align:left;
+	color: #80B63D;
+}
+.left img{
+	margin-right:5px !important;
+	padding: 0 !important;
+}
+/*style ask question form*/
+.ask_question_form{
+	margin-left:10px;
+}
+.ask_question_form #main-recent{
+	padding-top:10px;
+}
+.ask_question_form h2, .tabbody h2, h2.more_question{
+	color: #fff!important;
+	font: bold 20px 'PT Sans Narrow', sans-serif !important;
+	text-align:left;
+	background-color: #83C6B0;
+	height:35px;
+	padding: 5px 0 0 10px;
+	text-shadow: 2px 1px #83C6B0;
+}
+.entry-content .title h3{
+	font-size: 12px;
+	text-align:left;
+}
+#loginform p{
+	margin: 5px 0 0 0 !important;
+}
+#loginform p label{
+	font-size:12px;
+}
+
+

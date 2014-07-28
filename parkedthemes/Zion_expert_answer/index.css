@@ -1,0 +1,107 @@
+#article {
+    width: 615px!important;
+}
+#article-mid {
+    width: 595px!important;
+	background-image: url("images/article-mid_1.png")!important;
+}
+
+#article-text h1 {
+	margin: 10px 0!important;
+}
+#article-top {
+    width: 615px!important;
+	background-image: url("images/article-top_1.png")!important;
+}
+#article-bottom {
+    background-image: url("images/article-btm_1.png")!important;
+	width: 615px!important;
+}
+
+.button2 {
+    background: url("images/sprite_buttons.png") no-repeat scroll 0 0 transparent;
+    height: 0 !important;
+    line-height: 40px;
+    overflow: hidden;
+    padding: 0 0 43px;
+    width: 156px;
+}
+
+.button1, .button1:visited, .button1_off, .button1_off:visited, .button2, .button2:visited {
+    color: #012F54;
+    display: block;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+}
+.msg {
+    background: url("images/bg_question_w.png") no-repeat scroll 0 0 transparent;
+    height: 184px;
+    margin: 19px 8px;
+    position: relative;
+    width: 600px;
+}
+.divider {
+    clear: both;
+    margin: 0 0 12px 15px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+h1#QuesCTA {
+    color: #FFFFFF;
+    font-family: "Times New Roman",Times,serif;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    margin: 0 0 3px;
+    padding: 0;
+}
+
+.welcomebox {
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 6px 3px 10px;
+    padding: 7px 6px 0 6px;
+    text-decoration: none;
+}
+
+.msg textarea {
+    border: 0 none;
+    height: 153px !important;
+    margin: 6px 0 0 6px;
+    overflow: auto;
+    padding: 10px;
+    position: absolute;
+    width: 567px !important;
+}
+
+.ddFieldsWrap {
+    background-color: #D7D7D7;
+    display: inline;
+    float: left;
+    width: 615px;
+}
+
+.ddFields {
+    display: inline;
+    float: left;
+    margin: 10px;
+    width: 600px;
+}
+
+.ddFields {
+    background-color: #D7D7D7;
+}
+
+.notediv {
+   clear:both; 
+    margin: 105px 3px 0 3px;
+    width: 610px;
+}
+
+#content2{background-image:url(images/bg1.jpg); background-repeat: no-repeat;background-position: left top; width: 615px}
+
+.divider{margin-bottom:0; border-bottom:none;}

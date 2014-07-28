@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{PAGETITLE}</title>
+<meta name="description" content="{META_TITLE}">
+<meta name="keywords" content="{META_KEYWORDS}">
+{META_TAG}
+<link rel="shortcut icon" href="images/cmp3.ico" />
+<link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+<link href="{THEME}version1.css" rel="stylesheet" type="text/css">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>		
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src='http://jquery-multifile-plugin.googlecode.com/svn/trunk/jquery.blockUI.js' type="text/javascript" language="javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script type="text/javascript">
+
+$(document).ready(function(){
+        var id= getUrlVars()["question_id"];
+        var idA= getUrlVars()["article_id"];
+	if(null!=id && id!=''){
+            $('#id_answer').show();
+            $('#answer_form').show();
+            $('#qa_'+id).hide(); 
+            $('#more_questions').hide(); 
+            $('#question_id').val(id); 
+        }else{
+            if (null!=idA && idA!=''){ 
+                $('#full_article').show(); 
+                $('#article_summary').hide();
+            }
+            else{
+                  $('#full_article, #answer_form').hide();
+            }
+            $('#id_answer').hide();
+        } 
+
+         $( "#contact-form" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: { effect: 'drop', direction: "down" },
+                        title: "Order Cupon Book",
+                        buttons: { "Close": function() {  $(this).dialog("close"); }}
+	});
+        $('#featured').click(function(){
+               $( "#contact-form" ).dialog("open");
+               return false;
+        });    
+ 
+});
+
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	        vars[key] = value;
+	});
+	return vars;
+}
+
+function showArticleFull(){
+    $('#article_summary').hide(600); $('#full_article').show(600);
+    return false;
+}
+
+function hideArticleFull(){
+    $('#full_article').hide(600); $('#article_summary').show(600);
+    return false;
+}
+</script>
+
+<style>
+#question_form {display:none;}
+.hgroup {height:41px; padding-left:90px; background: url('{THEME_IMAGE}hgroup_bg.png') no-repeat 0 0 transparent;}
+.hgroup h2, .hgroup h3 {padding:10px 0px!important; color: #ffffff; font-family: 'LatoBlack',Arial,Helvetica;}
+</style>
+
+</head>
+
+<body id="home">
+{WIDGET#68_MODULE}
+
+<div id="page" class="clearfloat">
+
+<div class="clearfloat">
+   <div id="branding" class="left" onclick="location.href='{TITLE_LINK}';" style="cursor: pointer;">
+    <div class="blogtitle"><a href="{TITLE_LINK}">{DOMAIN}</a></div>
+    <div class="description"></div>
+   </div> 
+</div>
+
+<div class="right">
+     <form method="get" id="searchform" action="/result.php">
+        <div><input type="text" value="" name="Keywords" id="s"  onfocus="this.value = ''" />
+             <input type="submit" id="searchsubmit" value="" />
+        </div>
+     </form>
+</div>
+
+<ul id="nav" class="clearfloat">
+  <li><a href="{TITLE_LINK}" title="Home" class="on">Home</a></li> 
+  <li class="page_item page-item-2"><a href="result.php?Keywords={MENU1}" title="{MENU1}">{MENU1}</a></li>
+  <li class="page_item page-item-3"><a href="result.php?Keywords={MENU2}" title="{MENU2}">{MENU2}</a></li>
+  <li class="page_item page-item-4"><a href="result.php?Keywords={MENU3}" title="{MENU3}">{MENU3}</a></li>
+  <li class="page_item page-item-5"><a href="result.php?Keywords={MENU4}" title="{MENU4}">{MENU4}</a></li>
+  <li class="page_item page-item-6"><a href="result.php?Keywords={MENU5}" title="{MENU4}">{MENU5}</a></li>
+  <li class="page_item page-item-7"><a href="result.php?Keywords={MENU6}" title="{MENU4}">{MENU6}</a></li>
+</ul>
+
+
+
+<div>
+
+<div id="content">
+<h2>{PAGE_TITLE}</h2>
+{PAGE_CONTENT}
+
+{PAGE_REPLACE_BEGIN} 
+
+  <div id="tip_relate"> 
+      <div class="hgroup"><h2>{SEARCH_TERM} Tip</h2></div>
+      <div id="article_summary"><p>{ARTICLE_SUMMARY}<a href="#" onclick="showArticleFull();">[read more]</a> </p></div>
+
+       <div id="results" >
+                 <div style="text-align:right;font-size: 10pt;color:#ccc;padding-top:2px;">Sponsored Links</div>
+               {SPONSOR_LISTINGS}
+       </div>
+
+      <div id="full_article">
+      <div class="hgroup"><h2>{ARTICLE_TITLE}</h2></div>
+      {ARTICLE_CONTENT}<br /><br />
+      <a href="#" onclick="hideArticleFull();">[close]</a>
+      </div> 
+  </div> <!--end tip_relate-->
+
+
+
+
+
+
+     <div class="module cms home_questions" id="id_answer">
+          <div class="frame">
+	      <div class="hgroup"><h2>{SEARCH_TERM} Q&A</h2></div>
+
+	      <div class="contents question_answer">
+		    {QUESTION_BYID_MODULE}
+	      </div>
+          </div>
+      </div>
+
+
+
+
+     <div class="module cms home_questions" id="more_questions">
+          <div class="frame">
+	      <div class="hgroup"><h2>{SEARCH_TERM} Q&A</h2></div>
+
+	      <div class="contents question_answer">
+		    <ul class="parents">
+		       	{QUESTION_MODULE}
+                    </ul>
+	      </div> 
+
+              <div class="contents expert_answer" style="display: none;">
+		    <ul class="parents">
+
+                    </ul>
+	      </div>
+              
+          </div>
+      </div>
+
+{PAGE_REPLACE_END}      
+     {WIDGET_MODULE}
+
+</div>
+<!--END CONTENT-->
+
+
+
+
+
+<div id="sidecontainer">
+  <ul id="sidelist">   
+      
+    <li id="recent">
+             <img src="{THEME}images/get_match.jpg" style="width:280px; margin:10px; border:0 none;" id="featured">
+
+             <div class="hgroup" id="featured_article"></div>
+
+              <div class="article"> <span><img width="80" height="80" src="{M_IMG_1}" alt="image" style="margin-right:10px;float: left;"/></span><h3>{M_ARTICLE_TITLE_1}</h3> <span>{M_ARTICLE_SUMMARY_1}</span> <a href="/result.php?Keywords={MENU1}&article_id={ARTICLE_ID1}" rel="bookmark">[Read more...]</a></div>
+            <div class="article"> <span><img width="80" height="80" src="{M_IMG_2}" alt="image" style="margin-right:10px;float: left;"/></span><h3>{M_ARTICLE_TITLE_2}</h3> <span>{M_ARTICLE_SUMMARY_2}</span> <a href="/result.php?Keywords={MENU2}&article_id={ARTICLE_ID2}" rel="bookmark">[Read more...]</a></div>
+            <div class="article"> <span><img width="80" height="80" src="{M_IMG_3}" alt="image" style="margin-right:10px;float: left;"/></span><h3>{M_ARTICLE_TITLE_3}</h3> <span>{M_ARTICLE_SUMMARY_3}</span> <a href="/result.php?Keywords={MENU3}&article_id={ARTICLE_ID3}" rel="bookmark">[Read more...]</a></div>
+           
+  </li>
+  
+           
+
+
+    </ul>
+  <!--END SIDELIST-->
+</div>
+<!--END SIDEBAR-->
+</div>
+
+<div id="middle" class="clearfloat">
+		
+	<div id="related_topics" class="hgroup">
+		</div>
+		<div id="cat-1" class="category">
+			<span class="cat_title2">
+                        <a class="bottom_title" href="result.php?Keywords={RELATED1}">{RELATED1}</a><br />
+			<a class="bottom_title" href="result.php?Keywords={RELATED2}">{RELATED2}</a><br />
+			<a class="bottom_title" href="result.php?Keywords={RELATED3}">{RELATED3}</a><br />
+                        </span>											
+		</div>
+		<div id="cat-2" class="category">
+			<span class="cat_title2">
+                        <a class="bottom_title" href="result.php?Keywords={RELATED4}">{RELATED4}</a><br />
+			<a class="bottom_title" href="result.php?Keywords={RELATED5}">{RELATED5}</a><br />			
+			<a class="bottom_title" href="result.php?Keywords={RELATED6}">{RELATED6}</a><br />
+                       </span>	
+		</div>
+	
+		    	
+		<div id="cat-3" class="category">
+			<span class="cat_title2">
+                        <a class="bottom_title" href="result.php?Keywords={RELATED7}">{RELATED7}</a><br />			
+			<a class="bottom_title" href="result.php?Keywords={RELATED8}">{RELATED8}</a><br />
+			<a class="bottom_title" href="result.php?Keywords={RELATED9}">{RELATED9}</a><br />
+                        </span>	
+		</div>
+	
+		    	
+		<div id="cat-4" class="category">
+			<span class="cat_title2">                      						
+			<a class="bottom_title" href="result.php?Keywords={RELATED10}">{RELATED10}</a><br />
+			<a class="bottom_title" href="result.php?Keywords={RELATED11}">{RELATED11}</a><br />			
+                        <a class="bottom_title" href="result.php?Keywords={RELATED9}">{RELATED12}</a><br />
+                         </span>				
+		</div>
+		
+	</div>
+{WIDGET#15_MODULE}
+
+</div> 
+<div id="footer"> 
+     <div> <a href="{TITLE_LINK}">Home</a> | <a href="privacy.php">Privacy</a> | <a href="contact_us.php">Contact Us</a></div> 
+    <div> {COPYRIGHT}
+  </div>
+</div>
+
+</div>
+</body>
+</html>

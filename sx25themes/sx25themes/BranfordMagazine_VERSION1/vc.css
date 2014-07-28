@@ -1,0 +1,19 @@
+.result{
+	padding-top: 16px;
+}
+.result a.URLTop{
+	color:#000000;
+}
+.result a.URLText{
+
+}
+.result a.URLBottom:hover{
+	color:#333333;
+	text-decoration:none;
+}
+.result p.URLText{
+	line-height: normal;
+}
+.result h3,p.URLBottom{
+	line-height: 7px;
+}

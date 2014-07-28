@@ -1,0 +1,29 @@
+!!! Under construction - uncompleted !!!
+
+Installation notes for sx2 and sx25
+-----------------------------------
+
+1. At system level:
+   - create /var/cache/sx/
+   - create /var/cache/sx/images
+   - Change ownership of /var/cache/sx/ and all directories below to the
+     owner/group of what apache runs (likely nobody/nobody)
+
+2. Change config.php:
+   - $whm_ip               IP address of cpanel server
+   - $whm_user             Username for cpanel server
+   - $whm_pass             Password for cpanel
+
+
+Installation notes for sx25
+---------------------------
+1. Change standard/config/config.ini for database server
+
+
+
+
+
+Installation notes for sx2
+---------------------------
+
+

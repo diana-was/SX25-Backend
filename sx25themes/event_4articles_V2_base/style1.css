@@ -1,0 +1,604 @@
+/*
+Theme Name: DirectoryPress
+Theme URI: http://directorypress.net/
+Description: DirectoryPress Developed By <a href="http://www.markfail.com">Mark Fail</a>.
+Version: 5.0e
+Author: PremiumPress
+Author URI: http://www.premiumpress.com
+Tags: blue, custom header, fixed width, two columns, widgets
+
+	DirectoryPress
+	 http://directorypress.net
+
+	This theme was designed and built by Mark Fail,
+	whose blog you will find at http://markfail.com/
+
+*/
+
+/********************** DIRECTORYPRESS GLOBAL STYLES ***********************/
+/***************************************************************************/
+
+
+* { margin: 0; padding: 0; outline: 0; }
+a { color: #af4667; text-decoration: none; }
+a:hover { cursor: pointer; text-decoration: underline; }
+a img { border: 0; }
+
+
+/********************** DIRECTORYPRESS LAYOUT STYLES ***********************/
+/***************************************************************************/
+ol { list-style:none; }
+.fl { float: left !important; display: inline; }
+.fr { float: right !important; display: inline; }
+.ac { display: block; text-align: center; }
+.ar { display: block; text-align: right; }
+.al { display: block; text-align: left; }
+.cl { clear: both; height: 0; line-height: 0; font-size: 0; text-indent: -4000px; }
+.hidden { display: none; }
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+.shell { margin: 0 auto; width: 1060px; }
+.clear { clear: both } 
+.tip { font-size:11px; }
+.tiptitle { font-size:14px; font-weight:bold; color:#666666;}
+.inputbox { font-size:14px; height:25px; margin:10px; border:2px solid #cccccc; }
+#LogoArea  { min-height:65px; }
+#AddItemBtn { float:right; height:50px; margin-top:3px; margin-right:15px; }
+#LogoWrapper { width:465px; float:left; margin-top:10px; margin-left:15px; }
+.login_error { background:red; padding:5px; margin-bottom:10px; color:white; }
+/********************** DIRECTORYPRESS LIST STYLES ***********************/
+/**************************************************************************/
+
+.name, .price, .location, .date, .image { float: left; display: block;}
+.image { margin-right:20px; }
+.image img { border: solid 5px #ffffff; background: #ffffff; }
+.item { width: 320px; padding-left: 75px; padding-right: 10px; float: left; display: block; }
+.description { padding-left: 25px; width: 300px; float: left; }
+.image { width: 50px; text-align: center; }
+.list, .list-spon { height:200px;}
+.ItemTitle { height:30px;   font-size:18px; line-height:30px; }
+.list div a, .list-spon div a { text-decoration: none;  }
+.list div.no, .list-spon div.no { height:60px; }
+.list div.alt, .list-spon div.alt{   height:60px; }
+.list div a:hover, .list-spon div a:hover { color: #000000; }
+.list div.no, .list div.alt, .list-spon div.no,.list-spon div.alt { padding: 7px 0 7px 0; }
+.main_page_img { display: block;float: left;width: 50px;height: 50px;border: 5px #FFF solid;margin-left: 8px; }
+.main_page_no_img { width: 50px; margin-left: 8px; }
+
+/********************** STAR RATING TEXT ***********************/
+/****************************************************************/
+
+.itemRating, .itemRating_featured { float:left; width:360px; height:45px; margin-top:5px; }
+.itemRating { padding:5px;}
+.itemDesc { float:left; text-align:right; width:250px; text-align:right;line-height:20px; padding:4px; padding-top:0px;}
+.ratingblock { margin-left:10px;}
+.ratingstars { float:left; width:130px;}
+.ratingtext { float:left; font-size:15px; line-height:25px; }
+#gdsr_mur_block_1_4, .gdmultitable, .ratingmulti { border:0px; padding:0px;}
+
+.urbangreymenu{width: 150px;}
+.urbangreymenu ul{list-style-type: none;margin: 0;padding: 0;margin-bottom: 0; }
+.urbangreymenu ul li{padding-bottom: 2px;}
+.urbangreymenu ul li a{font: normal 12px Arial;color: black; display: block;padding: 5px 0;line-height: 17px;padding-left: 8px; text-decoration: none;}
+.post-text-wide .urbangreymenu {width: 200px; margin-bottom:30px; margin-top:20px;}
+
+.goToButtons { background:white; border-top:10px solid white; height:40px; }
+.goToButtons ul { width:600px; list-style-type: none; }
+.goToButtons ul li { float:left; margin-right:20px;  }
+.goToButtons ul li { /*padding:8px;*/ background:#fff;font-size:13px;  }
+.goToButtons ul li a { color:#666; font-weight:bold; text-decoration:none; color:#F1810F;}
+.goToButtons ul li a:hover { text-decoration:none; color:#000;}
+/********************** DIRECTORYPRESS BUTTON STYLES ***********************/
+/***************************************************************************/
+
+.g-button, .g-button span { float: left; display: inline; height: 32px; padding-left: 11px; background: url(images/g-button.gif) no-repeat 0 0; font: bold 12px/32px Verdana; color: #fff; }
+.g-button span { background-position: right 0; padding-left: 0; padding-right: 11px; }
+.g-button:hover, .g-button:hover span { background-position: 0 -32px; text-decoration: none; }
+.g-button:hover span { background-position: right -32px;  }
+.g-button:active, .g-button:active span { background-position: 0 -64px; text-decoration: none; }
+.g-button:active span { background-position: right -64px; }
+#shadow-wrapper { width: 1028px; margin: 0 auto; height: 306px; }
+
+
+/********************** DIRECTORYPRESS LAYOUT STYLES ***********************/
+/***************************************************************************/
+
+
+#content { height: 100%; padding: 10px; }
+#sidebar { float: left; display: inline; width: 231px; }
+
+/********************** DIRECTORYPRESS NAVIGATION BAR STYLES ***********************/
+/***********************************************************************************/
+/*
+#navigation {   display: inline; min-width: 380px; max-width: 480px; }
+#navigation ul { list-style: none outside; padding:0;  }
+#navigation li { float: left; display: inline; margin-left: 10px; height: 33px; margin-top:10px;  }
+#navigation li a, 
+#navigation li a span { float: left; display: inline; height: 34px;  font: bold 16px/34px Arial;  }
+#navigation li a span { background-position: right 0; padding-left: 0; padding-right: 5px; margin:0px; margin-top:-5px; }
+*/ 
+
+/********************** DIRECTORYPRESS SEARCH BOX STYLES ***********************/
+/********************************************************************************/
+
+#search { height: 34px; width: 231px; margin-bottom: 10px; font-size:11px; }
+#search .field { float: left; display: inline; font-size: 12px; font-family: Verdana;  margin: 10px 0 0 11px; width: 175px; border: 0; background: none; }
+#search .btn { float: right; display: inline; height: 32px; width: 32px; border: 0; cursor: pointer; margin: 1px 1px 0 0; }
+#search .btn:hover { background-position: 0 -32px; }
+#search .btn:active { background-position: 0 -64px; }
+#search_country { background: url('images/magnifier.png') no-repeat; }
+#search_country { padding-left:20px; }
+
+/********************** DIRECTORYPRESS SIDEBAR STYLES ***********************/
+/****************************************************************************/
+
+#sidebar li {	list-style-type: none;}
+#sidebar .box {  height: 100%; margin-bottom: 10px; width: 231px; }
+#sidebar .box .top {  padding-bottom: 5px; height: 100%; }
+#sidebar .box h2 { font: bold 16px/36px Arial; color: #fff; padding: 0 11px; }
+#sidebar .box ul { list-style: none outside; }
+#sidebar .box li { padding: 0 10px;  height: 100%; position: relative; }
+#sidebar .box li.last { background: none; }
+#sidebar .box li a { line-height: 31px; }
+#sidebar .box li a:hover {  text-decoration: none; }
+#sidebar .box li span { position: absolute; top: 8px; left: 10px; display: block; height: 16px; width: 16px;  margin: 3px 9px 3px 0; }
+#sidebar .box .category a { display: block; width: 190px; line-height: 31px; padding-left: 20px; }
+#sidebar .box .category a:hover { }
+#sidebar .box .category .sub {  }
+
+/********************** DIRECTORYPRESS ADVERTISEMENT STYLES ***********************/
+/***********************************************************************************/
+
+.advertisement { padding: 10px; padding-bottom: 3px; }
+.advertisement a img { display: block; background: #2e2e2d; padding: 4px; border: 1px solid #3a3939; margin-bottom: 10px; }
+.advertisement a:hover img { display: block; background: #2e2e2d; padding: 4px; border: 1px solid #838383; margin-bottom: 10px; }
+.advertisement small { font: 10px Verdana; color: #5e5f5f; display: block; margin-top: -4px; }
+.advertisement small a { color: #949494; }
+.advertisement small a:hover { color: #cfcfcf; }
+
+/********************** DIRECTORYPRESS SOCIAL STYLES ***********************/
+/***********************************************************************************/
+
+.social { padding: 5px 0px 0px 13px; }
+.social .fl { margin-right: 14px; }
+.social a { display: block; float: left; margin: 7px 0px; padding-right: 13px;}
+.social a.free { margin-bottom: 0 !important; }
+
+/********************** DIRECTORYPRESS SINGLE COLUMN STYLES ***********************/
+/***********************************************************************************/
+
+#widecolumn { float: left; display: inline; width: 699px; height: 100%; margin-right:10px; }
+#widecolumn .wrapper { padding: 20px; }
+
+/********************** DIRECTORYPRESS WIDE COLUMN STYLES ***********************/
+/***********************************************************************************/
+
+#widecolumn .page-header { height: 36px; padding: 0 11px; }
+#widecolumn .page-header h2 { font: bold 16px/36px Arial; color: #cecdcd; }
+#widecolumn .page-header h2 span { font: 14px/36px Arial; color: #777677; }
+
+/********************** DIRECTORYPRESS SLIDER STYLES ***********************/
+/***********************************************************************************/
+
+#content-slider { width: 653px; height: 329px; background: #30302f; padding: 2px; border: 1px solid #3a3939; margin-bottom: 20px; }
+/*#content-slider .navigation { margin-top: 3px; height: 36px; background: #1e1e1e; padding-left: 12px; }
+#content-slider .navigation .pages {  float:right; display: inline; margin-top: 2px;  width: 633px;}
+#content-slider .navigation .pages a { float: right; display: inline; height: 32px; width: 33px; background: url(images/slider-nav.gif) no-repeat 0 0; margin-right: 2px; }
+
+#content-slider .navigation  h2 {  float:left;  margin-top:-38px; }*/
+
+#sn-2 { background-position: -35px 0 !important; }
+#sn-3 { background-position: -70px 0 !important; }
+#sn-4 { background-position: -105px 0 !important; }
+#sn-5 { background-position: -140px 0 !important; }
+#sn-1:hover { background-position: 0 -32px !important; }
+#sn-2:hover { background-position: -35px -32px !important; }
+#sn-3:hover { background-position: -70px -32px !important;  }
+#sn-4:hover { background-position: -105px -32px !important; }
+#sn-5:hover { background-position: -140px -32px !important; }
+#sn-1:active, #sn-1.active { background-position: 0 -64px !important; }
+#sn-2:active, #sn-2.active { background-position: -35px -64px !important; }
+#sn-3:active, #sn-3.active { background-position: -70px -64px !important; }
+#sn-4:active, #sn-4.active { background-position: -105px -64px !important; }
+#sn-5:active, #sn-5.active { background-position: -140px -64px !important; }
+ 
+/********************** DIRECTORYPRESS COLUMNS STYLES ***********************/
+/*****************************************************************************/
+
+.column { width: 319px; }
+.column .box { margin-bottom: 20px; min-height: 231px; overflow: hidden; position: relative; }
+.column .last-box { margin-bottom: 0; }
+.column .box .head {  height: 34px; }
+.column .box .head img { margin: 1px 1px 0 0; }
+.column h2 { font: bold 16px/34px Arial; color: #839c36; padding-left: 12px; }
+.column .cnt-blog { padding: 20px; padding-bottom: 5px; }
+.column .post h3 a { font: bold 14px/14px Arial; color: #cecdcd; }
+.column .post h3 a { font: bold 14px/14px Arial; color: #cecdcd; }
+.column .post .more {font-weight: bold; color: #af4667; } 
+.column .post small a { color: #af4768; } 
+.column .post small strong { font-weight: normal; color: #cecdcd;} 
+.column .post .entry { padding-top: 15px; } 
+.column .post .entry p { padding-bottom: 15px; } 
+.column .post .postmetadata { position: absolute; bottom: 0; left: 0; width: 301px; height: 28px; line-height: 28px; background: #161616; padding: 0 10px; color: #cecdcd; } 
+.column .post .postmetadata a { color: #af4768; } 
+.column .cnt-about { padding: 0 20px; }
+.column .cnt-flickr { padding: 12px 3px 12px 13px; }
+.column .cnt-flickr li {list-style-type: none; }
+.column .cnt-flickr a { margin-bottom: 10px; margin-right: 10px; float: left; }
+.column .cnt-flickr a.last { margin-bottom: 0; }
+.column .cnt-flickr a.fl { margin-right: 10px; }
+.column .cnt-flickr a img { display: block; background: #2e2e2d; padding: 4px; border: 1px solid #373737; width: 81px; height: 72px; }
+.column .cnt-flickr a:hover img { border: 1px solid #7f7e7f;  }
+.column .cnt-portfolio { padding: 20px; }
+.column .cnt-portfolio ul { list-style: none outside; padding-bottom: 20px;  }
+.column .cnt-portfolio ul li { padding-left: 21px; padding-bottom: 2px; height: 20px; }
+.column .cnt-portfolio h1 { font-size:18px; }
+.column .cnt-portfolio h2 { font-size:16px; font-weight:normal; color:#000; padding-left:0px; padding-bottom:10px; }
+.column .cnt-portfolio p { line-height:26px; font-size:13px;}
+#about p { padding-bottom: 20px; }
+#about .wrapper { padding-bottom: 0; }
+
+#hometextbox { width:350px;min-height:500px; }
+
+/********************** DIRECTORYPRESS BLOG STYLES ***********************/
+/*************************************************************************/
+
+#blog .post { margin-bottom: 20px; }
+#blog .postimage { float: left; display: inline; width: 190px; }
+#blog .postimage a img { padding: 4px; border: 1px solid #373737; }
+#blog .postimage a:hover img { border: 1px solid #7f7e7f; }
+#blog .post-text { float: right; display: inline; width: 450px;   height:233px; overflow: hidden; position: relative; }
+#blog .post-text .header,
+#blog .post-text-wide .header { height: 34px; background: #161616; overflow:hidden}
+#blog .post-text .header h2,
+#blog .post-text-wide .header h3 { font: bold 16px/34px Arial, sans-serif; color: #839c36; padding-left: 13px; }
+#blog .header img { margin: 1px 1px 0 8px; }
+#blog .header span { line-height: 34px; }
+#blog .header span strong { font-weight: normal; color: #cecdcd; }
+#blog .wide-post, #comments { height: 100%; }
+#blog .post .entry { padding: 0px; }
+#blog .post .entry h2 a { font: bold 14px Arial, sans-serif; color: #cecdcd; }
+#blog .post .entry small { display: block; margin: 5px 0 15px 0; font: 11px Arial, sans-serif; color: #626363; }
+#blog .post .entry small span { color: #cecdcd; }
+#blog .post .entry small a { color: #af4668; }
+
+#blog .post .entry .more { color: #; }
+
+#blog .postmetadata { position: absolute; bottom: 0; left: 0; height: 28px; width: 440px; background: #161616; line-height: 28px; padding: 0 10px 0 0  !important; }
+#blog .postmetadata span { color: #cecdcd; }
+
+.addthis_toolbox { margin-top: 0px;  float:right;}
+.addthis_toolbox .hover_effect{     width:220px; padding: 10px 0 6px 10px;   clear:both; float:right; }
+.addthis_toolbox .hover_effect div{    float: right;}
+.addthis_toolbox .hover_effect a{      padding: 2px 2px 2px 16px;    position: relative;    text-decoration: none;}
+.addthis_toolbox .hover_effect a:hover{    border: 0px solid #105CB6;       background: #B4D3F8;    color: #105CB6;    text-decoration: none;}
+.addthis_toolbox .hover_effect span{    position: absolute;    width: 16px;    height: 16px;    top: 2px;    left: 1px;}
+
+/********************** DIRECTORYPRESS COMMENTS STYLES ***********************/
+/*****************************************************************************/
+
+#comments { position: relative;  }
+#comments .wrapper { padding: 18px 0 0 10px }
+#comments h2, #post-comment h2 { font: bold 16px/36px Arial, sans-serif; color: #839c36; padding: 0 11px; background: #161616; height: 36px; }
+#post-comment .wrapper { padding: 20px  0 0 23px !important; }
+#post-comment .column.fr { width: 300px;  }
+.comment { margin-bottom: 20px; padding-top:10px; }
+.comment .author, .comment .avatar { float: left; display: inline; width: 67px; height: 67px; overflow: hidden; border: 3px solid #dddddd; margin-right: 24px; } 
+.comment-text { float: left; display: inline; width: 551px; background: url(images/comment-bg.gif) repeat-y 0 0; position: relative;  }
+.comment-text .bottom { background: url(images/comment-bottom.gif) no-repeat 0 bottom; }
+.comment-text .top { background: url(images/comment-top.gif) no-repeat 0 top; padding: 0 20px 0 26px; height: 100%; }
+.comment-text h3 { font: bold 14px/31px Arial,sans-serif; color: #a7a7a7; margin-bottom: 20px; }
+.comment-text h3 span { font: 11px/31px Arial, sans-serif; color: #5a5b5b; }
+.comment-text p { padding: 0 0 20px 6px; }
+#commentform textarea { width:640px; height:100px;  }
+#post-comment label { display: block; font: bold 14px/19px Arial, sans-serif; color: #af4667; padding-left: 3px; }
+#post-comment .field { display: block; width: 287px; border: 1px solid #373737; padding: 6px 5px; background: #30302f; margin-bottom: 13px; color: #626363; }
+#post-comment textarea { display: block; width: 267px; height: 140px; border: 1px solid #373737; padding: 6px 5px; background: #30302f; margin-bottom: 13px; color: #626363; overflow: auto; }
+#post-comment .fr label { padding-left: 19px; }
+#post-comment .g-button { float: right; margin: 10px 20px 20px 0; }
+
+
+/********************** DIRECTORYPRESS FOOTER STYLES ***********************/
+/***************************************************************************/
+
+#FooterArticles { display:none; }
+
+.slide-shell {	width: 653px;	height: 290px;	overflow: hidden;	position: relative;}
+.slide-platform {	width: 40000px;	height: 290px;	position: absolute;	left: 0px;	top: 0px;}
+.slide-platform a {	float: left;}
+span.center {	display: block;	padding: 10px;}
+.comment-text em p:before {	content: "\ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";}
+.comment-text em p:after {	content: "\ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â";}
+
+/********************** DIRECTORYPRESS FEATURED STYLES ***********************/
+/***********************************************************************************/
+
+/*ul.navigation {    list-style: none;    margin: 0; margin-top:20px;    padding:20px; padding-bottom:0px;  height:91px;}*/
+#shade {    background: #EDEDEC url(images/shade.jpg) no-repeat 0 0;    height: 30px;}
+
+
+/********************** DIRECTORYPRESS HOME PAGE CATEGORIES  ***********************/
+/***********************************************************************************/
+
+.homeCategories { width: 700px; margin-top:15px; margin-bottom:15px; }
+.homeCategories ul{list-style-type: none;margin: 0;padding: 0;margin-bottom: 0; }
+.homeCategories ul li { float:left; width:230px; min-height:40px;  }
+.homeCategories ul li a{ font: normal 12px Arial; color: black;  display: block;padding: 5px 0;line-height: 17px; padding-left: 38px;text-decoration: none;}
+.homeCategories ul li  {  }
+.homeCategories ul .sm { padding:0px; margin:0px; color:red; float:left; margin-right:10px; }
+
+
+#slider {    width: 660px;    margin: 0 auto;    position: relative;}
+.scroll {    margin-top:-20px; height: 200px;    width: 660px;    overflow: auto;    overflow-x: hidden;    position: relative;    clear: left;    background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;}
+.scrollContainer div.panel {    padding: 20px;    height: 210px;    width: 600px;}
+/*ul.navigation li {    display: inline;    margin-right: 10px; }
+ul.navigation a {    padding: 10px;    color: #000;    text-decoration: none; }
+ul.navigation a:focus {    outline: none;}*/
+.scrollButtons {    position: absolute;    top: 150px;    cursor: pointer;}
+.scrollButtons.left {    left: -20px;}
+.scrollButtons.right {    right: -20px;}
+.hide {    display: none;}
+
+#recentlist { width:699px; float:none; }
+
+/********************** DIRECTORYPRESS FEATURED STYLES ***********************/
+/******************************************************************************/
+
+#featured-item {   width:100%;    height: 250px;    position: relative;    float:left;   margin:0;   display:block;   overflow: hidden;	padding:0px;margin-bottom:20px;background:#666;}
+#featured-itemContent {   width: 100%;   position: absolute;   top: 0; margin:0; padding:0;   list-style:none;   margin-left: 0;}
+.featured-itemImage {	border:0px; 	width:100%px;	height:254px;   	float: left;   	position: relative;   	display: none;}
+.featured-itemImage span {   position: absolute;  left: 0;   font: 10px/15px Arial, Helvetica, sans-serif;  width: 699px; filter: alpha(opacity=90); -moz-opacity: 0.9; -khtml-opacity: 0.9;  opacity: 0.9; color: #fff; display: none; bottom: 0;}
+.featured-itemImage span strong { font-weight:normal; font-size:20px; letter-spacing:-1px; display:block; margin:15px 0 5px 15px !important; padding:0 }
+.featured-itemImage span b { font-weight:normal; display:block; margin:3px 0 12px 15px !important; padding:0; line-height:18px; font-size:14px; width:450px }
+.featured-itemImage span em.price {	font-style:normal;	display:block;	height:30px;	padding:5px 0;	font-size:25px; letter-spacing:normal;	position:absolute; right:15px; top:10px; line-height:25px;}
+.featured-itemImage span em.more-info {	font-style:normal;	font-size:12px;	font-weight:bold;	display:block;	position:absolute; right:15px; top:52px }
+.clear { clear: both } 
+.featured-itemImage span strong {color:#333333; }
+.featured-itemImage span { background-color: #eeeeee; }
+.featured-itemImage span b {	color:#666666; }
+.featured-itemImage span em.price { color:#333333; }
+.classform {  padding: 20px;  margin: 0px auto 0; padding-top:0px; background: #F6F6F6 url('<?php echo bloginfo('template_url') ?>/images/reg_backdrop.gif') repeat-x; }
+.classform .adfields { border: solid 1px #CCCCCC; padding: 5px; margin-bottom: 10px; }
+.classform select { margin-bottom: 10px; padding: 5px; border: solid 1px #CCCCCC; width:200px; }
+.classform input.postit { border: solid #ffffff; padding:5px; font: normal 17px Arial; color: #ffffff; background: #666666; cursor: pointer; }
+input.lbutton { background:#304B6E none repeat scroll 0 0; border:none; font-weight:bold; color:#FFFFFF; cursor:pointer; font-size:13px; padding:5px; }
+.left_form { float: left; padding-left:15px; width:500px;  }
+.right_form { float: left;  max-width:300px; }
+.right_form_confirm { float: right; width: 50%;}
+.classform label { display: block; margin: 5px 0 5px 0; }
+.CheckoutBtn a, Checkout a:hover{	text-decoration:none;	font-weight:bold;	height:23px;	width:120px;	display:block;	text-align:center;	padding-top:6px;}
+.CheckoutBtn a{	background:url(images/Btn.jpg) no-repeat;	color:#FFFFFF;}
+
+/********************** DIRECTORYPRESS THEME CALENDAR  ***********************/
+/**********************************************************************************/
+
+#wp-calendar {	border: 1px solid #ddd;	empty-cells: show;	font-size: 14px;	margin: 0;	width: 90%; background:#666; margin-left:10px; margin-bottom:10px;}
+#wp-calendar #next a {	padding-right: 10px;	text-align: right;}
+#wp-calendar #prev a {	padding-left: 10px;	text-align: left;}
+#wp-calendar a {	display: block;	text-decoration: none;}
+#wp-calendar a:hover {	background: #e0e6e0;	color: red;}
+#wp-calendar caption {	color: #999;	font-size: 16px;	text-align: left;}
+#wp-calendar td {	color: #ccc;	font: normal 12px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;	letter-spacing: normal;	padding: 2px 0;	text-align: center; border:1px dotted #ccc;}
+#wp-calendar td.pad:hover {	background: #fff;}
+#wp-calendar td:hover, #wp-calendar #today {	background: #eee;	color: #bbb;}
+#wp-calendar th {	font-style: normal;	text-transform: capitalize; background:#666; color:#fff; text-align:center;}
+
+/********************** DIRECTORYPRESS SUBMISSION FORMS ***********************/
+/**********************************************************************************/
+
+fieldset{ border:3px solid #999;margin-top:30px;padding:20px; background:#fff; }
+fieldset legend{background:#e7e7e7;border-left:3px solid #c5c5c5;border-right:3px solid #c5c5c5;border-top:3px solid #c5c5c5;color:#616161;font-size:18px;font-weight:lighter;margin:0 0 25px;padding:8px 7px 0;}
+fieldset fieldset{margin-top:10px;margin-bottom:20px;padding:16px 10px;}
+fieldset fieldset legend{font-size:120%;font-weight:400;}
+fieldset fieldset div{clear:left;margin:0 20px;}
+fieldset p{margin:0 0 7px;}
+form div{margin-bottom:0;vertical-align:text-top;}
+form div.input{color:#444;margin-bottom:1em;}
+form div.required{color:#333;font-weight:700;}
+
+label{display:block;font-size:110%;padding-right:20px;}
+.adfields{border:2px solid #d1d1d1;clear:both;color:#434343;font-family:Arial, "frutiger linotype", "lucida grande", verdana, sans-serif;font-size:13px;font-weight:lighter;width:95%;padding:7px 5px 5px;}
+select{clear:both;font-size:110%;vertical-align:text-bottom;}
+option{font-size:120%;padding:0 3px;}
+input[type=checkbox]{clear:left;float:left;width:auto;margin:0 6px 7px 2px;}
+input[type=radio]{float:left;width:auto;margin:0 3px 7px 0;}
+div.radio label{margin:0 0 6px 20px;}
+.form select,.form input,.form textarea{vertical-align:middle;}
+.message { font-size:16px; background:red; color:#fff; padding:7px; margin-bottom:20px;}
+
+
+/********************** WORDPRESS PAGE FORMATTING ***********************/
+/**********************************************************************************/
+
+.entry p {text-align: left; font-size: 1.05em;line-height:24px;}
+.entry a { text-decoration:underline; }
+.entry ul { margin-left:20px; padding-bottom:20px; }
+
+.PhotoSwitcher1 { width:600px; }
+.PhotoSwitcher1 ul      {    list-style-type:none;            margin:0px 0 0 0;            padding:0;        }
+.PhotoSwitcher1 ul li        {            float:left;            margin: 0 0 0 0px;            height:135px;            width:130px;        }   
+.PhotoSwitcher1 ul li.First        {            margin:0;        }
+.PhotoSwitcher1 ul li a        {                    display:block;        }
+.PhotoSwitcher1 ul li img        {            width:80px; height: 80px;  border:1px solid #333;      }
+
+#gradient-style{font-size: 12px; width: 660px;	text-align: left;	border-collapse: collapse; margin-top:20px;}
+#gradient-style th{	font-size: 16px;	font-weight: normal;	padding: 18px;	background: #b9c9fe url('images/table/gradhead.png') repeat-x;	border-top: 2px solid #ddd;	border-bottom: 1px solid #fff;	color: #efefef; font-weight:bold;}
+#gradient-style td{	padding: 18px; 	border-bottom: 1px solid #fff;	color: #333;	border-top: 1px solid #fff;	background: #e8edff url('images/table/gradback.png') repeat-x;}
+#gradient-style tfoot tr td{	background: #e8edff;	font-size: 13px;	color: #333;}
+#gradient-style tbody tr:hover td{	background: #d0dafd url('images/table/gradhover.png') repeat-x;	color: #333; font-weight:bold; }
+#gradient-style td a { color:#000000}
+/********************** PAGE RANK STYLES ***********************/
+/**********************************************************************************/
+
+div.pagerank{	border: 1px solid #ccc;	height: 4px;	margin: 7px 0 0 5px;	padding: 0;	width: 50px;	background: #EFEFEF;	float: left;}
+div.inner-pagerank{	margin-top: -1px;	background-image: url('images/pr10.gif');	float: left;	height: 5px;	padding: 0;}
+div.pr-text{	float: left;	font-size: 0.9em;}
+
+
+.sf-menu img{ float:left;}
+.sf-menu, .sf-menu * {	 list-style: none; }
+.sf-menu ul {	position:absolute;	top:-999em;	width:10em;}
+.sf-menu ul li {	width:100%;}
+.sf-menu li:hover {	visibility:inherit; }
+.sf-menu li {	float:left;	position:relative;}
+.sf-menu a {	display:block;	position:relative; line-height:30px; } 
+.sf-menu li:hover ul,.sf-menu li.sfHover ul {	left:0;	top:2.5em;	z-index:99;}
+ul.sf-menu li:hover li ul,ul.sf-menu li.sfHover li ul {	top:-999em;}
+ul.sf-menu li li:hover ul,ul.sf-menu li li.sfHover ul {	left:10em; 	top:0;}
+ul.sf-menu li li:hover li ul,ul.sf-menu li li.sfHover li ul {	top:-999em;}
+ul.sf-menu li li li:hover ul,ul.sf-menu li li li.sfHover ul {	left:10em; 	top:0;}
+.sf-menu {	z-index:2;}
+.sf-menu a {	float:left;	padding:15px 5px 0px 5px;	height:31px;	text-decoration:none; 	font-size:16px;	margin-left:10px;	margin-right:15px;}
+.sf-menu li {	margin-right:1px; }
+.sf-menu li li {text-decoration:none; }
+.sf-menu li li a {	width:113px;	padding-left:10px;}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {}
+.sf-menu a {	float:left;	padding:0px;		margin-top:7px;	text-decoration:none;	font-size:14px;	margin-left:10px;	line-height:32px;	text-align:center;	font-weight:normal; }
+ul.sf-menu li ul a {  height:25px; background:#efefef; border: 1px solid #ddd; margin:0px; padding:5px; font-size:12px; width:200px; }
+ul.sf-menu li ul a span { color:#333; } 
+ul.sf-menu li ul a:hover {background:#ddd;}
+
+
+/*#navigation li ul a.active span,
+#navigation li ul a:active span { color: #333; line-height:45px;   }*/
+ 
+/********************** ARTICLE PAGE FORMATTING ***********************************/
+/**********************************************************************************/
+
+.ArticleBox { margin-bottom:10px; padding:10px; background:#efefef; border-bottom:1px solid #dddddd; }
+.ArticleBox h2 { font-size:21px; margin-top:0px; padding-top:0px;}
+.ArticleBox img { float:left; padding-bottom:50px;margin-right:20px; max-width:150px; padding-top:5px;}
+.post-date { margin-top:15px; }
+.post-date em {background:#666 none repeat scroll 0 0;color:#FFFFFF;font-size:0.9em;font-style:normal;line-height:1.75em;padding:3px 5px;}
+.post-date a { color:white;}
+
+/********************** ARTICLE PAGE FORMATTING ***********************************/
+/**********************************************************************************/
+
+        .desc { color:#6b6b6b;}
+        .desc a {color:#0092dd;}
+        .dropdown, .dropdown1 { margin-right:20px;}
+        .dropdown dd, .dropdown dt, .dropdown ul,.dropdown1 dd, .dropdown1 dt, .dropdown1 ul,.dropdown2 dd, .dropdown2 dt, .dropdown2 ul { margin:0px; padding:0px; font-size:12px; z-index:100; }
+        .dropdown dd,.dropdown1 dd,.dropdown2 dd { position:relative; }
+        .dropdown a, .dropdown a:visited, .dropdown1 a, .dropdown1 a:visited, .dropdown2 a, .dropdown2 a:visited { color:#816c5b; text-decoration:none; outline:none;}
+        .dropdown a:hover, .dropdown1 a:hover, .dropdown2 a:hover { color:#5d4617;}
+        .dropdown dt a:hover, .dropdown1 dt a:hover, .dropdown2 dt a:hover { color:#5d4617; border: 1px solid #d0c9af;}
+        .dropdown dt a span, .dropdown1 dt a span, .dropdown2 dt a span {cursor:pointer; display:block; padding:5px;}
+        .dropdown dd ul, .dropdown1 dd ul, .dropdown2 dd ul { background:#eee none repeat scroll 0 0; border:1px solid #ccc; color:#333; display:none;
+                          left:0px; padding:5px 0px; position:absolute; top:2px; width:auto; min-width:170px; list-style:none;}
+        .dropdown span.value, .dropdown1 span.value, .dropdown2 span.value { display:none;}
+        .dropdown dd ul li a, .dropdown1 dd ul li a, .dropdown2 dd ul li a { padding:5px; display:block;}
+        .dropdown dd ul li a:hover, .dropdown1 dd ul li a:hover, .dropdown2 dd ul li a:hover { background-color:#eee;}        
+        .dropdown img.flag, .dropdown1 img.flag, .dropdown2 img.flag { border:none; vertical-align:middle; margin-left:10px; }
+        .flagvisibility { display:none;}
+
+#catnav { background: url('images/catnav_bg.jpg') no-repeat; height:90px; }
+
+
+
+/************************************************************************
+Packages Styles Page
+************************************************************************/
+
+#packages { 	margin-left:20px; margin-right: auto; margin-top:10px; margin-bottom:50px; padding:10px;}
+.payicon { float:right; margin-right:0px; background: #fff url('images/buy_paypal.gif') no-repeat; width:200px; height:70px; }
+.extrainfo { background:#efefef; border-top:2px solid #ddd; border-bottom: 2px solid #ddd; padding:10px; margin-top:30px; margin-right:20px;}
+table#pricing-chart td {	text-align:center}
+table#pricing-chart { padding:0px; margin:0px;}
+table#pricing-chart th.package {	background: #3694d0 url('images/packagesbg.gif') repeat-x;	width: 215px;	height: 158px;	border: 1px solid #3587ba;} 
+table#pricing-chart th a.sign-up {	background:url("images/sign-up-green.png") no-repeat scroll 0 0 transparent;	display:block;	height:30px;	left:4px;	margin:0 auto;	position:relative;	text-indent:-9999px;	top:35px;	width:99px;}
+table#pricing-chart th a.sign-up:hover {	background-position: 0 -34px;}
+table#pricing-chart th a.sign-up:active {	background-position: 0 -33px;}
+table#pricing-chart th.package h2 { margin-top:10px; color:white;line-height:30px; text-shadow: 2px 2px 3px #000; font-weight:normal; }
+table#pricing-chart th.package .price { font-size:30px;float:left; } 
+table#pricing-chart th.package .time { float:right; font-size:16px; color:#D0E3FA; }
+table#pricing-chart td.sub { background:#efefef; border-bottom:1px dashed #ddd; padding:8px; }
+
+/************************************************************************
+Search Page Categories
+************************************************************************/
+
+#searchpage_list { margin:20px; width:675px; float:left;  }
+#searchpage_list ul { margin-top:20px; }
+#searchpage_list ul li { font-size:14px; width:220px; float:left; font-weight:bold; line-height:30px; }
+#searchpage_list ul li img { float:left; margin-right:10px; }
+#searchpage_list ul li a { text-decoration:none;  }
+#searchpage_list ul ul { margin-left:20px; list-style-type:circle;  clear:both; margin-top:0px;}
+#searchpage_list ul ul li { font-size:12px; height:25px; font-weight:normal; }
+
+/************************ SIDEBAR TAB STYLES ***************************/
+/***********************************************************************/
+
+.sidebar-tabs {padding: 3px 0;margin-left: 5px;margin-top: 1px;margin-bottom: 0px;font: bold 10px Verdana;list-style-type: none;text-align: left; line-height:30px;}
+.sidebar-tabs li{display: inline;margin: 0; }
+.sidebar-tabs li a{text-decoration: none;position: relative;z-index: 1; padding: 3px 7px;margin-right: 3px;border: 1px solid #778;color: #2d2b2b;background: #efefef; }
+.sidebar-tabs li a:visited{color: #2d2b2b;}
+.sidebar-tabs li a:hover{text-decoration: underline;color: #2d2b2b;}
+
+.sidebar-title { font-size:11px; font-weight:bold; }
+.sidebar-post { font-size:12px; }
+
+#sidebar .post { margin-bottom: 20px;   }
+
+#GoogleMap { float:left; padding-right:10px; width:100%; height:220px; }
+#SingleImage { max-width:200px; float:left; padding-right:15px; padding-bottom:15px; }
+#usefuldetails { background:#666; border-top:10px solid #fff; border-bottom:20px solid #fff; }
+#usefuldetails table {  padding:10px; }
+
+#PPT-CustomFields {  padding:0px; color:#fff; }
+#PPT-CustomFields a { color:#fff; text-decoration:underline; }
+.CustomRow { float:left; width:275px; margin-right:10px; font-size:14px; }
+.CustomRow span { font-weight:bold;  }
+.SingleRow { font-size:12px; margin-top:15px; }
+.left { border-right:1px dotted #666;  }
+
+/********************** WORDPRESS PAGE FORMATTING ***********************/
+/**********************************************************************************/
+
+.entry   {text-align: left; margin-bottom: 18px; line-height:24px; margin-top:10px; padding:20px;}
+.entry ul { margin-left:20px; padding-bottom:20px; }
+.entry h1 { font-size:21px; }
+.entry h2 { font-size:18px; }
+.entry h3 { font-size:16px; font-weight:normal;  }
+.entry p {text-align: left;  line-height:22px;}
+.entry a { text-decoration:underline; }
+.entry ul { margin-left:10px; padding-bottom:10px; }
+.entry ul li { list-style-type:none; font-size:13px;  }
+.entry strong { font-weight:normal; }
+.entry em {  font-style: italic; }
+
+/* ===================== PREMIUM PRESS FEATURED SCROLLING BARS  ======================== */
+
+#ImageScroller { border-top:10px solid #fff; } 
+#style1_wrapper { background: #eee url('images/slider/hbg.jpg') repeat-x; border:1px solid #ddd; clear:both;height:160px; }
+#style1 {     margin-top:20px; width: 670px !important; margin:0 auto; margin-left:10px; }
+#style1_car1 {  float: left; width: 620px; height: 140px;   position: relative;   }
+#style1 .container {  float: left;  width: 600px;  height: 150px;  position: relative;    overflow: hidden;   }
+#style1 ul {  margin: 0;  padding:0;  width: 100000px;  position: relative;  top: 0;  left: 0;  height: 70px; margin-top:21px;}          
+#style1 ul li { margin-top:20px; width: 130px;  height: 150px;  text-align: center;   list-style:none;     float:left; margin-left:10px; margin-right:10px;}
+#style1 ul li img { border:1px solid #ccc;}
+#style1 ul li  { border-right:0px;}
+#style1 .previous_button {  float:left;   width: 34px;  height: 160px;  background: url(images/slider/ho2.jpg);  z-index: 100;  cursor: pointer;}
+#style1 .previous_button_over {  background: url(images/slider/ho2a.jpg);}
+#style1 .previous_button_disabled {  background: url(images/slider/ho2b.jpg);  cursor: default;}
+#style1 .next_button {  float:left;    width: 34px;  height: 160px;  background: url(images/slider/ho1.jpg);  z-index: 100;  cursor: pointer;}
+#style1 .next_button_over {  background: url(images/slider/ho1a.jpg);}
+#style1 .next_button_disabled {  background: url(images/slider/ho1b.jpg);  cursor: default;}
+
+#StoreText { background:#fff; border-bottom:10px solid #fff; padding:20px;}
+
+
+.3-cols-customfields {  }
+.aspacer { margin-right:20px; padding-bottom:20px; }
+.article-sub { margin-right:30px; padding-bottom:20px; float:left;}
+
+#feature_listings li {
+    background: url("images/category_bg.jpg") repeat-x scroll 0 0 #F4F4F4;
+    color: #000000;
+    margin-top: 8px;
+    text-transform: lowercase;
+}
+
+.flt{font-size: 12px; color: rgb(51, 51, 51); overflow: hidden; line-height: 13px; height: 22px; width: 200px;}
+
+.fla{font-size: 12px; color: rgb(51, 51, 51); overflow: hidden; line-height: 13px;}

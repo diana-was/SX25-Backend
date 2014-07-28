@@ -1,0 +1,151 @@
+/*UNIVERSAL POLL STYLES*/
+
+.pds-vote-button {
+float: right;
+font: normal bold 12px/19px Arial;
+color: #fff;
+text-align: center;
+width: 65px; height: 19px;
+background: url(/images/polls/vote-off.gif);
+
+margin: 10px 5px 10px 0px;
+padding: 0px; display: block; text-decoration: none;}
+
+a.pds-vote-button:hover {background: url(/images/polls/vote-on.gif);}
+
+.pds-answer-feedback {
+background-color: #f1f1f1; 
+border: 1px solid #d1d1d1;} 
+
+.pds-answer-feedback-bar {
+background: #177ac2 url(/images/polls/poll-feedback-bar.gif); 
+border: 0px none #4D6382; 
+height: 10px;}
+
+.pds-total-votes {font: bold 10px/10px Arial;
+color: #333333; text-align: left; margin: 10px 0px;} 
+
+.pds-links, .pds-links a {visibility: hidden; display: none;}
+
+.pds-links-back a.pds-share {visibility: hidden; display: none;}
+.pds-links-back a.pds-pd-link {visibility: hidden; display: none;}
+.pds-links-back a.pds-comments {visibility: hidden; display: none;}
+.pds-links-back a.pds-view-results {visibility: hidden; display: none;}
+
+/*HOMEPAGE POLL STYLES*/
+
+/*--------- page layout -----------*/
+#at-homepage-poll {width: 199px; float: left;}
+#at-homepage-poll-top {width: 100%; height: 26px; background: url(/images/polls/at-poll-top.png) no-repeat;}
+#at-homepage-poll-mid {width: 100%; background: url(/images/polls/at-poll-mid.png)  repeat-y;}
+#at-homepage-poll-content {position: relative; width: 183px; margin: 0px auto; padding: 10px 0px 40px 0px;
+
+background: url(/images/polls/at-poll-back.png)  no-repeat bottom center;}
+#at-homepage-poll-bottom {width: 100%; height: 10px; background: url(/images/polls/at-poll-bot.png)  no-repeat;} 
+
+/*--------- poll layout -----------*/ 
+#at-homepage-poll-content .pds-answer-group {padding: 0px;}
+#at-homepage-poll-content .pds-links-back {float: left;}
+
+#at-homepage-poll-content .pds-vote-button {
+position: absolute; bottom: 8px; right: 5px;
+font: normal bold 12px/19px Arial;
+color: #fff;
+text-align: center;
+margin: 0px; padding: 0px; display: block; text-decoration: none;}
+
+#at-homepage-poll-content a.pds-vote-button:hover {background: url(/images/polls/vote-on.gif);}
+
+#at-homepage-poll-content a.pds-return-poll {visbility: hidden; display: none;}
+
+/* #at-homepage-poll-content a.pds-return-poll:hover {background: url(/images/polls/return-off.gif);}  */
+
+#at-homepage-poll-content .pds-vote-button {
+width: 65px; height: 19px;
+background: url(/images/polls/vote-off.gif);}
+
+#at-homepage-poll-content a.pds-return-poll {
+width: 90px; height: 19px;
+background: url(/images/polls/return-off.gif);}
+
+#at-homepage-poll-content .view-past-polls, #at-homepage-poll-content .addthis_button {color: #000; font-size: 10px; text-align: left; line-height: normal; display: block;}
+
+#at-homepage-poll-content .view-past-polls {position: absolute; bottom: 5px; left: 0px;}
+#at-homepage-poll-content .addthis_button {position: absolute; bottom: 20px; left: 0px;}
+
+#at-homepage-poll-content .pds-question-top {font-weight: bold; font-size: 12px; line-height: normal; color: #000; text-align: left; padding-bottom: 10px;}
+#at-homepage-poll-content .pds-answer-group{display: block; padding: 5px 0px;}
+#at-homepage-poll-content .pds-feedback-group{display: block; padding: 5px 0px;}
+#at-homepage-poll-content .pds-textfield{background: #fff; border: 1px solid #d1d1d1; font-size: 11px; padding: 0px;
+width: 150px;}
+
+/*OPEN POLLS & POLLS RESULTS PAGE*/ 
+
+/*--------- page layout -----------*/
+
+.polls-box {width: 422px;}
+.polls-top {width: 100%; height: 10px; background: url(/images/polls/box-w422-top.gif) no-repeat;}
+
+.polls-middle {width: 100%; background: url(/images/polls/box-w422-mid.gif) repeat-y;}
+.polls-content {padding: 10px;}
+.polls-bottom {width: 100%; height: 10px; background: url(/images/polls/box-w422-bottom.gif) no-repeat;}
+
+/*--------- poll layout -----------*/
+
+#categorysub-openpolls a.view-past-polls, #categorysub-pollresults a.view-past-polls 
+{font-size: 11px; text-align: right; margin-right: 10px; display: block;}
+
+#categorysub-openpolls a.pds-vote-button, #categorysub-pollresults a.pds-vote-button  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 19px; font-weight: 800; color: #fff; text-decoration: none; float: left;}
+
+#categorysub-openpolls .pds-question-top, #categorysub-pollresults .pds-question-top, #categorysub-pollresults .pollQuestion {font-weight: bold; font-size: 14px; line-height: normal; color: #000; text-align: left; margin-bottom: 10px;}
+
+#categorysub-openpolls .pds-links, #categorysub-openpolls .pds-links-back, #categorysub-pollresults .pds-links, #categorysub-pollresults .pds-links-back {padding: 10px 0px 0px 0px; display: block;}
+
+#categorysub-openpolls a.addthis_button, #categorysub-pollresults a.addthis_button {float: right;}
+
+#categorysub-openpolls .pds-links a, #categorysub-pollresults .pds-links a {visibility: hidden; display: none;}
+
+#categorysub-openpolls .pds-links-back a, #categorysub-pollresults .pds-links-back a {visibility: hidden;}
+
+#categorysub-openpolls .pds-answer label, #categorysub-pollresults .pds-answer label, #categorysub-pollresults .pollAnswer {color: #333; font-size: 13px; line-height: 150%; position: relative;}
+
+#categorysub-openpolls .pds-answer-feedback-bar, #categorysub-pollresults .pds-answer-feedback-bar {height: 19px; border: 1px solid #333; background: url(/images/polls/bg-poll-bar.gif) repeat-x;}
+
+#categorysub-openpolls .pds-answer-feedback, #categorysub-pollresults .pds-answer-feedback {background-color: #f1f1f1; border: 1px solid #d1d1d1; margin-bottom: 10px;}
+
+#categorysub-openpolls .pds-total-votes, #categorysub-pollresults .pds-total-votes {font-size: 12px;}
+
+#categorysub-openpolls a.pds-return-poll, #categorysub-pollresults a.pds-return-poll {
+float: left; visibility: hidden;
+font: normal bold 12px/19px Arial;
+color: #fff;
+text-align: center;
+width: 90px; height: 19px;
+background: url(/images/polls/return-off.gif); 
+
+margin: 0px 5px 0px 0px;
+padding: 0px; display: block; text-decoration: none;}
+
+#categorysub-openpolls a.pds-view-results, #categorysub-pollresults a.pds-view-results {visibility: hidden; display: none;}
+
+#categorysub-openpolls .pds-links-back a.pds-share, #categorysub-pollresults .pds-links-back a.pds-share { visibility: hidden; display: none;}
+
+#categorysub-openpolls .pds-links-back a.pds-comments, #categorysub-pollresults .pds-links-back a.pds-comments {visibility: hidden; display: none;}
+
+#categorysub-openpolls .pds-textfield, #categorysub-pollresults .pds-textfield  {}
+
+#categorysub-openpolls .pds-feedback-per, #categorysub-pollresults .pds-feedback-per {font-weight: bold; color: #036da9;}
+
+#categorysub-openpolls .pds-feedback-votes, #categorysub-pollresults .pds-feedback-votes {font-size: smaller; font-weight: bold;}
+
+/*PAST POLLS PAGE*/ 
+
+/*--------- page layout -----------*/
+
+#categorysub-pastpolls h2 {text-transform: uppercase;}
+#categorysub-pastpolls h2.no-top-margin {margin-top: 0px; padding-top: 0px;}
+#categorysub-pastpolls .polls-box a:link, #categorysub-pastpolls .polls-box a:visited, #categorysub-pastpolls .polls-box a:active {color: #036daa;}
+#categorysub-pastpolls .polls-box a:hover {color: #231f20;}
+#categorysub-pastpolls a:link, #categorysub-pastpolls a:visited, #categorysub-pastpolls a:active {font-size: 13px; color: #231f20;}
+#categorysub-pastpolls a:hover {color: #036daa;}
+#categorysub-pastpolls li {list-style-image: url(images/expertqa-q.gif); padding: 0px 0px 10px 0px;}

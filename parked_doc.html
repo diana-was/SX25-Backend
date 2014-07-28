@@ -1,0 +1,598 @@
+<div id="wrapper">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <tbody><tr>
+	        <td><img src="/images/parked_logo.gif" height="58" width="255"></td>
+	      <td class="hdrtitle" align="right" valign="bottom">Parked Layout Documentation</td>
+	    </tr>
+	    <tr>
+	      <td colspan="2" bgcolor="#d1dec2"><img src="/images/s.gif" height="1" width="1"></td>
+
+	    </tr>
+	    <tr>
+	      <td colspan="2" align="right">Version 1.2</td>
+	    </tr>
+	</tbody></table>
+	<br><br>
+	<h1 align="left">Overview</h1>
+	<p align="left">The Parked.com Custom Layout feature enables additional control over the appearance of parked domains. Through the use of variables, Parked.com allow access to its content which can be used in the layout designs according to your own needs using HTML, CSS or JavaScript. </p>
+	<p align="left">The CSS and JavaScript code can be created in the CSS and JS tabs, which automatically generate the css and js files in the layout folder and include a “link” to this files into each (landing page and resultpage) page at the time of coping the layout into the parked account.</p>
+	<p align="left">For more complex CSS and JS or when using designs from other sources include the links to the files in the header as a normal html using  {PROFILE_LINK}  as the url e.g.</p> 
+	<div id="source">
+	<pre>&lt;link href="{PROFILE_LINK}em_v1_03.css" rel="stylesheet" type="text/css"&gt; 
+&lt;script src="{PROFILE_LINK}jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+	</div>
+	<p align="left">Then upload the files in the “Theme Files” tab. </p>
+
+	<p align="left">For images or other files used in the theme use {PROFILE_LINK} variable in the url and upload the files in the "Theme Files" tab.</p>
+	<p align="left">Here are a few more things to keep in mind:</p>
+	<ul>
+	  <li>A Landing page and Results page is required</li>
+	  <li>Required variables must be present, but optional variables may be used at your discretion</li>
+	  <li>Keyword usage should not exceed 60 for optimimum performance</li>
+	</ul>
+	<p align="left">&nbsp;</p>
+	<h1 align="left">General Variables</h1>
+	<p align="left">The guidelines below are used to construct the general sections of the landing page and results page. The majority of these variables can be modified from within your account and will display the set content.</p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{COPYRIGHT}</td>
+	<td>Displays copyright information for current domain in the format: ©yyyy domain All rights reserved. </td>
+	<td>No </td>
+
+	<td>Both</td>
+	<td><span> &lt;div id="copyright"&gt;<strong>{COPYRIGHT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{DOMAIN}</td>
+
+	<td>Displays the current domain name.</td>
+	<td>No </td>
+	<td>Both</td>
+	<td><span> &lt;div id="hdr"&gt;<strong>{DOMAIN}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{FORSALE}</td>
+	<td>For Sale message displayed in header of template. Displays the For Sale message as defined on the Domain Detail page.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;span class="forsale"&gt;<strong>{FORSALE}</strong>&lt;/span&gt;</span></td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{LANDING_IMG}</td>
+	<td>Displays the image on the landing page as defined on the Domain Detail page based on the keyword or custom content.</td>
+	<td>No</td>
+	<td>Landing Page</td>
+
+	<td><span> &lt;img src="<strong>{LANDING_IMG}</strong>"&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{META_KEYWORDS}</td>
+	<td>Meta element used to identify keywords of the document to improve the quality of search results. Displays the Meta Tags Keywords text as defined on the Domain Details page.</td>
+
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;meta name="keywords" content="<strong>{META_KEYWORDS}</strong>"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+
+	<td>{META_TAG}</td>
+	<td>Meta element used to add additional properties of the document by specifying additional meta elements. Complete meta tags should be used. Not accessible from Domain Details page.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;meta name="author" content="John Doe"&gt;<br>
+	  &lt;meta name="date" content="2008-01-01T08:49:37+00:00"&gt;</span> </td>
+
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{META_TITLE}</td>
+	<td>Meta element used to identify description properties of the document.  Displays the Meta Tags Description text as defined on the Domain Detail page.</td>
+	<td>No</td>
+	<td>Both</td>
+
+	<td><span>&lt;meta name="description" content="<strong>{META_TITLE}</strong>"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{PAGETITLE}</td>
+	<td>TITLE element used to identify the contents of the document. Displays the Title Tag text as defined on the Domain Detail page.</td>
+
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;title&gt;<strong>{PAGETITLE}</strong>&lt;/title&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+
+	<td>{RESULTS_IMG}</td>
+	<td>Displays the image on the results page as defined on the Domain Detail page based on the keyword or custom content.</td>
+	<td>No</td>
+	<td>Results Page</td>
+	<td><span> &lt;img src="<strong>{RESULTS_IMG}</strong>"&gt;</span></td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{STYLESHEET}</td>
+	<td>Allows the use of Parked.com created Style Sheets. Sets the style sheet to control appearance as defined on the Domain Detail page using the Color option.</td>
+	<td>No</td>
+	<td>Both</td>
+
+	<td><span>&lt;link href="/style/<strong>{STYLESHEET}</strong>" rel="stylesheet" type="text/css"&gt;</span></td>
+	</tr>
+	
+	<tr class="altrow1" valign="top">
+	<td>{TITLE}</td>
+	<td>Title used in header of template. Displays the Domain Title text as defined on the Domain Detail page.</td>
+	<td>No</td>
+
+	<td>Both</td>
+	<td><span> &lt;a href="/"&gt;<strong>{TITLE}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{TITLE_LINK}</td>
+
+	<td>Link used for title or logo in header of template. If specified, the link of the domain will be automatically added.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span> &lt;a href="<strong>{TITLE_LINK}</strong>"&gt;&lt;img src="logo.gif"/&gt;&lt;/a&gt;</span></td>
+
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{USER_CONTENT}</td>
+	<td>Displays the Custom Content as defined on the Domain Detail page.</td>
+	<td>No </td>
+	<td>Both</td>
+
+	<td><span>&lt;div id="userContent"&gt;<strong>{USER_CONTENT}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<div class="line"></div>
+
+
+	<h1 align="left">Form Specific Variables</h1>
+
+	<p align="left">The guidelines below are used to construct the form section, which is located on the landing page and results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+	<tr class="altrow1" valign="top">
+	<td>{KEYWORDS}</td>
+	<td>Displays the keyword that was used for current search. Used to populate text input field after a search.</td>
+	<td>Yes</td>
+
+	<td>Both</td>
+	<td><span>&lt;input type="text" name="Keywords" value="<strong>{KEYWORDS}</strong>" style="width: 200px;"&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{R}</td>
+
+	<td>Hidden form element for internal use.</td>
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span> &lt;input type="hidden" name="r" value="<strong>{R}</strong>"&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+	<p align="left">In addition to the variable requirements, the form tag and elements must be specified properly in order to function correctly. The following form tag and elements must be present and the element attributes must be specified exactly as shown:</p>
+
+	<div id="source">
+	  <pre>&lt;form method="get" action="/result.php"&gt;<br>	&lt;input type="text" name="Keywords" value="{KEYWORDS}"&gt;<br>	&lt;input type="hidden" name="r" value="{R}"&gt;</pre>
+
+	</div>
+	<p align="left">Specifying additional attributes, such as a class attribute, is allowed as long as additional attributes are  placed after the required attributes in the example above.</p>
+
+
+	<div class="line"></div>
+
+
+
+	<h1 align="left">Keyword Variables</h1>
+	<p align="left">The guidelines below are used to configure the keywords that appear on  the landing page and results page. There are  four types of keywords that can be utilized in constructing your pages. Three of the keyword types, Related, Category and Hard-coded can be used in any combination in order to meet the minimum requirement of five keywords per page. Some keyword variable types are restricted to  certain pages.</p>
+
+	<h2 align="left">Related Keyword Variables</h2>
+	<p align="left">The variables below are used to construct Related keywords, which are located on the landing page and results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{LINK1}<br>.<br>.<br>.<br>{LINK11}</td>
+
+	<td>Related keywords URL. Used as href attribute in conjunction with corresponding {RELATED} variable to form &lt;a&gt; tag. Minimum requirement of 5.</td>
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span> &lt;a href="<strong>{LINK1}</strong>"&gt;{RELATED1}&lt;/a&gt;</span></td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{RELATED1}<br>.<br>.<br>.<br>{RELATED11}</td>
+	<td>Related keywords based on keyword set for the domain page. Used as label in conjunction with corresponding {LINK} variable to form &lt;a&gt; tag. Minimum requirement of 5.</td>
+
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span>&lt;a href="{LINK1}"&gt;<strong>{RELATED1}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+	<p align="left">A minimum of <strong>five</strong> Related, Category or Hard-coded keywords must be included on each page  in order to be considered valid.</p>
+
+
+	<br><br>
+	<h2 align="left">Category  Keyword Variables</h2>
+	<p align="left">The variables below are used to construct the Catergory keywords, which  are located on the landing page. </p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+
+	<tr class="altrow1" valign="top">
+	<td>{CAT1_LINK1}<br>.<br>.<br>.<br>{CAT1_LINK4}</td>
+	<td>Related Category Keyword URL. Used as href attribute in conjunction with corresponding {CAT1_RELATED} variable to form &lt;a&gt; tag.</td>
+
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span>&lt;a href="<strong>{CAT1_LINK1}</strong>"&gt;{CAT1_RELATED1}&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+
+	<td>{CAT1_RELATED1}<br>.<br>.<br>.<br>{CAT1_RELATED4}</td>
+	<td>Related Category Keyword based on Category. Used as label in conjunction with corresponding {CAT1_LINK} variable to form &lt;a&gt; tag.</td>
+	<td>No </td>
+	<td>Landing Page</td>
+
+	<td><span>&lt;a href="{CAT1_LINK1}"&gt;<strong>{CAT1_RELATED1}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{CAT2_LINK1}<br>.<br>.<br>.<br>
+
+	{CAT2_LINK5}</td>
+	<td>Related Category Keyword URL. Used as href attribute in conjunction with corresponding {CAT2_RELATED} variable to form &lt;a&gt; tag.</td>
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span>&lt;a href="<strong>{CAT2_LINK1}</strong>"&gt;{CAT2_RELATED1}&lt;/a&gt;</span> </td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{CAT2_RELATED1}<br>.<br>.<br>.<br>{CAT2_RELATED4}</td>
+	<td>Related Category Keyword based on Category. Used as label in conjunction with corresponding {CAT2_LINK} variable to form &lt;a&gt; tag.</td>
+
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span>&lt;a href="{CAT2_LINK1}"&gt;<strong>{CAT2_RELATED1}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{CAT3_LINK1}<br>.<br>.<br>.<br>{CAT3_LINK4}</td>
+
+	<td>Related Category Keyword URL. Used as href attribute in conjunction with corresponding {CAT3_RELATED} variable to form &lt;a&gt; tag.</td>
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span>&lt;a href="<strong>{CAT3_LINK1}</strong>"&gt;{CAT3_RELATED1}&lt;/a&gt;</span> </td>
+
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{CAT3_RELATED1}<br>.<br>.<br>.<br>{CAT3_RELATED4}</td>
+	<td>Related Category Keyword based on Category. Used as label in conjunction with corresponding {CAT3_LINK} variable to form &lt;a&gt; tag.</td>
+
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span>&lt;a href="{CAT3_LINK1}"&gt;<strong>{CAT3_RELATED1}</strong>&lt;/a&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+
+	<td>{CATEGORY1}<br>.<br>.<br>.<br>{CATEGORY3}</td>
+	<td>Category keyword  based on Keyword set on the Domain Detail page. Used as label in conjunction with corresponding {CATEGORY_LINK} variable to form &lt;a&gt; tag. </td>
+	<td>No </td>
+	<td>Landing Page</td>
+
+	<td><span>&lt;a href="{CATEGORY1_LINK}"&gt;<strong>{CATEGORY1}</strong>&lt;/a&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{CATEGORY1_LINK}<br>.<br>.<br>.<br>{CATEGORY3_LINK}</td>
+
+	<td>Category keywords  URL. Used as href attribute in conjunction with corresponding {CATEGORY} variable to form &lt;a&gt; tag. </td>
+	<td>No </td>
+	<td>Landing Page</td>
+	<td><span> &lt;a href="<strong>{CATEGORY1_LINK}</strong>"&gt;{CATEGORY1}&lt;/a&gt;</span></td>
+
+	</tr>
+	</tbody></table>
+	<h3 align="left">Additional Info</h3>
+	<p align="left">A minimum of <strong>five</strong> Related, Category or Hard-coded keywords must be included on each page  in order to be considered valid. Category keywords are not available on the results page.</p>
+
+
+
+	<br><br>
+
+	<h2 align="left">Hard-coded Keyword Variables</h2>
+	<p align="left">The variables below are used to construct  Hard-coded keywords, in the event you prefer not to use the provided keywords. Hard-coded keywords  can be located on the landing page and results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{R}<br></td>
+
+	<td>Query string value  for internal use. Used as part of href attribute in conjunction with user-supplied keyword and label to form &lt;a&gt; tag. </td>
+	<td>Yes</td>
+	<td>Both</td>
+	<td><span> &lt;a href="/result.php?Keywords=domain+parking&amp;r=<strong>{R}</strong>"&gt;Domain Parking&lt;/a&gt;</span></td>
+
+	</tr>
+
+
+
+
+	</tbody></table>
+	<h3 align="left">Additional Info</h3>
+	<p align="left"> The Hard-coded Keyword variable {R} is only a portion of the overall code necessary to utilize your own keywords. A user-supplied keyword and URL encoded version of that keyword are also used to form a &lt;a&gt; tag. The tag should be structured similar to the examples to ensure that the links function properly. A few sample Hard-coded Keyword links are shown below: </p>
+
+	<div id="source">
+	<pre>&lt;a href="/result.php?Keywords=domain+parking&amp;r={R}"&gt;Domain Parking&lt;/a&gt;&lt;br&gt;<br>&lt;a href="/result.php?Keywords=forwarding+domain+name&amp;r={R}"&gt;Forwarding Domain Name&lt;/a&gt;&lt;br&gt;<br>&lt;a href="/result.php?Keywords=domain+name+services&amp;r={R}"&gt;Domain Name Services&lt;/a&gt;&lt;br&gt;<br>&lt;a href="/result.php?Keywords=registration+service&amp;r={R}"&gt;Registration Service&lt;/a&gt;&lt;br&gt;<br>&lt;a href="/result.php?Keywords=name+registration+web&amp;r={R}"&gt;Name Registration Web&lt;/a&gt;&lt;br&gt;<br></pre>
+
+	</div>
+	<p align="left">A minimum of <strong>five</strong> Related, Category or Hard-coded keywords must be included on each page  in order to be considered valid.</p>
+
+	<br><br><br>
+	<h2 align="left">Related Searches Keyword Variables</h2>
+	<p align="left">Guidelines below are used to construct the Related Searches section, which is located on the results page. </p>
+
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="43%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+
+	<td width="43%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{RELATED_SEARCHES}</td>
+	<td>Related Search keywords based on keyword click or search.</td>
+	<td>No </td>
+
+	<td>Results Page</td>
+	<td><span>&lt;ul&gt;<strong>{RELATED_SEARCHES}</strong>&lt;/ul&gt;</span></td>
+	</tr>
+
+
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+
+	<p align="left">Related Searches is optional, however if used it must be displayed as an unordered list. Each keyword that is returned as part of the {RELATED_SEARCHES} variable is a list item (within &lt;li&gt; tags), so the {RELATED_SEARCHES} should be placed within an unordered list tag (&lt;ul&gt;) in order to display properly. A sample structure  is shown below:</p>
+
+
+	<div id="source"><pre>&lt;ul&gt;<br>	&lt;li&gt;<br>		&lt;a href="{RELATED_LINK}"&gt;{RELATED_SEARCH}&lt;/a&gt;<br>	&lt;/li&gt;<br>	&lt;li&gt;<br>		&lt;a href="{RELATED_LINK}"&gt;{RELATED_SEARCH}&lt;/a&gt;<br>	&lt;/li&gt;<br>	&lt;li&gt;<br>		&lt;a href="{RELATED_LINK}"&gt;{RELATED_SEARCH}&lt;/a&gt;<br>	&lt;/li&gt;<br>	&lt;li&gt;<br>		&lt;a href="{RELATED_LINK}"&gt;{RELATED_SEARCH}&lt;/a&gt;<br>	&lt;/li&gt;<br>&lt;/ul&gt;</pre></div>
+
+	<p align="left">Style sheets can be used to adjust the appearance of the list to suit your needs. </p>
+
+
+	<div class="line"></div>
+
+
+	<h1 align="left">Sponsor Listings Variables</h1>
+	<p align="left">Guidelines below are used to construct the Sponsor Listings section, which is located on the results page. </p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+
+	</tr>
+	<tr class="altrow1" valign="top">
+	<td>{CLICK_LINK}</td>
+	<td>Advertiser URL. Used as href attribute in conjunction with {TITLE}, {DESCRIPTION} and {SITEHOST} variables to form seperate &lt;a&gt; tags for sponsored results. Variables are used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLtop" href="<strong>{CLICK_LINK}</strong>" target='_blank'&gt;{TITLE}&lt;/a&gt;</span></td>
+	</tr>
+	<tr class="altrow2" valign="top">
+	<td>{DESCRIPTION}</td>
+	<td>Advertisement description. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;<strong>{DESCRIPTION}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{SEARCH_TERM}</td>
+
+	<td>Displays the keyword that was used for current search. Used to display the sponsored listing heading as follows: "Sponsored Results for {SEARCH_TERM}"</td>
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;div class="sponsoredresults"&gt;Sponsored Results for <strong>{SEARCH_TERM}</strong>&lt;/div&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{SITEHOST}</td>
+	<td>Advertiser website address. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;<strong>{SITEHOST}</strong>&lt;/a&gt;</span> </td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+	<td>{SPONSOR_LISTINGS}<br><br><b>or</b><br><br>{SPONSOR_LISTINGS_1}<br>.<br>.<br>.<br>{SPONSOR_LISTINGS_10}</td>
+
+	<td>Sponsored Results that are provided based on keyword click or search. Used with Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code in order to display properly. Either {SPONSOR_LISTINGS} or the individually numbered {SPONSOR_LISTINGS_x} may be used.</td>
+	<td>Yes</td>
+	<td>Results Page</td>
+	<td><span>&lt;div id="results"&gt;<strong>{SPONSOR_LISTINGS}</strong>&lt;/div&gt;</span></td>
+	</tr>
+
+	<tr class="altrow2" valign="top">
+	<td>{TITLE}</td>
+	<td>Advertisement title. Used as label in conjunction with corresponding {CLICK_LINK} variable to form &lt;a&gt; tag for sponsored results. Variable used in Sponsored Listings 1 Source Code and Sponsored Listings 2 Source Code. </td>
+	<td>Yes</td>
+	<td>Results Page</td>
+
+	<td><span>&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;<strong>{TITLE}</strong>&lt;/a&gt;</span></td>
+	</tr>
+
+	</tbody></table>
+
+	<h3 align="left">Additional Info</h3>
+	<p align="left">The Sponsor Listings section actually consist of two parts, the {SPONSOR_LISTINGS} or {SPONSOR_LISTINGS_x} variables and the Sponsored Listings Source Code. Both components are necessary to ensure that Sponsor Listings are displayed properly. The {SPONSOR_LISTINGS} variable in the layout source code will be replaced by the Sponsored Listings Source Code. Using the source code allows more flexibility in customizing the Sponsor Listings to suit your needs. A sample Sponsored  Listings Source Code structure  is shown below:</p>
+
+
+	<div id="source">
+	  <pre>&lt;p&gt;<br>   &lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>   &lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>   &lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>&lt;/p&gt;</pre>
+
+	</div>
+	<p align="left">Also, the Sponsor Listings notice ("Sponsored Results for ") which  includes the keyword that produced the results must be displayed above the Sponsor Listing results. A complete sample structure is shown below:</p>
+	<div id="source">
+	  <pre>&lt;div class="sponsoredresults"&gt;Sponsored Results for {SEARCH_TERM}&lt;/div&gt;<br>&lt;div id="results"&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>	&lt;p&gt;<br>		&lt;a class="URLtop" href="{CLICK_LINK}" target='_blank'&gt;{TITLE}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLtext" href="{CLICK_LINK}" target='_blank'&gt;{DESCRIPTION}&lt;/a&gt;&lt;br&gt;<br>		&lt;a class="URLbottom" href="{CLICK_LINK}" target='_blank'&gt;{SITEHOST}&lt;/a&gt;<br>	&lt;/p&gt;<br>&lt;/div&gt;</pre>
+
+	</div>
+		<p align="left">If using individual Sponsor Listings, a minimum of <strong>five</strong> must be included in order to be considered valid.</p>
+
+		
+	<div class="line"></div>
+
+
+	<h1 align="left">External Link Variables</h1>
+	<p align="left">The guidelines below are used to configure the External Link variables which enable additional content to be added to your domains using external sources.</p>
+
+	<br>
+	<h2 align="left">File Open Variable</h2>
+	<p align="left">The variable below is used to add URL-based content. The File Open Variable can appear on the landing page or results page.</p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+
+	<td>{FILE_OPEN}<br></td>
+	<td>Link to be used for adding additional content using a URL-based file source. The source of the provided URL will replace the variable on the domain.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;div&gt;<strong>{FILE_OPEN}</strong>&lt;/div&gt;</span></td>
+
+	</tr>
+
+
+
+
+	</tbody></table>
+	<h3 align="left">Additional Info</h3>
+	<p align="left"> The File Open section actually consist of two parts, the {FILE_OPEN} variable and the File Open URL. Both components are necessary to ensure that contents of the File Open URL are displayed properly. The {FILE_OPEN} variable in the layout and Results source code will be replaced by the contents of the File Open URL. The variables {DOMAIN} and {SEARCH_TERM} can be added to the File Open URL if you wish to pass the current domain or search term in the URL. </p>
+
+
+	<br><br><br>
+	<h2 align="left">News Feed Variable</h2>
+	<p align="left">The variable below is used to add URL-based content from an RSS feed. The News Feed Variable can appear on the landing page or results page.</p>
+	<table class="tb" align="center" cellpadding="10" cellspacing="0">
+	<tbody>
+	<tr class="tbhdr">
+	<td width="16%"><b>Variable</b></td>
+
+	<td width="33%"><b>Description</b></td>
+	<td width="9%"><b>Required</b></td>
+	<td width="9%"><b>Location</b></td>
+	<td width="33%"><b>Example Usage</b></td>
+	</tr>
+
+	<tr class="altrow1" valign="top">
+
+	<td>{NEWS_READ}<br></td>
+	<td>Link to be used for adding additional content using an RSS feed. The source of the provided URL will replace the variable.</td>
+	<td>No</td>
+	<td>Both</td>
+	<td><span>&lt;div&gt;<strong>{NEWS_READ}</strong>&lt;/div&gt;</span></td>
+
+	</tr>
+
+
+
+
+	</tbody></table>
+	<h3 align="left">Additional Info</h3>
+	<p align="left"> The News Feed section actually consist of two parts, the {NEWS_READ} variable and the News Feed URL. Both components are necessary to ensure that contents of the News Feed URL are displayed properly. The {NEWS_READ} variable in the layout and Results source code will be replaced by the contents of the News Feed URL.  The variables {DOMAIN} and {SEARCH_TERM} can be added to the News Feed URL if you wish to pass the current domain or search term in the URL. </p>
+
+
+	<div class="ftr">
+	</div>
+</div>
